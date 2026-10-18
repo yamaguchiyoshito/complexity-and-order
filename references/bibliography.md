@@ -247,3 +247,41 @@ Elsevier。リンク先は書誌と紹介。理解を再構成の実演として
 Cybernetics & Human Knowing。UCL Discovery の記録。会話理論を概念の形成と共有の過程として導入する論文。
 
 **今回の確認範囲：** UCL Discovery の書誌と要旨を確認。本文全文は未取得。
+
+
+
+## bateson
+
+**Gregory Bateson / 1972**
+
+[Steps to an Ecology of Mind](https://press.uchicago.edu/ucp/books/book/chicago/S/bo3620295.html)
+
+Chandler / University of Chicago Press。所収の "The Logical Categories of Learning and Communication"（1964）が学習の階層（学習0〜Ⅲ）を論じる。
+
+**今回の確認範囲：** 書誌のみ確認。原文は今回の取得環境では読めていない。学習Ⅰ・Ⅱ・Ⅲの区分は複数の二次資料の要約で照合した。
+
+
+
+
+## tishby
+
+**Naftali Tishby, Fernando C. Pereira, William Bialek / 1999**
+
+[The information bottleneck method](https://arxiv.org/abs/physics/0004057)
+
+37th Allerton Conference。arXiv:physics/0004057（2000年公開）。圧縮と目的に関する情報の保持を一つの最適化として定式化する。
+
+**今回の確認範囲：** arXiv の要旨と本文冒頭を確認。汎関数の形（I(X;T) − β I(T;Y) の最小化）は本文と二次資料で照合した。
+
+
+
+
+## hoel
+
+**Erik P. Hoel, Larissa Albantakis, Giulio Tononi / 2013**
+
+[Quantifying causal emergence shows that macro can beat micro](https://pmc.ncbi.nlm.nih.gov/articles/PMC3856819/)
+
+PNAS, 110(49), 19790–19795。有効情報（EI）を介入分布のもとで定義し、巨視的記述が微視的記述を上回る例を示す。
+
+**今回の確認範囲：** PMC の公開本文の要旨と枠組みの記述を確認。例の数値は本文に転記していない。

@@ -283,7 +283,78 @@ def figure_conversation(name,final=False):
     f.save(name)
 
 
-CHAPTER_FIGURES={13:lambda name:figure_conversation(name,final=False)}
+def figure_14(name):
+    """図14: 同じ迷路で経路を直す（学習Ⅰ）と、迷路の区切り方を変える（学習Ⅱ）の対比。"""
+    f=Figure(14,'答えを直すことと、選び方を変えることは違う','同じ迷路で経路を直す図と、迷路の区切り方そのものを変える図',620)
+    for px,head in [(70,'経路を直す：与えられた区切りの中で答えを変える'),(620,'区切り方を変える：選択肢の組み立て方を変える')]:
+        f.panel(px,200,510,330);f.text(px+20,232,head,20,INK,weight=700)
+        ox,oy=px+60,270;cell=90
+        for i in range(5):f.line(ox+i*cell,oy,ox+i*cell,oy+2*cell,color='#cad5d3',width=1.5);
+        for j in range(3):f.line(ox,oy+j*cell,ox+4*cell,oy+j*cell,color='#cad5d3',width=1.5)
+        f.text(ox+8,oy+2*cell+26,'入口',16,MUTED);f.text(ox+4*cell-8,oy-8,'出口',16,MUTED,anchor='end')
+        if px==70:
+            walls=[(2,0,2,1),(3,1,3,2)]
+            for a,b,c,d in walls:f.line(ox+a*cell,oy+b*cell,ox+c*cell,oy+d*cell,color=INK,width=4)
+            f.path(polyline([(ox+45,oy+135),(ox+45,oy+45),(ox+150,oy+45)]),color=MUTED,width=2.5,dash=True)
+            f.text(ox+100,oy+30,'行き止まり',15,MUTED,anchor='middle')
+            f.path(polyline([(ox+45,oy+135),(ox+225,oy+135),(ox+225,oy+45),(ox+315,oy+45)]),color=ORANGE,width=3,arrow=True)
+            f.text(ox+135,oy+160,'直した経路',15,ORANGE,anchor='middle')
+        else:
+            walls=[(3,1,3,2)]
+            for a,b,c,d in walls:f.line(ox+a*cell,oy+b*cell,ox+c*cell,oy+d*cell,color=INK,width=4)
+            f.line(ox+2*cell,oy,ox+2*cell,oy+cell,color=ORANGE,width=4,dash=True);f.text(ox+2*cell+8,oy+cell+22,'区切りを引き直す',15,ORANGE)
+            f.path(polyline([(ox+45,oy+135),(ox+45,oy+45),(ox+315,oy+45)]),color=ORANGE,width=3,arrow=True)
+    f.text(325,560,'学習Ⅰ',22,TEAL,anchor='middle',weight=700);f.text(875,560,'学習Ⅱ',22,TEAL,anchor='middle',weight=700)
+    f.footer('概念図。ベイトソンの論理階型の装置を再現したものではなく、本連載の類比である。')
+    f.save(name)
+
+
+def figure_15(name):
+    """図15: 同じ入力から、目的に応じて別の特徴が残る二つの情報ボトルネック。"""
+    f=Figure(15,'何を残すかは、何を判断したいかで決まる','同じ入力から、目的に応じて別々の特徴が残される二つの情報ボトルネック',640)
+    items=['発生時刻','直前の変更','失敗した呼び出し','利用者の数','時間帯','機能の名前','端末の種類','再試行の回数']
+    rect(f,80,215,220,370,MUTED);f.text(190,245,'入力 X（ログ）',20,MUTED,anchor='middle',weight=700)
+    ys=[275+i*38 for i in range(8)]
+    for y,it in zip(ys,items):f.text(190,y+6,it,17,INK,anchor='middle')
+    for cy,target,keep,color in [(300,'目的 Y₁：原因の特定',[0,1,2],TEAL),(500,'目的 Y₂：影響の見積り',[3,4,5],ORANGE)]:
+        f.parts.append(f'<path d="M520,{cy-70} L560,{cy-18} L560,{cy+18} L520,{cy+70} Z" fill="#ffffff" stroke="{color}" stroke-width="2.5"/>')
+        f.text(540,cy+6,'T',22,color,anchor='middle',weight=700)
+        for i in keep:f.line(300,ys[i],520,cy-40+40*keep.index(i),color=color,width=2)
+        rect(f,640,cy-60,230,120,color);f.text(755,cy-28,'残る区別',18,color,anchor='middle',weight=700)
+        for n,i in enumerate(keep):f.text(755,cy+n*24,items[i],16,INK,anchor='middle')
+        f.line(870,cy,950,cy,color=color,width=2,arrow=True);f.text(960,cy+6,target,18,color,weight=700)
+    f.text(540,405,'ボトルネック T',17,MUTED,anchor='middle')
+    f.footer('概念図。項目は説明用の例であり、何が残るかは p(x, y) と β によって決まる。')
+    f.save(name)
+
+
+def figure_16(name):
+    """図16: 同一システムを個別要素・集団・全体の三段階で表し、粒度ごとに見える因果が違う図。"""
+    f=Figure(16,'原因が見える粒度は、一つではない','同一システムを個別要素・集団・全体の三段階で表す。粗すぎても細かすぎても見えない',640)
+    heads=[('個別要素','遷移が多く、雑音と重なりが大きい'),('集団','受け渡しの単位で、次の状態がよく決まる'),('全体','区別が一つに潰れ、原因を語れない')]
+    for k,(h,sub) in enumerate(heads):
+        px=70+k*370;f.panel(px,200,340,330);f.text(px+20,232,h,21,INK,weight=700);f.text(px+20,258,sub,15,MUTED)
+    # micro: 9 dots with many thin arrows
+    import itertools
+    pts=[(130+60*i,320+55*j) for j in range(3) for i in range(3)]
+    for (a,b) in [(0,1),(1,2),(0,4),(3,4),(4,5),(1,4),(2,5),(4,8),(3,7),(6,7),(7,8),(5,8),(2,4),(6,4)]:
+        f.line(*pts[a],*pts[b],color='#aec1c4',width=1.3,arrow=True)
+    for x,y in pts:f.circ(x,y,8,TEAL)
+    f.text(240,505,'一人ずつの作業履歴',16,MUTED,anchor='middle')
+    # meso: 3 groups with clear arrows
+    for i,x in enumerate([500,610,720]):
+        rect(f,x-40,345,80,70,TEAL);f.circ(x-18,370,6);f.circ(x+18,370,6);f.circ(x,395,6)
+    f.line(540,380,570,380,color=ORANGE,width=3,arrow=True);f.line(650,380,680,380,color=ORANGE,width=3,arrow=True)
+    f.text(555,372,'待ち',14,ORANGE,anchor='middle');f.text(665,372,'待ち',14,ORANGE,anchor='middle')
+    f.text(610,505,'チーム間の受け渡し',16,MUTED,anchor='middle')
+    # macro: one box
+    rect(f,900,330,220,100,MUTED);f.text(1010,385,'組織',22,MUTED,anchor='middle',weight=700)
+    f.text(1010,505,'一つの状態しかない',16,MUTED,anchor='middle')
+    f.footer('概念図。有効情報の計算例ではない。どの粗視化を選ぶかは分析者の決定である。')
+    f.save(name)
+
+
+CHAPTER_FIGURES={13:lambda name:figure_conversation(name,final=False),14:figure_14,15:figure_15,16:figure_16}
 COVERS={2:figure_cover_2}
 EXTRA_FIGURES={'3-2':figure_3_2,'6-2':figure_6_2,'4-2':figure_4_2,'2-2':figure_2_2,'1-2':figure_1_2,'12-2':figure_12_2}
 

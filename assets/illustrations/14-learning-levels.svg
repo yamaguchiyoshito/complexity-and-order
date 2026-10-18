@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+<title id="title">答えを直すことと、選び方を変えることは違う</title>
+<desc id="desc">同じ迷路で経路を直す図と、迷路の区切り方そのものを変える図</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#566773" stroke-width="1.4"/></marker></defs>
+<rect width="1200" height="620" rx="20" fill="#f8f7f2"/>
+<g font-family="system-ui, Noto Sans CJK JP, Hiragino Kaku Gothic ProN, Meiryo, sans-serif">
+<text x="50" y="52" fill="#087f83" font-size="18" text-anchor="start" font-weight="700">COMPLEXITY / ORDER     14</text>
+<text x="50" y="103" fill="#182e3a" font-size="34" text-anchor="start" font-weight="700">答えを直すことと、選び方を変えることは違う</text>
+<text x="50" y="141" fill="#566773" font-size="21" text-anchor="start" font-weight="400">同じ迷路で経路を直す図と、迷路の区切り方そのものを変える図</text>
+<line x1="50.0" y1="166.0" x2="1150.0" y2="166.0" stroke="#d5dedc" stroke-width="1"/>
+<rect x="70" y="200" width="510" height="330" rx="16" fill="none" stroke="#cad5d3" stroke-width="2" stroke-dasharray="7 7"/>
+<text x="90" y="232" fill="#182e3a" font-size="20" text-anchor="start" font-weight="700">経路を直す：与えられた区切りの中で答えを変える</text>
+<line x1="130.0" y1="270.0" x2="130.0" y2="450.0" stroke="#cad5d3" stroke-width="1.5"/>
+<line x1="220.0" y1="270.0" x2="220.0" y2="450.0" stroke="#cad5d3" stroke-width="1.5"/>
+<line x1="310.0" y1="270.0" x2="310.0" y2="450.0" stroke="#cad5d3" stroke-width="1.5"/>
+<line x1="400.0" y1="270.0" x2="400.0" y2="450.0" stroke="#cad5d3" stroke-width="1.5"/>
+<line x1="490.0" y1="270.0" x2="490.0" y2="450.0" stroke="#cad5d3" stroke-width="1.5"/>
+<line x1="130.0" y1="270.0" x2="490.0" y2="270.0" stroke="#cad5d3" stroke-width="1.5"/>
+<line x1="130.0" y1="360.0" x2="490.0" y2="360.0" stroke="#cad5d3" stroke-width="1.5"/>
+<line x1="130.0" y1="450.0" x2="490.0" y2="450.0" stroke="#cad5d3" stroke-width="1.5"/>
+<text x="138" y="476" fill="#566773" font-size="16" text-anchor="start" font-weight="400">入口</text>
+<text x="482" y="262" fill="#566773" font-size="16" text-anchor="end" font-weight="400">出口</text>
+<line x1="310.0" y1="270.0" x2="310.0" y2="360.0" stroke="#182e3a" stroke-width="4"/>
+<line x1="400.0" y1="360.0" x2="400.0" y2="450.0" stroke="#182e3a" stroke-width="4"/>
+<path d="M175.0,405.0 L175.0,315.0 L280.0,315.0" fill="none" stroke="#566773" stroke-width="2.5" stroke-dasharray="8 7"/>
+<text x="230" y="300" fill="#566773" font-size="15" text-anchor="middle" font-weight="400">行き止まり</text>
+<path d="M175.0,405.0 L355.0,405.0 L355.0,315.0 L445.0,315.0" fill="none" stroke="#b95130" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="265" y="430" fill="#b95130" font-size="15" text-anchor="middle" font-weight="400">直した経路</text>
+<rect x="620" y="200" width="510" height="330" rx="16" fill="none" stroke="#cad5d3" stroke-width="2" stroke-dasharray="7 7"/>
+<text x="640" y="232" fill="#182e3a" font-size="20" text-anchor="start" font-weight="700">区切り方を変える：選択肢の組み立て方を変える</text>
+<line x1="680.0" y1="270.0" x2="680.0" y2="450.0" stroke="#cad5d3" stroke-width="1.5"/>
+<line x1="770.0" y1="270.0" x2="770.0" y2="450.0" stroke="#cad5d3" stroke-width="1.5"/>
+<line x1="860.0" y1="270.0" x2="860.0" y2="450.0" stroke="#cad5d3" stroke-width="1.5"/>
+<line x1="950.0" y1="270.0" x2="950.0" y2="450.0" stroke="#cad5d3" stroke-width="1.5"/>
+<line x1="1040.0" y1="270.0" x2="1040.0" y2="450.0" stroke="#cad5d3" stroke-width="1.5"/>
+<line x1="680.0" y1="270.0" x2="1040.0" y2="270.0" stroke="#cad5d3" stroke-width="1.5"/>
+<line x1="680.0" y1="360.0" x2="1040.0" y2="360.0" stroke="#cad5d3" stroke-width="1.5"/>
+<line x1="680.0" y1="450.0" x2="1040.0" y2="450.0" stroke="#cad5d3" stroke-width="1.5"/>
+<text x="688" y="476" fill="#566773" font-size="16" text-anchor="start" font-weight="400">入口</text>
+<text x="1032" y="262" fill="#566773" font-size="16" text-anchor="end" font-weight="400">出口</text>
+<line x1="950.0" y1="360.0" x2="950.0" y2="450.0" stroke="#182e3a" stroke-width="4"/>
+<line x1="860.0" y1="270.0" x2="860.0" y2="360.0" stroke="#b95130" stroke-width="4" stroke-dasharray="8 7"/>
+<text x="868" y="382" fill="#b95130" font-size="15" text-anchor="start" font-weight="400">区切りを引き直す</text>
+<path d="M725.0,405.0 L725.0,315.0 L995.0,315.0" fill="none" stroke="#b95130" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="325" y="560" fill="#087f83" font-size="22" text-anchor="middle" font-weight="700">学習Ⅰ</text>
+<text x="875" y="560" fill="#087f83" font-size="22" text-anchor="middle" font-weight="700">学習Ⅱ</text>
+<text x="50" y="592" fill="#566773" font-size="19" text-anchor="start" font-weight="400">概念図。ベイトソンの論理階型の装置を再現したものではなく、本連載の類比である。</text>
+</g>
+</svg>

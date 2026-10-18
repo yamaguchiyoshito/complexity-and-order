@@ -291,6 +291,51 @@
         "pask",
         "manning"
       ]
+    },
+    {
+      "number": 14,
+      "cour": 2,
+      "part": "Ⅰ",
+      "slug": "learning-levels",
+      "title": "答えを直しているかぎり、解けない問題がある",
+      "subtitle": "ベイトソンの学習階層と、学び方を学ぶこと",
+      "summary": "与えられた選択肢の中で答えを直すことと、選択肢の組み立て方を変えることを分ける。",
+      "path": "chapters/14-learning-levels.md",
+      "figure": "assets/illustrations/14-learning-levels.svg",
+      "figures": [],
+      "sources": [
+        "bateson"
+      ]
+    },
+    {
+      "number": 15,
+      "cour": 2,
+      "part": "Ⅰ",
+      "slug": "information-bottleneck",
+      "title": "情報を減らしたら、判断できるようになった",
+      "subtitle": "情報ボトルネックと、何を残すかという設計",
+      "summary": "入力の情報量を抑えながら目的に必要な区別を残す圧縮として、要約を設計する。",
+      "path": "chapters/15-information-bottleneck.md",
+      "figure": "assets/illustrations/15-information-bottleneck.svg",
+      "figures": [],
+      "sources": [
+        "tishby"
+      ]
+    },
+    {
+      "number": 16,
+      "cour": 2,
+      "part": "Ⅰ",
+      "slug": "causal-emergence",
+      "title": "細かく見れば、原因が分かるとは限らない",
+      "subtitle": "粗視化と因果創発――説明に適した階層を選ぶ",
+      "summary": "原因を記述する粒度を、管理のためだけでなく説明の有効性で選ぶ。",
+      "path": "chapters/16-causal-emergence.md",
+      "figure": "assets/illustrations/16-causal-emergence.svg",
+      "figures": [],
+      "sources": [
+        "hoel"
+      ]
     }
   ]
 }
