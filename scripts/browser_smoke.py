@@ -43,11 +43,9 @@ def main()->int:
             page.set_viewport_size({'width':width,'height':height})
             for path in sorted((ROOT/'_site/chapters').glob('*.html')):
                 show(page,path)
-                if width<500:page.locator('aside details').evaluate('(e)=>e.open=false')
                 state=page.evaluate('''()=>({math:document.querySelectorAll('math').length,brokenImages:[...document.images].filter(e=>!e.complete||!e.naturalWidth).length,overflow:document.documentElement.scrollWidth>innerWidth+1})''')
                 rows.append({'file':path.name,'width':width,**state})
             show(page,ROOT/'_site/chapters/01-complexity-hierarchy.html')
-            if width<500:page.locator('aside details').evaluate('(e)=>e.open=false')
             page.screenshot(path=str(args.output/f'reader-{width}.png'))
         show(page,ROOT/'_site/complete.html')
         rows.append({'file':'complete.html','width':390,**page.evaluate('''()=>({math:document.querySelectorAll('math').length,brokenImages:[...document.images].filter(e=>!e.complete||!e.naturalWidth).length,overflow:document.documentElement.scrollWidth>innerWidth+1})''')})

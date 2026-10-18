@@ -73,9 +73,11 @@ def wrap_page(title: str, body: str, source: Path, series: dict, css: str) -> st
 <meta name="color-scheme" content="light dark"><title>{html.escape(title)} | 複雑さと秩序</title>
 <style>{css}</style></head><body>
 <a class="skip" href="#main">本文へ移動</a>
-<header class="topbar"><a href="{root_link}index.html" class="brand">複雑さと秩序<span>COMPLEXITY / ORDER</span></a><a href="{root_link}guides/READING.html">読み方</a></header>
-<div class="layout"><aside><input type="checkbox" id="toc-pin" class="toc-pin" aria-label="目次を固定して開く"><label class="toc-rail" for="toc-pin" title="目次（ホバーで開く／クリックで固定）"><svg viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 5h14M3 10h14M3 15h14"/></svg>連載の目次</label><div class="toc-panel"><div class="toc-card"><div class="toc-head"><label class="toc-pinlabel" for="toc-pin"><span class="when-off">固定して開く</span><span class="when-on">固定を解除</span></label></div><details open><summary>全12回の連載</summary><nav aria-label="連載の目次">{''.join(links)}</nav></details><p class="side-note">必要な複雑さを持ち、そのすべてを、すべての参加者へ負わせない。</p><a href="{root_link}references/bibliography.html">文献と確認範囲</a></div></div></aside>
-<main id="main" tabindex="-1"><article>{body}</article><footer>全12回 / 第1版 — 本文はMarkdown、挿絵はSVG、数式はMathML。<br>理論・説明用モデル・工学的応用を区別して読む。</footer></main></div></body></html>'''
+<input type="checkbox" id="toc-state" class="toc-state" aria-label="目次を開く">
+<header class="topbar"><a href="{root_link}index.html" class="brand">複雑さと秩序<span>COMPLEXITY / ORDER</span></a><div class="topbar-actions"><a href="{root_link}guides/READING.html">読み方</a><label class="toc-toggle" for="toc-state"><svg viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 5h14M3 10h14M3 15h14"/></svg>目次</label></div></header>
+<label class="toc-backdrop" for="toc-state" aria-hidden="true"></label>
+<aside class="toc-drawer" aria-label="連載の目次"><div class="toc-drawer-head"><strong>全12回の連載</strong><label class="toc-close" for="toc-state" title="閉じる"><svg viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l10 10M15 5L5 15"/></svg></label></div><nav aria-label="連載の目次">{''.join(links)}</nav><div class="toc-drawer-foot"><p>必要な複雑さを持ち、そのすべてを、すべての参加者へ負わせない。</p><a href="{root_link}references/bibliography.html">文献と確認範囲</a></div></aside>
+<div class="layout"><main id="main" tabindex="-1"><article>{body}</article><footer>全12回 / 第1版 — 本文はMarkdown、挿絵はSVG、数式はMathML。<br>理論・説明用モデル・工学的応用を区別して読む。</footer></main></div></body></html>'''
 
 
 def make_book(series: dict, css: str, dest: Path) -> None:
