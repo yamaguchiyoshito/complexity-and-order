@@ -18,6 +18,8 @@
 | `scripts/check_html.py` | HTMLの相対リンク・アンカー・MathML・外部依存を検査 | 生成後に実行する |
 | `tests/` | 検査・変換の回帰試験 | 成功例と失敗例を両方持つ |
 | `scripts/publish.py` | 新規GitHubリポジトリ作成の補助 | 既存リポジトリには使わない |
+| `scripts/rhythm_report.py` | 文のリズムの計測（[文体の規則](STYLE.md)） | 合否判定には使わない |
+| `scripts/manuscript_invariants.py` | 改稿前後で数式・数値・脚注・図が不変かの検査 | 文体改稿のたびに実行する |
 | `_site/` | ブラウザ用生成物 | 直接編集せず再生成する |
 
 ## 変更の最小手順

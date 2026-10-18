@@ -53,7 +53,7 @@ GitHub管理対象はMarkdownとSVGなどの原本である。`_site/` は生成
 
 ## 編集・保守・公開
 
-[編集ガイド](guides/EDITING.md)には原本の責務、SVG・数式・出典の編集規則をまとめた。[GitHub登録・Pages公開手順](guides/PUBLISHING.md)には非公開リポジトリ作成用コマンドと公開時の注意を示す。[編集方針と検証範囲](guides/EDITORIAL.md)では、会話からの再編集、理論と応用の区別、出典確認の限界を記載する。
+[編集ガイド](guides/EDITING.md)には原本の責務、SVG・数式・出典の編集規則をまとめた。[文体の規則](guides/STYLE.md)には本文の文のリズムと留保の置き方をまとめた。[GitHub登録・Pages公開手順](guides/PUBLISHING.md)には非公開リポジトリ作成用コマンドと公開時の注意を示す。[編集方針と検証範囲](guides/EDITORIAL.md)では、会話からの再編集、理論と応用の区別、出典確認の限界を記載する。
 
 ## 原典へ戻る
 

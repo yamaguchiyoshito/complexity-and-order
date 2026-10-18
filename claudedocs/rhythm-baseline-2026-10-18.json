@@ -1,0 +1,569 @@
+{
+ "ref": "HEAD 6edb5c8 (改稿前)",
+ "chapters": {
+  "01-complexity-hierarchy.md": {
+   "sentences": 60,
+   "mean_length": 27.6,
+   "short_le15": 7,
+   "mid_25_45": 35,
+   "long_ge60": 0,
+   "longest": 53,
+   "shortest": 8,
+   "comma0_pct": 27,
+   "commas_ge3": 2,
+   "max_same_ending_run": 3,
+   "max_subject_start_run": 3,
+   "max_mid_length_run": 9,
+   "questions": 6,
+   "paragraphs": 18,
+   "one_sentence_paragraphs": 0,
+   "top_endings": [
+    [
+     "である",
+     12
+    ],
+    [
+     "ない",
+     7
+    ],
+    [
+     "る",
+     7
+    ],
+    [
+     "ではない",
+     7
+    ]
+   ],
+   "hedges": {
+    "ではない": 7,
+    "とは限らない": 0,
+    "てはいけない": 1,
+    "区別": 1,
+    "違う": 3,
+    "本連載/本稿": 2,
+    "説明用/公式ではない": 0,
+    "必要がある/べき": 3,
+    "太字文": 1,
+    "次回は": 1
+   }
+  },
+  "02-general-system-theory.md": {
+   "sentences": 57,
+   "mean_length": 26.9,
+   "short_le15": 9,
+   "mid_25_45": 35,
+   "long_ge60": 0,
+   "longest": 48,
+   "shortest": 10,
+   "comma0_pct": 19,
+   "commas_ge3": 2,
+   "max_same_ending_run": 2,
+   "max_subject_start_run": 5,
+   "max_mid_length_run": 4,
+   "questions": 4,
+   "paragraphs": 18,
+   "one_sentence_paragraphs": 1,
+   "top_endings": [
+    [
+     "である",
+     9
+    ],
+    [
+     "ではない",
+     8
+    ],
+    [
+     "る",
+     7
+    ],
+    [
+     "ない",
+     5
+    ]
+   ],
+   "hedges": {
+    "ではない": 9,
+    "とは限らない": 0,
+    "てはいけない": 0,
+    "区別": 3,
+    "違う": 0,
+    "本連載/本稿": 1,
+    "説明用/公式ではない": 2,
+    "必要がある/べき": 3,
+    "太字文": 1,
+    "次回は": 1
+   }
+  },
+  "03-dissipative-structures.md": {
+   "sentences": 46,
+   "mean_length": 30.0,
+   "short_le15": 3,
+   "mid_25_45": 25,
+   "long_ge60": 0,
+   "longest": 58,
+   "shortest": 8,
+   "comma0_pct": 17,
+   "commas_ge3": 6,
+   "max_same_ending_run": 2,
+   "max_subject_start_run": 2,
+   "max_mid_length_run": 4,
+   "questions": 1,
+   "paragraphs": 17,
+   "one_sentence_paragraphs": 1,
+   "top_endings": [
+    [
+     "る",
+     10
+    ],
+    [
+     "である",
+     9
+    ],
+    [
+     "ない",
+     6
+    ],
+    [
+     "う",
+     4
+    ]
+   ],
+   "hedges": {
+    "ではない": 4,
+    "とは限らない": 0,
+    "てはいけない": 1,
+    "区別": 1,
+    "違う": 1,
+    "本連載/本稿": 0,
+    "説明用/公式ではない": 1,
+    "必要がある/べき": 3,
+    "太字文": 1,
+    "次回は": 1
+   }
+  },
+  "04-synergetics.md": {
+   "sentences": 46,
+   "mean_length": 28.3,
+   "short_le15": 5,
+   "mid_25_45": 28,
+   "long_ge60": 0,
+   "longest": 47,
+   "shortest": 9,
+   "comma0_pct": 20,
+   "commas_ge3": 3,
+   "max_same_ending_run": 3,
+   "max_subject_start_run": 2,
+   "max_mid_length_run": 6,
+   "questions": 0,
+   "paragraphs": 17,
+   "one_sentence_paragraphs": 2,
+   "top_endings": [
+    [
+     "る",
+     8
+    ],
+    [
+     "ではない",
+     7
+    ],
+    [
+     "う",
+     6
+    ],
+    [
+     "ない",
+     5
+    ]
+   ],
+   "hedges": {
+    "ではない": 7,
+    "とは限らない": 1,
+    "てはいけない": 1,
+    "区別": 2,
+    "違う": 4,
+    "本連載/本稿": 1,
+    "説明用/公式ではない": 0,
+    "必要がある/べき": 1,
+    "太字文": 1,
+    "次回は": 1
+   }
+  },
+  "05-autopoiesis.md": {
+   "sentences": 53,
+   "mean_length": 29.9,
+   "short_le15": 6,
+   "mid_25_45": 29,
+   "long_ge60": 1,
+   "longest": 62,
+   "shortest": 11,
+   "comma0_pct": 23,
+   "commas_ge3": 4,
+   "max_same_ending_run": 3,
+   "max_subject_start_run": 2,
+   "max_mid_length_run": 5,
+   "questions": 5,
+   "paragraphs": 18,
+   "one_sentence_paragraphs": 2,
+   "top_endings": [
+    [
+     "る",
+     9
+    ],
+    [
+     "ではない",
+     7
+    ],
+    [
+     "ない",
+     6
+    ],
+    [
+     "である",
+     6
+    ]
+   ],
+   "hedges": {
+    "ではない": 7,
+    "とは限らない": 2,
+    "てはいけない": 0,
+    "区別": 1,
+    "違う": 3,
+    "本連載/本稿": 3,
+    "説明用/公式ではない": 2,
+    "必要がある/べき": 2,
+    "太字文": 1,
+    "次回は": 1
+   }
+  },
+  "06-kauffman.md": {
+   "sentences": 48,
+   "mean_length": 31.2,
+   "short_le15": 4,
+   "mid_25_45": 24,
+   "long_ge60": 1,
+   "longest": 77,
+   "shortest": 9,
+   "comma0_pct": 19,
+   "commas_ge3": 3,
+   "max_same_ending_run": 3,
+   "max_subject_start_run": 4,
+   "max_mid_length_run": 6,
+   "questions": 1,
+   "paragraphs": 17,
+   "one_sentence_paragraphs": 3,
+   "top_endings": [
+    [
+     "る",
+     12
+    ],
+    [
+     "である",
+     9
+    ],
+    [
+     "ない",
+     5
+    ],
+    [
+     "ある",
+     5
+    ]
+   ],
+   "hedges": {
+    "ではない": 2,
+    "とは限らない": 0,
+    "てはいけない": 1,
+    "区別": 1,
+    "違う": 0,
+    "本連載/本稿": 0,
+    "説明用/公式ではない": 0,
+    "必要がある/べき": 0,
+    "太字文": 1,
+    "次回は": 1
+   }
+  },
+  "07-strange-loops.md": {
+   "sentences": 53,
+   "mean_length": 28.7,
+   "short_le15": 8,
+   "mid_25_45": 23,
+   "long_ge60": 0,
+   "longest": 59,
+   "shortest": 7,
+   "comma0_pct": 28,
+   "commas_ge3": 4,
+   "max_same_ending_run": 3,
+   "max_subject_start_run": 3,
+   "max_mid_length_run": 5,
+   "questions": 3,
+   "paragraphs": 19,
+   "one_sentence_paragraphs": 3,
+   "top_endings": [
+    [
+     "である",
+     16
+    ],
+    [
+     "ない",
+     8
+    ],
+    [
+     "る",
+     5
+    ],
+    [
+     "ではない",
+     4
+    ]
+   ],
+   "hedges": {
+    "ではない": 4,
+    "とは限らない": 2,
+    "てはいけない": 0,
+    "区別": 2,
+    "違う": 2,
+    "本連載/本稿": 3,
+    "説明用/公式ではない": 0,
+    "必要がある/べき": 1,
+    "太字文": 1,
+    "次回は": 1
+   }
+  },
+  "08-active-inference.md": {
+   "sentences": 49,
+   "mean_length": 30.6,
+   "short_le15": 3,
+   "mid_25_45": 26,
+   "long_ge60": 1,
+   "longest": 68,
+   "shortest": 8,
+   "comma0_pct": 12,
+   "commas_ge3": 5,
+   "max_same_ending_run": 2,
+   "max_subject_start_run": 2,
+   "max_mid_length_run": 4,
+   "questions": 1,
+   "paragraphs": 20,
+   "one_sentence_paragraphs": 2,
+   "top_endings": [
+    [
+     "る",
+     9
+    ],
+    [
+     "ない",
+     8
+    ],
+    [
+     "である",
+     7
+    ],
+    [
+     "ある",
+     5
+    ]
+   ],
+   "hedges": {
+    "ではない": 3,
+    "とは限らない": 2,
+    "てはいけない": 1,
+    "区別": 0,
+    "違う": 1,
+    "本連載/本稿": 0,
+    "説明用/公式ではない": 1,
+    "必要がある/べき": 1,
+    "太字文": 1,
+    "次回は": 1
+   }
+  },
+  "09-requisite-variety.md": {
+   "sentences": 58,
+   "mean_length": 29.8,
+   "short_le15": 7,
+   "mid_25_45": 35,
+   "long_ge60": 0,
+   "longest": 50,
+   "shortest": 12,
+   "comma0_pct": 26,
+   "commas_ge3": 2,
+   "max_same_ending_run": 4,
+   "max_subject_start_run": 4,
+   "max_mid_length_run": 5,
+   "questions": 2,
+   "paragraphs": 21,
+   "one_sentence_paragraphs": 2,
+   "top_endings": [
+    [
+     "る",
+     15
+    ],
+    [
+     "ない",
+     9
+    ],
+    [
+     "なる",
+     7
+    ],
+    [
+     "である",
+     7
+    ]
+   ],
+   "hedges": {
+    "ではない": 3,
+    "とは限らない": 0,
+    "てはいけない": 2,
+    "区別": 4,
+    "違う": 1,
+    "本連載/本稿": 1,
+    "説明用/公式ではない": 0,
+    "必要がある/べき": 2,
+    "太字文": 3,
+    "次回は": 1
+   }
+  },
+  "10-viable-system-model.md": {
+   "sentences": 54,
+   "mean_length": 32.7,
+   "short_le15": 3,
+   "mid_25_45": 33,
+   "long_ge60": 2,
+   "longest": 74,
+   "shortest": 11,
+   "comma0_pct": 13,
+   "commas_ge3": 7,
+   "max_same_ending_run": 2,
+   "max_subject_start_run": 7,
+   "max_mid_length_run": 6,
+   "questions": 3,
+   "paragraphs": 21,
+   "one_sentence_paragraphs": 1,
+   "top_endings": [
+    [
+     "る",
+     10
+    ],
+    [
+     "である",
+     8
+    ],
+    [
+     "ない",
+     7
+    ],
+    [
+     "なる",
+     5
+    ]
+   ],
+   "hedges": {
+    "ではない": 5,
+    "とは限らない": 1,
+    "てはいけない": 1,
+    "区別": 0,
+    "違う": 1,
+    "本連載/本稿": 0,
+    "説明用/公式ではない": 0,
+    "必要がある/べき": 1,
+    "太字文": 1,
+    "次回は": 1
+   }
+  },
+  "11-second-order-cybernetics.md": {
+   "sentences": 56,
+   "mean_length": 31.7,
+   "short_le15": 3,
+   "mid_25_45": 37,
+   "long_ge60": 1,
+   "longest": 63,
+   "shortest": 10,
+   "comma0_pct": 18,
+   "commas_ge3": 5,
+   "max_same_ending_run": 3,
+   "max_subject_start_run": 2,
+   "max_mid_length_run": 6,
+   "questions": 1,
+   "paragraphs": 23,
+   "one_sentence_paragraphs": 2,
+   "top_endings": [
+    [
+     "る",
+     13
+    ],
+    [
+     "ない",
+     11
+    ],
+    [
+     "である",
+     7
+    ],
+    [
+     "ではない",
+     5
+    ]
+   ],
+   "hedges": {
+    "ではない": 5,
+    "とは限らない": 2,
+    "てはいけない": 0,
+    "区別": 3,
+    "違う": 2,
+    "本連載/本稿": 2,
+    "説明用/公式ではない": 2,
+    "必要がある/べき": 4,
+    "太字文": 1,
+    "次回は": 0
+   }
+  },
+  "12-complexity-and-order.md": {
+   "sentences": 161,
+   "mean_length": 30.2,
+   "short_le15": 13,
+   "mid_25_45": 87,
+   "long_ge60": 3,
+   "longest": 72,
+   "shortest": 7,
+   "comma0_pct": 7,
+   "commas_ge3": 12,
+   "max_same_ending_run": 5,
+   "max_subject_start_run": 3,
+   "max_mid_length_run": 7,
+   "questions": 3,
+   "paragraphs": 74,
+   "one_sentence_paragraphs": 15,
+   "top_endings": [
+    [
+     "る",
+     38
+    ],
+    [
+     "ではない",
+     22
+    ],
+    [
+     "ない",
+     13
+    ],
+    [
+     "である",
+     13
+    ]
+   ],
+   "hedges": {
+    "ではない": 23,
+    "とは限らない": 1,
+    "てはいけない": 1,
+    "区別": 4,
+    "違う": 6,
+    "本連載/本稿": 3,
+    "説明用/公式ではない": 0,
+    "必要がある/べき": 4,
+    "太字文": 6,
+    "次回は": 0
+   }
+  }
+ }
+}
