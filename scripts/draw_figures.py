@@ -227,6 +227,33 @@ def figure_12_2(name):
     f.save(name)
 
 
+def figure_cover_2(name):
+    """第2クールの表紙: 成立した秩序を学習・変化・継承させる三つの部。"""
+    f=Figure('13–24','成立させる、から。更新する、へ。','秩序は、どう変わり続けるのか ― 第13〜24回の連載',660)
+    # Ⅰ 意味と学習: two observers reconstruct the same document differently and exchange
+    f.box(80,250,110,70,'A');f.box(300,250,110,70,'B',color=ORANGE)
+    rect(f,200,355,90,56,MUTED);f.text(245,390,'文書',20,MUTED,anchor='middle')
+    f.line(190,285,300,285,arrow=True);f.line(300,300,190,300,arrow=True)
+    f.line(135,320,215,355,color=MUTED);f.line(355,320,275,355,color=MUTED)
+    f.text(245,500,'意味と学習',28,anchor='middle',weight=700)
+    f.line(440,350,520,350,arrow=True)
+    # Ⅱ 硬直と崩壊: a thick, rigid block with a thin side
+    f.parts.append('<rect x="560" y="250" width="200" height="130" rx="14" fill="#ffffff" stroke="#087f83" stroke-width="8"/>')
+    f.parts.append('<rect x="560" y="250" width="200" height="130" rx="14" fill="none" stroke="#b95130" stroke-width="2" stroke-dasharray="7 6"/>')
+    f.line(760,315,830,315,color=ORANGE,width=2.5,arrow=True);f.text(835,321,'想定外',18,ORANGE)
+    f.text(660,500,'硬直と崩壊',28,anchor='middle',weight=700)
+    f.line(900,350,980,350,arrow=True)
+    # Ⅲ 再編成と継承: nested units carried forward
+    for i,(x,y) in enumerate([(1010,245),(1010,330)]):rect(f,x,y,120,60,TEAL if i==0 else MUTED,dash=i==1)
+    f.circ(1040,275,8);f.circ(1070,275,8);f.circ(1100,275,8)
+    ring(f,1040,360,8);f.circ(1070,360,8);ring(f,1100,360,8)
+    f.line(1070,305,1070,330,arrow=True)
+    f.text(1070,500,'再編成と継承',28,anchor='middle',weight=700)
+    f.footer('第1クールの結論を裏返す。秩序は可能性を開くと同時に閉じる。何を残し、何を変えるかを決め直す。')
+    f.save(name)
+
+
+COVERS={2:figure_cover_2}
 EXTRA_FIGURES={'3-2':figure_3_2,'6-2':figure_6_2,'4-2':figure_4_2,'2-2':figure_2_2,'1-2':figure_1_2,'12-2':figure_12_2}
 
 
@@ -248,6 +275,8 @@ def main():
     f.text(995,525,'自律と自己観測',28,anchor='middle',weight=700)
     f.footer('原典の理論・説明用モデル・工学的な応用を区別して読む。')
     f.save('00-cover.svg')
+    for k in json.loads((ROOT/'series.json').read_text())['cours']:
+        if k['number']>=2:COVERS[k['number']](Path(k['cover']).name)
 
     f=Figure(1,'数が同じでも、関係の増え方は違う','12要素を、全結合と局所接続で比較する')
     network(f,290,360,12,145)
@@ -408,6 +437,7 @@ def main():
     for c in chapters:
         for fig in c.get('figures',[]):
             EXTRA_FIGURES[fig['label']](Path(fig['path']).name);extra+=1
-    print(f'Generated {len(chapters)+1+extra} SVG files in {OUT}')
+    covers=len(json.loads((ROOT/'series.json').read_text())['cours'])
+    print(f'Generated {len(chapters)+covers+extra} SVG files in {OUT}')
 
 if __name__=='__main__':main()

@@ -16,9 +16,9 @@ class RepositoryTests(unittest.TestCase):
     def test_entire_repository(self):
         result,errors=validate()
         self.assertEqual(errors,[])
-        self.assertEqual(result.chapters,12)
         series=json.loads((ROOT/'series.json').read_text(encoding='utf-8'))
-        self.assertEqual(result.svg_files,1+12+sum(len(c.get('figures',[])) for c in series['chapters']))
+        self.assertEqual(result.chapters,len(series['chapters']))
+        self.assertEqual(result.svg_files,len(series['cours'])+len(series['chapters'])+sum(len(c.get('figures',[])) for c in series['chapters']))
         self.assertGreater(result.display_math,15)
 
     def test_math_becomes_native_mathml(self):
@@ -37,7 +37,7 @@ class RepositoryTests(unittest.TestCase):
         self.assertEqual(site_index_text(text),'# T\n\n本文\n')
         self.assertEqual(site_index_text('# T\n\n本文\n'),'# T\n\n本文\n')
         readme=(ROOT/'README.md').read_text(encoding='utf-8')
-        self.assertIn('## 全12回の目次',site_index_text(readme))
+        self.assertIn('## 第1クール',site_index_text(readme))
         self.assertNotIn('## GitHubで読む',site_index_text(readme))
 
     def test_figure_section_check(self):
@@ -92,7 +92,7 @@ class RepositoryTests(unittest.TestCase):
 
     def test_chapter_ids_and_sources_are_unique(self):
         data=json.loads((ROOT/'series.json').read_text())
-        self.assertEqual(len(set(c['slug'] for c in data['chapters'])),12)
+        self.assertEqual(len(set(c['slug'] for c in data['chapters'])),len(data['chapters']))
         for c in data['chapters']:
             self.assertEqual(len(c['sources']),len(set(c['sources'])))
 

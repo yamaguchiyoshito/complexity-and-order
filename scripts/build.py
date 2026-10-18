@@ -72,9 +72,19 @@ def wrap_page(title: str, body: str, source: Path, series: dict, css: str) -> st
     depth = len(source.parent.parts)
     root_link = '../' * depth
     links = []
-    for c in series['chapters']:
+    def link(c: dict) -> str:
         current = source.as_posix() == c['path']
-        links.append(f'<a class="chapter-link{" current" if current else ""}" href="{root_link}{map_url(c["path"])}"'+(' aria-current="page"' if current else '')+f'><span>{c["number"]:02d}</span>{html.escape(c["title"])}</a>')
+        return f'<a class="chapter-link{" current" if current else ""}" href="{root_link}{map_url(c["path"])}"'+(' aria-current="page"' if current else '')+f'><span>{c["number"]:02d}</span>{html.escape(c["title"])}</a>'
+    for k in series.get('cours', []):
+        lo, hi = k['chapters']
+        members = [c for c in series['chapters'] if lo <= c['number'] <= hi]
+        if not members: continue
+        links.append(f'<div class="toc-cour">第{k["number"]}クール　{html.escape(k["title"])}</div>')
+        for c in members:
+            for part in k.get('parts', []):
+                if c['number'] == part['chapters'][0]: links.append(f'<div class="toc-part">{html.escape(part["label"])}　{html.escape(part["title"])}</div>')
+            links.append(link(c))
+    footer_label = f'全{len(series["chapters"])}回 / 第{str(series.get("version", "1")).split(".")[0]}版'
     return f'''<!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light dark"><title>{html.escape(title)} | 複雑さと秩序</title>
@@ -83,14 +93,16 @@ def wrap_page(title: str, body: str, source: Path, series: dict, css: str) -> st
 <input type="checkbox" id="toc-state" class="toc-state" aria-label="目次を開く">
 <header class="topbar"><a href="{root_link}index.html" class="brand">複雑さと秩序<span>COMPLEXITY / ORDER</span></a><div class="topbar-actions"><a href="{root_link}guides/READING.html">読み方</a><label class="toc-toggle" for="toc-state"><svg viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 5h14M3 10h14M3 15h14"/></svg>目次</label></div></header>
 <label class="toc-backdrop" for="toc-state" aria-hidden="true"></label>
-<aside class="toc-drawer" aria-label="連載の目次"><div class="toc-drawer-head"><strong>全12回の連載</strong><label class="toc-close" for="toc-state" title="閉じる"><svg viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l10 10M15 5L5 15"/></svg></label></div><nav aria-label="連載の目次">{''.join(links)}</nav><div class="toc-drawer-foot"><p>必要な複雑さを持ち、そのすべてを、すべての参加者へ負わせない。</p><a href="{root_link}references/bibliography.html">文献と確認範囲</a></div></aside>
-<div class="layout"><main id="main" tabindex="-1"><article>{body}</article><footer>全12回 / 第1版 — 本文はMarkdown、挿絵はSVG、数式はMathML。<br>理論・説明用モデル・工学的応用を区別して読む。</footer></main></div></body></html>'''
+<aside class="toc-drawer" aria-label="連載の目次"><div class="toc-drawer-head"><strong>連載の目次</strong><label class="toc-close" for="toc-state" title="閉じる"><svg viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l10 10M15 5L5 15"/></svg></label></div><nav aria-label="連載の目次">{''.join(links)}</nav><div class="toc-drawer-foot"><p>必要な複雑さを持ち、そのすべてを、すべての参加者へ負わせない。</p><a href="{root_link}references/bibliography.html">文献と確認範囲</a></div></aside>
+<div class="layout"><main id="main" tabindex="-1"><article>{body}</article><footer>{footer_label} — 本文はMarkdown、挿絵はSVG、数式はMathML。<br>理論・説明用モデル・工学的応用を区別して読む。</footer></main></div></body></html>'''
 
 
-def make_book(series: dict, css: str, dest: Path) -> None:
-    paths = {str((ROOT/c['path']).resolve()): f'#chapter-{c["number"]:02d}' for c in series['chapters']}
+def make_book(series: dict, css: str, dest: Path, cour: dict) -> None:
+    lo, hi = cour['chapters']
+    chapters = [c for c in series['chapters'] if lo <= c['number'] <= hi]
+    paths = {str((ROOT/c['path']).resolve()): f'#chapter-{c["number"]:02d}' for c in chapters}
     pieces = []
-    for c in series['chapters']:
+    for c in chapters:
         source = ROOT/c['path']
         body = render(source.read_text(encoding='utf-8'), prefix=f'c{c["number"]:02d}-')
         def rewrite(match: re.Match) -> str:
@@ -108,8 +120,9 @@ def make_book(series: dict, css: str, dest: Path) -> None:
             return match.group(0)
         body = re.sub(r'(href|src)="([^"]*)"', rewrite, body)
         pieces.append(f'<section class="book-chapter" id="chapter-{c["number"]:02d}">{body}</section>')
-    toc = ''.join(f'<li><a href="#chapter-{c["number"]:02d}">第{c["number"]}回　{html.escape(c["title"])}</a></li>' for c in series['chapters'])
-    doc = f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>複雑さと秩序 — 全12回</title><style>{css}\n.book{{max-width:860px;margin:auto;padding:32px 24px}}.book-chapter{{padding-top:55px;margin-top:65px;border-top:2px solid var(--line)}}@media print{{.book-chapter{{break-before:page}}}}</style></head><body><main class="book"><section id="book-contents"><p class="eyebrow">COMPLEXITY / ORDER — COMPLETE SERIES</p><h1>複雑さと秩序</h1><h2>階層・自己組織化・自律性をめぐる全12回</h2><p>このファイルは外部通信なしで閲覧できる。数式はネイティブMathML、挿絵は埋め込みSVGで表示する。</p><ol>{toc}</ol></section>{''.join(pieces)}</main></body></html>'''
+    toc = ''.join(f'<li><a href="#chapter-{c["number"]:02d}">第{c["number"]}回　{html.escape(c["title"])}</a></li>' for c in chapters)
+    heading = f'第{cour["number"]}クール　{html.escape(cour["title"])}（第{lo}〜{hi}回）'
+    doc = f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>複雑さと秩序 — {heading}</title><style>{css}\n.book{{max-width:860px;margin:auto;padding:32px 24px}}.book-chapter{{padding-top:55px;margin-top:65px;border-top:2px solid var(--line)}}@media print{{.book-chapter{{break-before:page}}}}</style></head><body><main class="book"><section id="book-contents"><p class="eyebrow">COMPLEXITY / ORDER — COMPLETE SERIES</p><h1>複雑さと秩序</h1><h2>{heading}</h2><p>このファイルは外部通信なしで閲覧できる。数式はネイティブMathML、挿絵は埋め込みSVGで表示する。</p><ol>{toc}</ol></section>{''.join(pieces)}</main></body></html>'''
     dest.write_text(doc, encoding='utf-8')
 
 
@@ -137,8 +150,13 @@ def build(output: Path) -> dict:
     for p in [ROOT/'series.json', ROOT/'references/sources.json']:
         dest=output/p.relative_to(ROOT);dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,dest)
     (output/'.nojekyll').write_text('',encoding='utf-8')
-    make_book(series,css,output/'complete.html')
-    result=dict(pages=len(documents),chapters=len(series['chapters']),math_nodes=count,svg_files=len(list((output/'assets').rglob('*.svg'))),standalone='complete.html')
+    standalone=[]
+    for k in series.get('cours',[]):
+        lo,hi=k['chapters']
+        if not any(lo<=c['number']<=hi for c in series['chapters']):continue
+        name='complete.html' if k['number']==1 else f'complete-{k["number"]}.html'
+        make_book(series,css,output/name,k);standalone.append(name)
+    result=dict(pages=len(documents),chapters=len(series['chapters']),math_nodes=count,svg_files=len(list((output/'assets').rglob('*.svg'))),standalone=standalone)
     (output/'build-report.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     return result
 

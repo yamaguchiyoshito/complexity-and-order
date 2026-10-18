@@ -7,7 +7,7 @@
 | パス | 責務 | 編集方法 |
 | --- | --- | --- |
 | `chapters/*.md` | 各回の本文、数式、脚注、前後リンク | 直接編集する |
-| `series.json` | 全12回の順序、題名、概要、本文・図・出典の対応 | 本文変更と同じPRで整合させる |
+| `series.json` | クール（`cours`）と各回の順序、題名、概要、本文・図・出典の対応 | 本文変更と同じPRで整合させる |
 | `assets/illustrations/*.svg` | 本文から参照する独立した挿絵 | 再生成またはSVG編集 |
 | `scripts/draw_figures.py` | 全13図を再現する図形コード | 原則としてこちらを編集して図を生成する |
 | `references/sources.json` | 文献の書誌と今回の確認範囲 | 一次情報と確認状況を分けて更新する |
@@ -33,7 +33,7 @@ python scripts/build.py
 python scripts/check_html.py
 ```
 
-SVGを直接修正すると次の図再生成で上書きされる。長期保守する変更は `draw_figures.py` に反映する。全12回の枠組みは固定し、追加連載は別シリーズとして扱う。
+SVGを直接修正すると次の図再生成で上書きされる。長期保守する変更は `draw_figures.py` に反映する。1クール12回の枠組みを固定し、クールの追加は `series.json` の `cours` に登録する。各回は通し番号で、`cour` にクール番号を持つ。クールごとに `complete.html`（第1クール）、`complete-2.html` のような単一ファイル版を生成する。
 
 ## 数式の記法
 

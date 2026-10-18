@@ -1,11 +1,62 @@
 {
   "title": "複雑さと秩序",
-  "subtitle": "階層・自己組織化・自律性をめぐる全12回",
+  "subtitle": "階層・自己組織化・自律性から、秩序の更新へ",
   "language": "ja",
-  "version": "1.0.0",
+  "version": "1.4.0",
+  "cours": [
+    {
+      "number": 1,
+      "title": "階層・自己組織化・自律性",
+      "subtitle": "複雑さが秩序を生み、秩序が次の複雑さを可能にする",
+      "chapters": [
+        1,
+        12
+      ],
+      "cover": "assets/illustrations/00-cover.svg",
+      "status": "published"
+    },
+    {
+      "number": 2,
+      "title": "秩序は、どう変わり続けるのか",
+      "subtitle": "成立した秩序を、どう学習・変化・継承させるか",
+      "chapters": [
+        13,
+        24
+      ],
+      "cover": "assets/illustrations/00-cover-2.svg",
+      "status": "planned",
+      "parts": [
+        {
+          "label": "Ⅰ",
+          "title": "意味と学習",
+          "chapters": [
+            13,
+            16
+          ]
+        },
+        {
+          "label": "Ⅱ",
+          "title": "秩序の硬直と崩壊",
+          "chapters": [
+            17,
+            20
+          ]
+        },
+        {
+          "label": "Ⅲ",
+          "title": "再編成と継承",
+          "chapters": [
+            21,
+            24
+          ]
+        }
+      ]
+    }
+  ],
   "chapters": [
     {
       "number": 1,
+      "cour": 1,
       "slug": "complexity-hierarchy",
       "title": "複雑さを減らすと、何が増えるのか",
       "subtitle": "複雑度のオーダーとサイモンの階層論",
@@ -25,6 +76,7 @@
     },
     {
       "number": 2,
+      "cour": 1,
       "slug": "general-system-theory",
       "title": "部品を並べても、全体にはならない",
       "subtitle": "ベルタランフィの一般システム理論",
@@ -44,6 +96,7 @@
     },
     {
       "number": 3,
+      "cour": 1,
       "slug": "dissipative-structures",
       "title": "流れているから、かたちが保たれる",
       "subtitle": "プリゴジンの散逸構造論",
@@ -63,6 +116,7 @@
     },
     {
       "number": 4,
+      "cour": 1,
       "slug": "synergetics",
       "title": "一万の動きを、一つの動きとして読む",
       "subtitle": "ハーケンのシナジェティクスと隷属原理",
@@ -82,6 +136,7 @@
     },
     {
       "number": 5,
+      "cour": 1,
       "slug": "autopoiesis",
       "title": "壊れないのではなく、つくり直している",
       "subtitle": "オートポイエーシスと自己生産",
@@ -95,6 +150,7 @@
     },
     {
       "number": 6,
+      "cour": 1,
       "slug": "kauffman",
       "title": "つながるほど生まれやすく、変わりにくくなる",
       "subtitle": "自己触媒集合とNKモデル",
@@ -116,6 +172,7 @@
     },
     {
       "number": 7,
+      "cour": 1,
       "slug": "strange-loops",
       "title": "規則に従うものが、規則を書く",
       "subtitle": "ホフスタッターのストレンジループ",
@@ -129,6 +186,7 @@
     },
     {
       "number": 8,
+      "cour": 1,
       "slug": "active-inference",
       "title": "直す前に、何を知るべきか",
       "subtitle": "自由エネルギー原理と能動的推論",
@@ -143,6 +201,7 @@
     },
     {
       "number": 9,
+      "cour": 1,
       "slug": "requisite-variety",
       "title": "速くするだけでは、制御できない",
       "subtitle": "アシュビーの必要多様性の法則",
@@ -156,6 +215,7 @@
     },
     {
       "number": 10,
+      "cour": 1,
       "slug": "viable-system-model",
       "title": "中央がすべてを知らなくても、全体は動く",
       "subtitle": "ビーアの生存可能システムモデル",
@@ -170,6 +230,7 @@
     },
     {
       "number": 11,
+      "cour": 1,
       "slug": "second-order-cybernetics",
       "title": "測る側も、測られている系の中にいる",
       "subtitle": "フォン・フェルスターの第二次サイバネティクス",
@@ -184,6 +245,7 @@
     },
     {
       "number": 12,
+      "cour": 1,
       "slug": "complexity-and-order",
       "title": "複雑さは、なぜ秩序を生むのか",
       "subtitle": "階層、自己組織化、そして自律するシステム",

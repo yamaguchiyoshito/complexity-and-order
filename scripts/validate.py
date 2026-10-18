@@ -70,8 +70,21 @@ def validate(root: Path=ROOT) -> tuple[Result,list[str]]:
         sources=json.loads((root/'references/sources.json').read_text(encoding='utf-8'))
     except (OSError,ValueError) as exc:return result,[str(exc)]
     chapters=series.get('chapters',[])
-    if [c.get('number') for c in chapters]!=list(range(1,13)):errors.append('series.json: expected exactly chapters 1..12 in order')
-    if len({c['path'] for c in chapters})!=12:errors.append('series.json: chapter paths must be unique')
+    cours=series.get('cours',[])
+    if [c.get('number') for c in chapters]!=list(range(1,len(chapters)+1)):errors.append('series.json: chapter numbers must run 1..N without gaps')
+    if len({c['path'] for c in chapters})!=len(chapters):errors.append('series.json: chapter paths must be unique')
+    if not cours:errors.append('series.json: cours is missing')
+    for k in cours:
+        lo,hi=k['chapters'];present=[c for c in chapters if lo<=c['number']<=hi]
+        if hi-lo+1!=12:errors.append(f'series.json: cour {k["number"]} must span exactly 12 chapters')
+        if present and len(present)!=12:errors.append(f'series.json: cour {k["number"]} has {len(present)} of 12 chapters')
+        if not present and k.get('status')!='planned':errors.append(f'series.json: cour {k["number"]} has no chapters and is not marked planned')
+        for c in present:
+            if c.get('cour')!=k['number']:errors.append(f'{c["path"]}: cour field does not match series.json cours')
+        if not (root/k['cover']).exists():errors.append(f'missing cover: {k["cover"]}')
+    covered={n for k in cours for n in range(k['chapters'][0],k['chapters'][1]+1)}
+    for c in chapters:
+        if c['number'] not in covered:errors.append(f'{c["path"]}: chapter is outside every cour')
     md_paths=[root/'README.md',*(root/c['path'] for c in chapters),*sorted((root/'guides').glob('*.md')),root/'references/bibliography.md',root/'CHANGELOG.md']
     asts={};anchors={}
     for path in md_paths:
@@ -132,8 +145,8 @@ def validate(root: Path=ROOT) -> tuple[Result,list[str]]:
             if parsed.fragment and target.suffix=='.md' and unquote(parsed.fragment) not in anchors.get(target,set()):errors.append(f'{path.name}: unknown anchor: {url}')
     for svg in sorted((root/'assets').rglob('*.svg')):
         result.svg_files+=1;errors+=svg_errors(svg)
-    expected_svgs=1+len(chapters)+sum(len(c.get('figures',[])) for c in chapters)
-    if result.svg_files!=expected_svgs:errors.append(f'expected exactly {expected_svgs} SVG illustrations (cover + 12 chapters + additional figures in series.json)')
+    expected_svgs=len(series.get('cours',[]))+len(chapters)+sum(len(c.get('figures',[])) for c in chapters)
+    if result.svg_files!=expected_svgs:errors.append(f'expected exactly {expected_svgs} SVG illustrations (one cover per cour + one per chapter + additional figures in series.json)')
     for c in chapters:
         if not (root/c['figure']).exists():errors.append(f'missing figure: {c["figure"]}')
     for p in root.rglob('*'):

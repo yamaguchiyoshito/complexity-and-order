@@ -41,11 +41,22 @@ def check(site:Path)->dict:
             if parsed.fragment and target in docs and unquote(parsed.fragment) not in docs[target].ids:errors.append(f'{path.name}: missing anchor {url}')
     if not docs:errors.append('No generated HTML pages found')
     chapters=[d for p,d in docs.items() if p.parent==site/'chapters']
-    if len(chapters)!=12:errors.append('Expected 12 chapter HTML pages')
-    standalone=docs.get(site/'complete.html')
-    if not standalone:errors.append('Missing complete.html')
-    elif standalone.math!=sum(d.math for d in chapters):errors.append('Standalone/chapters math count mismatch')
-    return dict(html_pages=len(docs),chapter_pages=len(chapters),chapter_math=sum(d.math for d in chapters),standalone_math=standalone.math if standalone else 0,errors=errors)
+    series=json.loads((site/'series.json').read_text(encoding='utf-8')) if (site/'series.json').exists() else None
+    expected=len(series['chapters']) if series else 12
+    if len(chapters)!=expected:errors.append(f'Expected {expected} chapter HTML pages')
+    standalone_math=0
+    cours=series.get('cours',[]) if series else [{'number':1,'chapters':[1,12]}]
+    for k in cours:
+        lo,hi=k['chapters']
+        members=[docs.get((site/'chapters'/(Path(c['path']).stem+'.html')).resolve()) for c in (series['chapters'] if series else []) if lo<=c['number']<=hi] if series else chapters
+        members=[m for m in members if m]
+        if not members:continue
+        name='complete.html' if k['number']==1 else f'complete-{k["number"]}.html'
+        standalone=docs.get(site/name)
+        if not standalone:errors.append(f'Missing {name}')
+        elif standalone.math!=sum(d.math for d in members):errors.append(f'{name}: standalone/chapters math count mismatch')
+        else:standalone_math+=standalone.math
+    return dict(html_pages=len(docs),chapter_pages=len(chapters),chapter_math=sum(d.math for d in chapters),standalone_math=standalone_math,errors=errors)
 
 
 def main()->int:
