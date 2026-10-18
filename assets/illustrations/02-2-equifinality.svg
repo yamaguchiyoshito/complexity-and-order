@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+<title id="title">出発点が違っても、同じ定常状態へ着く</title>
+<desc id="desc">開放系の等結果性。異なる初期状態や経路が、同じ最終状態に到達し得る</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#566773" stroke-width="1.4"/></marker></defs>
+<rect width="1200" height="600" rx="20" fill="#f8f7f2"/>
+<g font-family="system-ui, Noto Sans CJK JP, Hiragino Kaku Gothic ProN, Meiryo, sans-serif">
+<text x="50" y="52" fill="#087f83" font-size="18" text-anchor="start" font-weight="700">COMPLEXITY / ORDER     02-2</text>
+<text x="50" y="103" fill="#182e3a" font-size="34" text-anchor="start" font-weight="700">出発点が違っても、同じ定常状態へ着く</text>
+<text x="50" y="141" fill="#566773" font-size="21" text-anchor="start" font-weight="400">開放系の等結果性。異なる初期状態や経路が、同じ最終状態に到達し得る</text>
+<line x1="50.0" y1="166.0" x2="1150.0" y2="166.0" stroke="#d5dedc" stroke-width="1"/>
+<rect x="560" y="250" width="320" height="260" rx="16" fill="none" stroke="#cad5d3" stroke-width="2" stroke-dasharray="7 7"/>
+<text x="866" y="484" fill="#566773" font-size="18" text-anchor="end" font-weight="400">違いを吸収する仕組み</text>
+<text x="866" y="504" fill="#566773" font-size="16" text-anchor="end" font-weight="400">（流入と流出の釣り合いなど）</text>
+<path d="M170,250 Q480,200 794.4,361.7" fill="none" stroke="#566773" stroke-width="2.5" marker-end="url(#arrow)"/>
+<circle cx="170.0" cy="250.0" r="10" fill="#b95130"/>
+<path d="M170,470 Q480,560 794.4,398.3" fill="none" stroke="#566773" stroke-width="2.5" marker-end="url(#arrow)"/>
+<circle cx="170.0" cy="470.0" r="10" fill="#b95130"/>
+<path d="M340,500 Q600,530 796.5,401.9" fill="none" stroke="#566773" stroke-width="2.5" marker-end="url(#arrow)"/>
+<circle cx="340.0" cy="500.0" r="10" fill="#b95130"/>
+<path d="M300,215 Q560,230 795.0,360.6" fill="none" stroke="#566773" stroke-width="2.5" marker-end="url(#arrow)"/>
+<circle cx="300.0" cy="215.0" r="10" fill="#b95130"/>
+<text x="170" y="232" fill="#b95130" font-size="18" text-anchor="middle" font-weight="400">初期状態 A</text>
+<text x="170" y="500" fill="#b95130" font-size="18" text-anchor="middle" font-weight="400">初期状態 B</text>
+<text x="340" y="530" fill="#b95130" font-size="18" text-anchor="middle" font-weight="400">初期状態 C</text>
+<text x="300" y="197" fill="#b95130" font-size="18" text-anchor="middle" font-weight="400">初期状態 D</text>
+<circle cx="830.0" cy="380.0" r="34" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<circle cx="830.0" cy="380.0" r="22" fill="#087f83"/>
+<text x="830" y="442" fill="#087f83" font-size="22" text-anchor="middle" font-weight="700">同じ定常状態</text>
+<rect x="900" y="440" width="240" height="80" rx="14" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="1020.0" y="476.0" fill="#087f83" font-size="25" text-anchor="middle" font-weight="700">条件</text>
+<text x="1020.0" y="510.0" fill="#566773" font-size="20" text-anchor="middle" font-weight="400">一定の条件を満たす開放系</text>
+<text x="50" y="572" fill="#566773" font-size="19" text-anchor="start" font-weight="400">概念図。どの仕組みが初期条件の違いを吸収するかは、系ごとに調べる。</text>
+</g>
+</svg>

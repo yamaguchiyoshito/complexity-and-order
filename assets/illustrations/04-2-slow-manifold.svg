@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+<title id="title">速い変数は、遅い変数が決める曲線へ落ちる</title>
+<desc id="desc">例 εṡ = −s + u² の先頭近似 s ≈ u² と、u が急変したときの遅れ</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#566773" stroke-width="1.4"/></marker></defs>
+<rect width="1200" height="640" rx="20" fill="#f8f7f2"/>
+<g font-family="system-ui, Noto Sans CJK JP, Hiragino Kaku Gothic ProN, Meiryo, sans-serif">
+<text x="50" y="52" fill="#087f83" font-size="18" text-anchor="start" font-weight="700">COMPLEXITY / ORDER     04-2</text>
+<text x="50" y="103" fill="#182e3a" font-size="34" text-anchor="start" font-weight="700">速い変数は、遅い変数が決める曲線へ落ちる</text>
+<text x="50" y="141" fill="#566773" font-size="21" text-anchor="start" font-weight="400">例 εṡ = −s + u² の先頭近似 s ≈ u² と、u が急変したときの遅れ</text>
+<line x1="50.0" y1="166.0" x2="1150.0" y2="166.0" stroke="#d5dedc" stroke-width="1"/>
+<rect x="70" y="200" width="640" height="330" rx="16" fill="none" stroke="#cad5d3" stroke-width="2" stroke-dasharray="7 7"/>
+<text x="90" y="232" fill="#182e3a" font-size="21" text-anchor="start" font-weight="700">曲線は s = h₀(u) = u²</text>
+<line x1="100.0" y1="500.0" x2="690.0" y2="500.0" stroke="#182e3a" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="390.0" y1="500.0" x2="390.0" y2="228.0" stroke="#182e3a" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="690" y="522" fill="#566773" font-size="18" text-anchor="end" font-weight="400">u</text>
+<text x="378" y="236" fill="#566773" font-size="18" text-anchor="end" font-weight="400">s</text>
+<path d="M110.0,260.0 L119.3,275.7 L128.7,290.9 L138.0,305.6 L147.3,319.7 L156.7,333.3 L166.0,346.4 L175.3,358.9 L184.7,370.9 L194.0,382.4 L203.3,393.3 L212.7,403.7 L222.0,413.6 L231.3,422.9 L240.7,431.7 L250.0,440.0 L259.3,447.7 L268.7,454.9 L278.0,461.6 L287.3,467.7 L296.7,473.3 L306.0,478.4 L315.3,482.9 L324.7,486.9 L334.0,490.4 L343.3,493.3 L352.7,495.7 L362.0,497.6 L371.3,498.9 L380.7,499.7 L390.0,500.0 L399.3,499.7 L408.7,498.9 L418.0,497.6 L427.3,495.7 L436.7,493.3 L446.0,490.4 L455.3,486.9 L464.7,482.9 L474.0,478.4 L483.3,473.3 L492.7,467.7 L502.0,461.6 L511.3,454.9 L520.7,447.7 L530.0,440.0 L539.3,431.7 L548.7,422.9 L558.0,413.6 L567.3,403.7 L576.7,393.3 L586.0,382.4 L595.3,370.9 L604.7,358.9 L614.0,346.4 L623.3,333.3 L632.7,319.7 L642.0,305.6 L651.3,290.9 L660.7,275.7 L670.0,260.0" fill="none" stroke="#087f83" stroke-width="4"/>
+<line x1="194.0" y1="272.0" x2="194.0" y2="382.4" stroke="#3c60a4" stroke-width="2.5" marker-end="url(#arrow)"/>
+<line x1="306.0" y1="332.0" x2="306.0" y2="478.4" stroke="#3c60a4" stroke-width="2.5" marker-end="url(#arrow)"/>
+<line x1="530.0" y1="495.2" x2="530.0" y2="440.0" stroke="#3c60a4" stroke-width="2.5" marker-end="url(#arrow)"/>
+<line x1="614.0" y1="248.0" x2="614.0" y2="346.4" stroke="#3c60a4" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="100" y="262" fill="#3c60a4" font-size="19" text-anchor="start" font-weight="700">速い緩和（ε が小さい）</text>
+<path d="M222.0,413.6 L230.4,422.0 L238.8,430.0 L247.2,437.6 L255.6,444.7 L264.0,451.4 L272.4,457.7 L280.8,463.5 L289.2,468.9 L297.6,473.9 L306.0,478.4 L314.4,482.5 L322.8,486.2 L331.2,489.4 L339.6,492.2 L348.0,494.6 L356.4,496.5 L364.8,498.1 L373.2,499.1 L381.6,499.8 L390.0,500.0 L398.4,499.8 L406.8,499.1 L415.2,498.1 L423.6,496.5 L432.0,494.6 L440.4,492.2 L448.8,489.4 L457.2,486.2 L465.6,482.5 L474.0,478.4 L482.4,473.9 L490.8,468.9 L499.2,463.5 L507.6,457.7 L516.0,451.4 L524.4,444.7 L532.8,437.6 L541.2,430.0 L549.6,422.0 L558.0,413.6" fill="none" stroke="#b95130" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="390" y="528" fill="#b95130" font-size="18" text-anchor="middle" font-weight="700">遅い変化：u の変化に合わせて曲線上を動く</text>
+<rect x="750" y="200" width="380" height="330" rx="16" fill="none" stroke="#cad5d3" stroke-width="2" stroke-dasharray="7 7"/>
+<text x="770" y="232" fill="#182e3a" font-size="21" text-anchor="start" font-weight="700">u が急変した直後、s は追いつかない</text>
+<line x1="800.0" y1="490.0" x2="1112.0" y2="490.0" stroke="#182e3a" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="800.0" y1="490.0" x2="800.0" y2="262.0" stroke="#182e3a" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="1112" y="512" fill="#566773" font-size="18" text-anchor="end" font-weight="400">t</text>
+<path d="M800.0,450.0 L875.0,450.0 L875.0,330.0 L1100.0,330.0" fill="none" stroke="#b95130" stroke-width="3"/>
+<text x="1106" y="336.0" fill="#b95130" font-size="18" text-anchor="start" font-weight="700">u</text>
+<path d="M800.0,482.0 L875.0,482.0 L875.0,482.0 L878.8,470.6 L882.5,460.2 L886.2,450.9 L890.0,442.4 L893.8,434.8 L897.5,427.9 L901.2,421.6 L905.0,415.9 L908.8,410.8 L912.5,406.1 L916.2,401.9 L920.0,398.1 L923.8,394.7 L927.5,391.6 L931.2,388.8 L935.0,386.2 L938.8,383.9 L942.5,381.8 L946.2,379.9 L950.0,378.2 L953.8,376.7 L957.5,375.3 L961.2,374.0 L965.0,372.9 L968.8,371.9 L972.5,370.9 L976.2,370.1 L980.0,369.3 L983.8,368.6 L987.5,368.0 L991.2,367.4 L995.0,366.9 L998.8,366.4 L1002.5,366.0 L1006.2,365.6 L1010.0,365.3 L1013.8,365.0 L1017.5,364.7 L1021.2,364.4 L1025.0,364.2 L1028.8,364.0 L1032.5,363.8 L1036.2,363.6 L1040.0,363.5 L1043.8,363.3 L1047.5,363.2 L1051.2,363.1 L1055.0,363.0 L1058.8,362.9 L1062.5,362.8 L1066.2,362.7 L1070.0,362.7 L1073.8,362.6 L1077.5,362.5 L1081.2,362.5 L1085.0,362.4 L1088.8,362.4 L1092.5,362.4 L1096.2,362.3 L1100.0,362.3" fill="none" stroke="#3c60a4" stroke-width="3"/>
+<text x="1106" y="384.0" fill="#3c60a4" font-size="18" text-anchor="start" font-weight="700">s</text>
+<line x1="875.0" y1="482.0" x2="875.0" y2="330.0" stroke="#566773" stroke-width="1.5" stroke-dasharray="8 7"/>
+<text x="875" y="262" fill="#566773" font-size="17" text-anchor="middle" font-weight="400">急変</text>
+<text x="50" y="612" fill="#566773" font-size="19" text-anchor="start" font-weight="400">説明用の例。初期の速い過渡、安定な解の存在、時間スケール分離を省いた厳密な等式ではない。</text>
+</g>
+</svg>

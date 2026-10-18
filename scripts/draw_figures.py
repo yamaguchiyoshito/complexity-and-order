@@ -79,7 +79,155 @@ def figure_3_2(name):
     f.save(name)
 
 
-EXTRA_FIGURES={'3-2':figure_3_2}
+def ring(f,x,y,r,color=TEAL,width=2):
+    f.parts.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r}" fill="#ffffff" stroke="{color}" stroke-width="{width}"/>')
+
+
+def rect(f,x,y,w,h,color=TEAL,dash=False,width=2):
+    extra=' stroke-dasharray="7 6"' if dash else ''
+    f.parts.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="12" fill="#ffffff" stroke="{color}" stroke-width="{width}"{extra}/>')
+
+
+def card(f,x,y,w,h,title,subtitle,color=TEAL):
+    rect(f,x,y,w,h,color)
+    f.text(x+w/2,y+27,title,min(20,round(215/max(len(title),1))),color,anchor='middle',weight=700)
+    f.text(x+w/2,y+52,subtitle,16,MUTED,anchor='middle')
+
+
+def figure_6_2(name):
+    """図6-2: K=0 の単峰な適応度地形と、K が大きいときの多峰な地形（概念図）。"""
+    f=Figure('06-2','依存が増えるほど、局所の改善が途中で止まる','K=0 の単峰な地形と、K が大きいときの多峰な地形の概念図',620)
+    smooth=lambda x:math.exp(-((x-0.5)/0.3)**2)
+    rugged=lambda x:0.55+0.25*math.sin(7*x)+0.12*math.sin(17*x+1)+0.08*math.sin(29*x+2)
+    def climb(F,x,step=1/400):
+        while True:
+            nxt=max([v for v in (x-step,x,x+step) if 0<=v<=1],key=F)
+            if nxt==x:return x
+            x=nxt
+    for px,F,start,head in [(70,smooth,0.15,'K = 0：各要素の良い選択を別々に選べる'),(620,rugged,0.13,'K が大きい：一つを直すと別の寄与が動く')]:
+        f.panel(px,200,510,330);f.text(px+20,232,head,21,INK,weight=700)
+        X=lambda x:px+50+420*x
+        Y=lambda v:500-220*v
+        f.line(px+50,500,px+490,500,color=INK,width=1.5,arrow=True);f.line(px+50,500,px+50,255,color=INK,width=1.5,arrow=True)
+        f.text(px+488,522,'構成（隣り合う構成が隣）',17,MUTED,anchor='end');f.text(px+58,252,'適応度 F',17,MUTED)
+        xs=[i/120 for i in range(121)]
+        f.path(polyline([(X(x),Y(F(x))) for x in xs]),color=TEAL,width=3)
+        stop=climb(F,start);steps=[start+(stop-start)*k/4 for k in range(5)]
+        for a,b in zip(steps,steps[1:]):f.line(X(a),Y(F(a)),X(b),Y(F(b)),color=ORANGE,width=2.5,arrow=True)
+        f.circ(X(start),Y(F(start)),7,ORANGE);f.text(X(start),Y(F(start))+30,'出発',16,ORANGE,anchor='middle')
+        f.circ(X(stop),Y(F(stop)),8,ORANGE)
+        if F is smooth:
+            f.text(X(stop),Y(F(stop))-18,'頂上に着く',18,ORANGE,anchor='middle',weight=700)
+        else:
+            gx=max(xs,key=F)
+            assert abs(gx-stop)>0.05,'局所探索が全体の最適に着いてしまう'
+            f.text(X(stop),Y(F(stop))-18,'局所最適で止まる',18,ORANGE,anchor='middle',weight=700)
+            f.circ(X(gx),Y(F(gx)),8,TEAL);f.text(X(gx)+14,Y(F(gx))-10,'全体の最適',18,TEAL,weight=700)
+            f.line(X(stop),Y(F(stop)),X(gx),Y(F(gx)),color=MUTED,width=1.5,dash=True)
+    f.footer('概念図。特定のNKモデルの実行結果ではない。横軸は隣り合う構成を隣に並べた一次元の略図。')
+    f.save(name)
+
+
+def figure_4_2(name):
+    """図4-2: 例 εs' = −s + u² の遅い多様体 s ≈ u² と、u が急変したときの遅れ。"""
+    f=Figure('04-2','速い変数は、遅い変数が決める曲線へ落ちる','例 εṡ = −s + u² の先頭近似 s ≈ u² と、u が急変したときの遅れ',640)
+    f.panel(70,200,640,330);f.text(90,232,'曲線は s = h₀(u) = u²',21,INK,weight=700)
+    X=lambda u:390+280*u
+    Y=lambda s:500-240*s
+    f.line(100,500,690,500,color=INK,width=1.5,arrow=True);f.line(390,500,390,228,color=INK,width=1.5,arrow=True)
+    f.text(690,522,'u',18,MUTED,anchor='end');f.text(378,236,'s',18,MUTED,anchor='end')
+    us=[-1+i/30 for i in range(61)]
+    f.path(polyline([(X(u),Y(u*u)) for u in us]),color=TEAL,width=4)
+    for u,s0 in [(-0.7,0.95),(-0.3,0.70),(0.5,0.02),(0.8,1.05)]:f.line(X(u),Y(s0),X(u),Y(u*u),color=BLUE,width=2.5,arrow=True)
+    f.text(100,262,'速い緩和（ε が小さい）',19,BLUE,weight=700)
+    slow=[-0.6+1.2*i/40 for i in range(41)]
+    f.path(polyline([(X(u),Y(u*u)) for u in slow]),color=ORANGE,width=3,arrow=True)
+    f.text(390,528,'遅い変化：u の変化に合わせて曲線上を動く',18,ORANGE,anchor='middle',weight=700)
+    f.panel(750,200,380,330);f.text(770,232,'u が急変した直後、s は追いつかない',21,INK,weight=700)
+    T=lambda t:800+75*t
+    V=lambda v:490-200*v
+    f.line(800,490,1112,490,color=INK,width=1.5,arrow=True);f.line(800,490,800,262,color=INK,width=1.5,arrow=True)
+    f.text(1112,512,'t',18,MUTED,anchor='end')
+    f.path(polyline([(T(0),V(0.2)),(T(1),V(0.2)),(T(1),V(0.8)),(T(4),V(0.8))]),color=ORANGE,width=3)
+    f.text(1106,V(0.8)+6,'u',18,ORANGE,weight=700)
+    ts=[1+3*i/60 for i in range(61)]
+    f.path(polyline([(T(0),V(0.04)),(T(1),V(0.04))]+[(T(t),V(0.64-0.60*math.exp(-(t-1)/0.5))) for t in ts]),color=BLUE,width=3)
+    f.text(1106,V(0.64)+22,'s',18,BLUE,weight=700)
+    f.line(T(1),V(0.04),T(1),V(0.8),color=MUTED,width=1.5,dash=True);f.text(T(1),262,'急変',17,MUTED,anchor='middle')
+    f.footer('説明用の例。初期の速い過渡、安定な解の存在、時間スケール分離を省いた厳密な等式ではない。')
+    f.save(name)
+
+
+def figure_2_2(name):
+    """図2-2: 等結果性。異なる初期状態や経路が同じ定常状態へ到達し得る（概念図）。"""
+    f=Figure('02-2','出発点が違っても、同じ定常状態へ着く','開放系の等結果性。異なる初期状態や経路が、同じ最終状態に到達し得る',600)
+    tx,ty=830,380
+    f.panel(560,250,320,260);f.text(866,484,'違いを吸収する仕組み',18,MUTED,anchor='end');f.text(866,504,'（流入と流出の釣り合いなど）',16,MUTED,anchor='end')
+    starts=[('A',170,250,480,200),('B',170,470,480,560),('C',340,500,600,530),('D',300,215,560,230)]
+    for label,sx,sy,cx,cy in starts:
+        # end the curve on a circle of radius 40 around the target
+        ang=math.atan2(cy-ty,cx-tx);ex,ey=tx+40*math.cos(ang),ty+40*math.sin(ang)
+        f.path(f'M{sx},{sy} Q{cx},{cy} {ex:.1f},{ey:.1f}',color=MUTED,width=2.5,arrow=True)
+        f.circ(sx,sy,10,ORANGE)
+    f.text(170,232,'初期状態 A',18,ORANGE,anchor='middle');f.text(170,500,'初期状態 B',18,ORANGE,anchor='middle')
+    f.text(340,530,'初期状態 C',18,ORANGE,anchor='middle');f.text(300,197,'初期状態 D',18,ORANGE,anchor='middle')
+    ring(f,tx,ty,34,TEAL,2);f.circ(tx,ty,22,TEAL);f.text(tx,442,'同じ定常状態',22,TEAL,anchor='middle',weight=700)
+    f.box(900,440,240,80,'条件','一定の条件を満たす開放系')
+    f.footer('概念図。どの仕組みが初期条件の違いを吸収するかは、系ごとに調べる。')
+    f.save(name)
+
+
+def figure_1_2(name):
+    """図1-2: サイモンの二人の時計職人の比喩。部分組立があると中断で失う範囲が小さい。"""
+    f=Figure('01-2','中断されても、部分組立は残る','サイモンの二人の時計職人の比喩。安定した部分組立があると、途中の成果を失いにくい',640)
+    f.panel(70,200,510,350);f.text(90,232,'一度に組み上げる',21,INK,weight=700)
+    f.panel(620,200,510,350);f.text(640,232,'部分組立をつくる',21,INK,weight=700)
+    # left: one chain of 12 parts, 8 assembled, interrupted, back to nothing
+    xs=[110+40*i for i in range(12)]
+    for i in range(7):f.line(xs[i],330,xs[i+1],330,color=TEAL,width=3)
+    for i,x in enumerate(xs):
+        (f.circ(x,330,9,TEAL) if i<8 else ring(f,x,330,9,TEAL))
+    f.line(410,280,410,350,color=ORANGE,width=2,dash=True);f.text(410,270,'中断',19,ORANGE,anchor='middle',weight=700)
+    f.path('M410,362 Q410,430 150,445',color=ORANGE,width=2,arrow=True);f.text(330,398,'最初へ戻る',17,ORANGE,anchor='middle')
+    for x in xs:ring(f,x,470,9,TEAL)
+    f.text(325,540,'失うもの：ここまでの全部',20,ORANGE,anchor='middle',weight=700)
+    # right: four subassemblies of three parts
+    def group(bx,y,filled,color,dash=False):
+        rect(f,bx,y-30,100,60,color,dash)
+        for k in range(3):
+            x=bx+20+30*k
+            (f.circ(x,y,9,TEAL) if k<filled else ring(f,x,y,9,TEAL))
+    for j,(filled,color,dash) in enumerate([(3,TEAL,False),(3,TEAL,False),(2,ORANGE,True),(0,MUTED,True)]):group(660+120*j,330,filled,color,dash)
+    f.line(950,280,950,350,color=ORANGE,width=2,dash=True);f.text(950,270,'中断',19,ORANGE,anchor='middle',weight=700)
+    f.line(950,368,950,432,color=ORANGE,width=2,arrow=True);f.text(970,405,'作りかけの一組だけ戻る',17,ORANGE)
+    for j,(filled,color,dash) in enumerate([(3,TEAL,False),(3,TEAL,False),(0,ORANGE,True),(0,MUTED,True)]):group(660+120*j,470,filled,color,dash)
+    f.text(875,540,'失うもの：作りかけの一組だけ',20,ORANGE,anchor='middle',weight=700)
+    f.footer('比喩の構図のみ。部品数や中断の確率はサイモン（1962）の設定であり、ここでは描いていない。')
+    f.save(name)
+
+
+def figure_12_2(name):
+    """図12-2: 十一の理論を、担当する問いで配置した見取り図。順序の矢印はない。"""
+    f=Figure('12-2','十一の理論は、階段ではなく問いの地図である','各理論が担当する問いで配置した連載の見取り図。順序の矢印はない',760)
+    areas=[(60,200,540,250,'成り立ちを問う'),(620,200,520,250,'自分をつくり、自分を書くことを問う'),(60,480,540,200,'環境に応じることを問う'),(620,480,520,200,'測る側を問う')]
+    for x,y,w,h,title in areas:f.panel(x,y,w,h);f.text(x+20,y+32,title,22,INK,weight=700)
+    cards={
+        1:(80,250,'第1回　サイモン','部分ごとに扱えるか'),2:(345,250,'第2回　ベルタランフィ','全体は部品の一覧か'),
+        3:(80,335,'第3回　プリゴジン','流れの中で保たれるか'),4:(345,335,'第4回　ハーケン','少数の変数で記述できるか'),
+        5:(640,250,'第5回　オートポイエーシス','自らを生産するか'),6:(895,250,'第6回　カウフマン','支え合うか、変えにくくなるか'),
+        7:(640,335,'第7回　ホフスタッター','自分を記述するか'),
+        8:(80,522,'第8回　フリストン','先に何を知るか'),9:(345,522,'第9回　アシュビー','対応の多様性は足りるか'),
+        10:(80,600,'第10回　ビーア','どこで判断するか'),11:(640,522,'第11回　フォン・フェルスター','誰が測っているか')}
+    W,H=235,64
+    center=lambda n:(cards[n][0]+W/2,cards[n][1]+H/2)
+    for n,(x,y,title,q) in cards.items():card(f,x,y,W,H,title,q)
+    f.text(640,636,'図を描く側も、図の中にいる。',18,MUTED)
+    f.text(640,662,'本文は第1回と第6回、第9回と第10回、第10回と第11回を行き来する。',15,MUTED)
+    f.footer('配置は本連載の解釈。発達段階や一直線の順序を表さない。')
+    f.save(name)
+
+
+EXTRA_FIGURES={'3-2':figure_3_2,'6-2':figure_6_2,'4-2':figure_4_2,'2-2':figure_2_2,'1-2':figure_1_2,'12-2':figure_12_2}
 
 
 def main():

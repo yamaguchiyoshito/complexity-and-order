@@ -3,7 +3,7 @@
 作成日: 2026-10-18
 採用: 第1陣 3A・6A・4A・2A・1A・12A（[候補調査](illustration-candidates.md)）
 決定済み: 各回1点まで。`series.json` に `figures` 配列を足す。
-状態: 設計のみ。本文、SVG、`draw_figures.py`、`series.json`、`validate.py` は変更していない。
+状態: 2026-10-18 に6点すべて適用済み。図12-2 は第12回のみ、`manuscript_invariants.py` に `--allow-figures` を追加。作図時にラベルの重なりを直したため、座標は §3 の値から一部ずれている（正は `scripts/draw_figures.py`）。第12回の「本文で接続」の破線はカードに被るため描かず、注記の一文に置き換えた。
 
 ---
 

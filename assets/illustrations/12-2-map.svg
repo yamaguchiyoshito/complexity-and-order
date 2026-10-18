@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">十一の理論は、階段ではなく問いの地図である</title>
+<desc id="desc">各理論が担当する問いで配置した連載の見取り図。順序の矢印はない</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#566773" stroke-width="1.4"/></marker></defs>
+<rect width="1200" height="760" rx="20" fill="#f8f7f2"/>
+<g font-family="system-ui, Noto Sans CJK JP, Hiragino Kaku Gothic ProN, Meiryo, sans-serif">
+<text x="50" y="52" fill="#087f83" font-size="18" text-anchor="start" font-weight="700">COMPLEXITY / ORDER     12-2</text>
+<text x="50" y="103" fill="#182e3a" font-size="34" text-anchor="start" font-weight="700">十一の理論は、階段ではなく問いの地図である</text>
+<text x="50" y="141" fill="#566773" font-size="21" text-anchor="start" font-weight="400">各理論が担当する問いで配置した連載の見取り図。順序の矢印はない</text>
+<line x1="50.0" y1="166.0" x2="1150.0" y2="166.0" stroke="#d5dedc" stroke-width="1"/>
+<rect x="60" y="200" width="540" height="250" rx="16" fill="none" stroke="#cad5d3" stroke-width="2" stroke-dasharray="7 7"/>
+<text x="80" y="232" fill="#182e3a" font-size="22" text-anchor="start" font-weight="700">成り立ちを問う</text>
+<rect x="620" y="200" width="520" height="250" rx="16" fill="none" stroke="#cad5d3" stroke-width="2" stroke-dasharray="7 7"/>
+<text x="640" y="232" fill="#182e3a" font-size="22" text-anchor="start" font-weight="700">自分をつくり、自分を書くことを問う</text>
+<rect x="60" y="480" width="540" height="200" rx="16" fill="none" stroke="#cad5d3" stroke-width="2" stroke-dasharray="7 7"/>
+<text x="80" y="512" fill="#182e3a" font-size="22" text-anchor="start" font-weight="700">環境に応じることを問う</text>
+<rect x="620" y="480" width="520" height="200" rx="16" fill="none" stroke="#cad5d3" stroke-width="2" stroke-dasharray="7 7"/>
+<text x="640" y="512" fill="#182e3a" font-size="22" text-anchor="start" font-weight="700">測る側を問う</text>
+<rect x="80" y="250" width="235" height="64" rx="12" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="197.5" y="277" fill="#087f83" font-size="20" text-anchor="middle" font-weight="700">第1回　サイモン</text>
+<text x="197.5" y="302" fill="#566773" font-size="16" text-anchor="middle" font-weight="400">部分ごとに扱えるか</text>
+<rect x="345" y="250" width="235" height="64" rx="12" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="462.5" y="277" fill="#087f83" font-size="20" text-anchor="middle" font-weight="700">第2回　ベルタランフィ</text>
+<text x="462.5" y="302" fill="#566773" font-size="16" text-anchor="middle" font-weight="400">全体は部品の一覧か</text>
+<rect x="80" y="335" width="235" height="64" rx="12" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="197.5" y="362" fill="#087f83" font-size="20" text-anchor="middle" font-weight="700">第3回　プリゴジン</text>
+<text x="197.5" y="387" fill="#566773" font-size="16" text-anchor="middle" font-weight="400">流れの中で保たれるか</text>
+<rect x="345" y="335" width="235" height="64" rx="12" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="462.5" y="362" fill="#087f83" font-size="20" text-anchor="middle" font-weight="700">第4回　ハーケン</text>
+<text x="462.5" y="387" fill="#566773" font-size="16" text-anchor="middle" font-weight="400">少数の変数で記述できるか</text>
+<rect x="640" y="250" width="235" height="64" rx="12" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="757.5" y="277" fill="#087f83" font-size="17" text-anchor="middle" font-weight="700">第5回　オートポイエーシス</text>
+<text x="757.5" y="302" fill="#566773" font-size="16" text-anchor="middle" font-weight="400">自らを生産するか</text>
+<rect x="895" y="250" width="235" height="64" rx="12" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="1012.5" y="277" fill="#087f83" font-size="20" text-anchor="middle" font-weight="700">第6回　カウフマン</text>
+<text x="1012.5" y="302" fill="#566773" font-size="16" text-anchor="middle" font-weight="400">支え合うか、変えにくくなるか</text>
+<rect x="640" y="335" width="235" height="64" rx="12" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="757.5" y="362" fill="#087f83" font-size="20" text-anchor="middle" font-weight="700">第7回　ホフスタッター</text>
+<text x="757.5" y="387" fill="#566773" font-size="16" text-anchor="middle" font-weight="400">自分を記述するか</text>
+<rect x="80" y="522" width="235" height="64" rx="12" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="197.5" y="549" fill="#087f83" font-size="20" text-anchor="middle" font-weight="700">第8回　フリストン</text>
+<text x="197.5" y="574" fill="#566773" font-size="16" text-anchor="middle" font-weight="400">先に何を知るか</text>
+<rect x="345" y="522" width="235" height="64" rx="12" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="462.5" y="549" fill="#087f83" font-size="20" text-anchor="middle" font-weight="700">第9回　アシュビー</text>
+<text x="462.5" y="574" fill="#566773" font-size="16" text-anchor="middle" font-weight="400">対応の多様性は足りるか</text>
+<rect x="80" y="600" width="235" height="64" rx="12" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="197.5" y="627" fill="#087f83" font-size="20" text-anchor="middle" font-weight="700">第10回　ビーア</text>
+<text x="197.5" y="652" fill="#566773" font-size="16" text-anchor="middle" font-weight="400">どこで判断するか</text>
+<rect x="640" y="522" width="235" height="64" rx="12" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="757.5" y="549" fill="#087f83" font-size="14" text-anchor="middle" font-weight="700">第11回　フォン・フェルスター</text>
+<text x="757.5" y="574" fill="#566773" font-size="16" text-anchor="middle" font-weight="400">誰が測っているか</text>
+<text x="640" y="636" fill="#566773" font-size="18" text-anchor="start" font-weight="400">図を描く側も、図の中にいる。</text>
+<text x="640" y="662" fill="#566773" font-size="15" text-anchor="start" font-weight="400">本文は第1回と第6回、第9回と第10回、第10回と第11回を行き来する。</text>
+<text x="50" y="732" fill="#566773" font-size="19" text-anchor="start" font-weight="400">配置は本連載の解釈。発達段階や一直線の順序を表さない。</text>
+</g>
+</svg>

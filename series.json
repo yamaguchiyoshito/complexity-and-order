@@ -12,7 +12,13 @@
       "summary": "要素数、関係数、状態数を区別し、階層化が効く条件を考える。",
       "path": "chapters/01-complexity-hierarchy.md",
       "figure": "assets/illustrations/01-complexity-hierarchy.svg",
-      "figures": [],
+      "figures": [
+        {
+          "path": "assets/illustrations/01-2-watchmakers.svg",
+          "label": "1-2",
+          "section": "小さく見るために、大きくつくる"
+        }
+      ],
       "sources": [
         "simon"
       ]
@@ -25,7 +31,13 @@
       "summary": "関係、境界、環境との交換から、全体が成立する条件を読む。",
       "path": "chapters/02-general-system-theory.md",
       "figure": "assets/illustrations/02-general-system-theory.svg",
-      "figures": [],
+      "figures": [
+        {
+          "path": "assets/illustrations/02-2-equifinality.svg",
+          "label": "2-2",
+          "section": "同じ目的地へ、別の経路から"
+        }
+      ],
       "sources": [
         "bertalanffy"
       ]
@@ -57,7 +69,13 @@
       "summary": "関係を分ける縮約と、動的な自由度を減らす縮約を区別する。",
       "path": "chapters/04-synergetics.md",
       "figure": "assets/illustrations/04-synergetics.svg",
-      "figures": [],
+      "figures": [
+        {
+          "path": "assets/illustrations/04-2-slow-manifold.svg",
+          "label": "4-2",
+          "section": "速い変数を、ゆっくりした変数に合わせる"
+        }
+      ],
       "sources": [
         "haken"
       ]
@@ -83,7 +101,13 @@
       "summary": "自己維持を助ける関係と、探索を難しくする相互依存の二面性を読む。",
       "path": "chapters/06-kauffman.md",
       "figure": "assets/illustrations/06-kauffman.svg",
-      "figures": [],
+      "figures": [
+        {
+          "path": "assets/illustrations/06-2-landscape.svg",
+          "label": "6-2",
+          "section": "変更の評価が、隣の状態で変わる"
+        }
+      ],
       "sources": [
         "kauffman",
         "raf",
@@ -166,7 +190,13 @@
       "summary": "十一の視点を結び、複雑さをなくす問いから、複雑さを成立させる問いへ戻る。",
       "path": "chapters/12-complexity-and-order.md",
       "figure": "assets/illustrations/12-complexity-and-order.svg",
-      "figures": [],
+      "figures": [
+        {
+          "path": "assets/illustrations/12-2-map.svg",
+          "label": "12-2",
+          "section": "複雑なものを、単純にする"
+        }
+      ],
       "sources": [
         "simon",
         "bertalanffy",

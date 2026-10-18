@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+<title id="title">中断されても、部分組立は残る</title>
+<desc id="desc">サイモンの二人の時計職人の比喩。安定した部分組立があると、途中の成果を失いにくい</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#566773" stroke-width="1.4"/></marker></defs>
+<rect width="1200" height="640" rx="20" fill="#f8f7f2"/>
+<g font-family="system-ui, Noto Sans CJK JP, Hiragino Kaku Gothic ProN, Meiryo, sans-serif">
+<text x="50" y="52" fill="#087f83" font-size="18" text-anchor="start" font-weight="700">COMPLEXITY / ORDER     01-2</text>
+<text x="50" y="103" fill="#182e3a" font-size="34" text-anchor="start" font-weight="700">中断されても、部分組立は残る</text>
+<text x="50" y="141" fill="#566773" font-size="21" text-anchor="start" font-weight="400">サイモンの二人の時計職人の比喩。安定した部分組立があると、途中の成果を失いにくい</text>
+<line x1="50.0" y1="166.0" x2="1150.0" y2="166.0" stroke="#d5dedc" stroke-width="1"/>
+<rect x="70" y="200" width="510" height="350" rx="16" fill="none" stroke="#cad5d3" stroke-width="2" stroke-dasharray="7 7"/>
+<text x="90" y="232" fill="#182e3a" font-size="21" text-anchor="start" font-weight="700">一度に組み上げる</text>
+<rect x="620" y="200" width="510" height="350" rx="16" fill="none" stroke="#cad5d3" stroke-width="2" stroke-dasharray="7 7"/>
+<text x="640" y="232" fill="#182e3a" font-size="21" text-anchor="start" font-weight="700">部分組立をつくる</text>
+<line x1="110.0" y1="330.0" x2="150.0" y2="330.0" stroke="#087f83" stroke-width="3"/>
+<line x1="150.0" y1="330.0" x2="190.0" y2="330.0" stroke="#087f83" stroke-width="3"/>
+<line x1="190.0" y1="330.0" x2="230.0" y2="330.0" stroke="#087f83" stroke-width="3"/>
+<line x1="230.0" y1="330.0" x2="270.0" y2="330.0" stroke="#087f83" stroke-width="3"/>
+<line x1="270.0" y1="330.0" x2="310.0" y2="330.0" stroke="#087f83" stroke-width="3"/>
+<line x1="310.0" y1="330.0" x2="350.0" y2="330.0" stroke="#087f83" stroke-width="3"/>
+<line x1="350.0" y1="330.0" x2="390.0" y2="330.0" stroke="#087f83" stroke-width="3"/>
+<circle cx="110.0" cy="330.0" r="9" fill="#087f83"/>
+<circle cx="150.0" cy="330.0" r="9" fill="#087f83"/>
+<circle cx="190.0" cy="330.0" r="9" fill="#087f83"/>
+<circle cx="230.0" cy="330.0" r="9" fill="#087f83"/>
+<circle cx="270.0" cy="330.0" r="9" fill="#087f83"/>
+<circle cx="310.0" cy="330.0" r="9" fill="#087f83"/>
+<circle cx="350.0" cy="330.0" r="9" fill="#087f83"/>
+<circle cx="390.0" cy="330.0" r="9" fill="#087f83"/>
+<circle cx="430.0" cy="330.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<circle cx="470.0" cy="330.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<circle cx="510.0" cy="330.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<circle cx="550.0" cy="330.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<line x1="410.0" y1="280.0" x2="410.0" y2="350.0" stroke="#b95130" stroke-width="2" stroke-dasharray="8 7"/>
+<text x="410" y="270" fill="#b95130" font-size="19" text-anchor="middle" font-weight="700">中断</text>
+<path d="M410,362 Q410,430 150,445" fill="none" stroke="#b95130" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="330" y="398" fill="#b95130" font-size="17" text-anchor="middle" font-weight="400">最初へ戻る</text>
+<circle cx="110.0" cy="470.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<circle cx="150.0" cy="470.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<circle cx="190.0" cy="470.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<circle cx="230.0" cy="470.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<circle cx="270.0" cy="470.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<circle cx="310.0" cy="470.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<circle cx="350.0" cy="470.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<circle cx="390.0" cy="470.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<circle cx="430.0" cy="470.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<circle cx="470.0" cy="470.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<circle cx="510.0" cy="470.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<circle cx="550.0" cy="470.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="325" y="540" fill="#b95130" font-size="20" text-anchor="middle" font-weight="700">失うもの：ここまでの全部</text>
+<rect x="660" y="300" width="100" height="60" rx="12" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<circle cx="680.0" cy="330.0" r="9" fill="#087f83"/>
+<circle cx="710.0" cy="330.0" r="9" fill="#087f83"/>
+<circle cx="740.0" cy="330.0" r="9" fill="#087f83"/>
+<rect x="780" y="300" width="100" height="60" rx="12" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<circle cx="800.0" cy="330.0" r="9" fill="#087f83"/>
+<circle cx="830.0" cy="330.0" r="9" fill="#087f83"/>
+<circle cx="860.0" cy="330.0" r="9" fill="#087f83"/>
+<rect x="900" y="300" width="100" height="60" rx="12" fill="#ffffff" stroke="#b95130" stroke-width="2" stroke-dasharray="7 6"/>
+<circle cx="920.0" cy="330.0" r="9" fill="#087f83"/>
+<circle cx="950.0" cy="330.0" r="9" fill="#087f83"/>
+<circle cx="980.0" cy="330.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<rect x="1020" y="300" width="100" height="60" rx="12" fill="#ffffff" stroke="#566773" stroke-width="2" stroke-dasharray="7 6"/>
+<circle cx="1040.0" cy="330.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<circle cx="1070.0" cy="330.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<circle cx="1100.0" cy="330.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<line x1="950.0" y1="280.0" x2="950.0" y2="350.0" stroke="#b95130" stroke-width="2" stroke-dasharray="8 7"/>
+<text x="950" y="270" fill="#b95130" font-size="19" text-anchor="middle" font-weight="700">中断</text>
+<line x1="950.0" y1="368.0" x2="950.0" y2="432.0" stroke="#b95130" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="970" y="405" fill="#b95130" font-size="17" text-anchor="start" font-weight="400">作りかけの一組だけ戻る</text>
+<rect x="660" y="440" width="100" height="60" rx="12" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<circle cx="680.0" cy="470.0" r="9" fill="#087f83"/>
+<circle cx="710.0" cy="470.0" r="9" fill="#087f83"/>
+<circle cx="740.0" cy="470.0" r="9" fill="#087f83"/>
+<rect x="780" y="440" width="100" height="60" rx="12" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<circle cx="800.0" cy="470.0" r="9" fill="#087f83"/>
+<circle cx="830.0" cy="470.0" r="9" fill="#087f83"/>
+<circle cx="860.0" cy="470.0" r="9" fill="#087f83"/>
+<rect x="900" y="440" width="100" height="60" rx="12" fill="#ffffff" stroke="#b95130" stroke-width="2" stroke-dasharray="7 6"/>
+<circle cx="920.0" cy="470.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<circle cx="950.0" cy="470.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<circle cx="980.0" cy="470.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<rect x="1020" y="440" width="100" height="60" rx="12" fill="#ffffff" stroke="#566773" stroke-width="2" stroke-dasharray="7 6"/>
+<circle cx="1040.0" cy="470.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<circle cx="1070.0" cy="470.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<circle cx="1100.0" cy="470.0" r="9" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="875" y="540" fill="#b95130" font-size="20" text-anchor="middle" font-weight="700">失うもの：作りかけの一組だけ</text>
+<text x="50" y="612" fill="#566773" font-size="19" text-anchor="start" font-weight="400">比喩の構図のみ。部品数や中断の確率はサイモン（1962）の設定であり、ここでは描いていない。</text>
+</g>
+</svg>
