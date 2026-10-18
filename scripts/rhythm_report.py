@@ -14,14 +14,22 @@ CONNECTIVES=('しかし','ただし','では','ところが','それでも','だ
 HEDGES={'ではない':r'ではない','とは限らない':r'とは限らない','てはいけない':r'てはいけない','区別':r'区別','違う':r'違う','本連載/本稿':r'本連載|本稿|この連載','説明用/公式ではない':r'説明用|の公式ではない|法則ではない','必要がある/べき':r'必要がある|べきである|なければならない','太字文':r'\*\*[^*]+\*\*','次回は':r'次回は'}
 
 
+MATH_ADJACENT:set[int]=set()
+
+
 def prose_paragraphs(text:str)->list[str]:
-    """Body paragraphs only: no headings, math blocks, code, figures, captions, footnotes, navigation."""
-    out=[];in_math=in_nav=in_code=False
+    """Body paragraphs only: no headings, math blocks, code, figures, captions, footnotes, navigation.
+    Side effect: MATH_ADJACENT holds the indexes of paragraphs touching a display-math block."""
+    out=[];in_math=in_nav=in_code=False;MATH_ADJACENT.clear();after_math=False
     for line in text.split('\n'):
         s=line.strip()
         if s.startswith('```'):in_code=not in_code;continue
         if in_code:continue
-        if s=='$$':in_math=not in_math;continue
+        if s=='$$':
+            in_math=not in_math
+            if in_math and out:MATH_ADJACENT.add(len(out)-1)
+            if not in_math:after_math=True
+            continue
         if in_math:continue
         if s.startswith('<!-- NAV:'):in_nav=True
         if in_nav:
@@ -29,6 +37,7 @@ def prose_paragraphs(text:str)->list[str]:
             continue
         if s.startswith('## 参考文献'):break
         if not s or s.startswith(('#','![','[^','*図')) or s=='---':continue
+        if after_math:MATH_ADJACENT.add(len(out));after_math=False
         out.append(s)
     return out
 
@@ -64,8 +73,8 @@ def measure(text:str)->dict:
     paras=prose_paragraphs(text);lengths=[];para_sizes=[]
     run_end=run_sub=run_mid=1;max_end=max_sub=max_mid=0;prev_end=None;prev_sub=False
     questions=comma0=comma3=0;endings=Counter()
-    for p in paras:
-        ss=sentences(p);para_sizes.append(len(ss))
+    for i,p in enumerate(paras):
+        ss=sentences(p);para_sizes.append(len(ss) if i not in MATH_ADJACENT else -1)
         for s in ss:
             L=length(s);lengths.append(L);c=s.count('、')
             comma0+=c==0;comma3+=c>=3;questions+=is_question(s)
