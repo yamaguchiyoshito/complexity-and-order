@@ -398,6 +398,53 @@
         "holling2001",
         "panarchy"
       ]
+    },
+    {
+      "number": 21,
+      "cour": 2,
+      "part": "Ⅲ",
+      "slug": "exploration-exploitation",
+      "title": "上手になるほど、試せなくなる",
+      "subtitle": "マーチの探索と活用、そして学習の配分",
+      "summary": "既知の方法を磨く活動と新しい可能性を探す活動のあいだで、資源と学習の機会をどう配分するかを扱う。",
+      "path": "chapters/21-exploration-exploitation.md",
+      "figure": "assets/illustrations/21-exploration-exploitation.svg",
+      "figures": [],
+      "sources": [
+        "march"
+      ]
+    },
+    {
+      "number": 22,
+      "cour": 2,
+      "part": "Ⅲ",
+      "slug": "commons",
+      "title": "みんなのものを、誰が守るのか",
+      "subtitle": "オストロムの多中心型ガバナンスとコモンズ",
+      "summary": "複数の自律した主体が共有資源の利用と維持を両立させる制度を、中央管理か放任かの二択を超えて考える。",
+      "path": "chapters/22-commons.md",
+      "figure": "assets/illustrations/22-commons.svg",
+      "figures": [],
+      "sources": [
+        "ostrom"
+      ]
+    },
+    {
+      "number": 23,
+      "cour": 2,
+      "part": "Ⅲ",
+      "slug": "major-transitions",
+      "title": "集まることと、一つになることは違う",
+      "subtitle": "進化の大転換と、新しい単位の成立",
+      "summary": "協働する要素の集まりが、全体として再生産され特徴を次へ伝える単位になる条件を扱う。",
+      "path": "chapters/23-major-transitions.md",
+      "figure": "assets/illustrations/23-major-transitions.svg",
+      "figures": [],
+      "sources": [
+        "maynardsmith",
+        "szathmary2015",
+        "west2015"
+      ]
     }
   ]
 }

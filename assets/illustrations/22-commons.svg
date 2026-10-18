@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">共有のものは、自由だけでは保たれない</title>
+<desc id="desc">共有資源を囲む複数の利用主体と、利用・維持負担・監視・ルール改訂の経路</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#566773" stroke-width="1.4"/></marker></defs>
+<rect width="1200" height="720" rx="20" fill="#f8f7f2"/>
+<g font-family="system-ui, Noto Sans CJK JP, Hiragino Kaku Gothic ProN, Meiryo, sans-serif">
+<text x="50" y="52" fill="#087f83" font-size="18" text-anchor="start" font-weight="700">COMPLEXITY / ORDER     22</text>
+<text x="50" y="103" fill="#182e3a" font-size="34" text-anchor="start" font-weight="700">共有のものは、自由だけでは保たれない</text>
+<text x="50" y="141" fill="#566773" font-size="21" text-anchor="start" font-weight="400">共有資源を囲む複数の利用主体と、利用・維持負担・監視・ルール改訂の経路</text>
+<line x1="50.0" y1="166.0" x2="1150.0" y2="166.0" stroke="#d5dedc" stroke-width="1"/>
+<circle cx="600" cy="400" r="95" fill="#ffffff" stroke="#087f83" stroke-width="3"/>
+<text x="600" y="394" fill="#087f83" font-size="22" text-anchor="middle" font-weight="700">共通基盤</text>
+<text x="600" y="420" fill="#566773" font-size="13" text-anchor="middle" font-weight="400">コード・保守者の時間・CI枠・問い合わせの余力</text>
+<rect x="545.0" y="226.0" width="110" height="48" rx="12" fill="#ffffff" stroke="#b95130" stroke-width="2"/>
+<text x="600.0" y="256.0" fill="#b95130" font-size="17" text-anchor="middle" font-weight="700">チームA</text>
+<line x1="600.0" y1="300.0" x2="600.0" y2="285.0" stroke="#566773" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="830.316954888546" y="329.6474508437579" width="110" height="48" rx="12" fill="#ffffff" stroke="#b95130" stroke-width="2"/>
+<text x="885.316954888546" y="359.6474508437579" fill="#b95130" font-size="17" text-anchor="middle" font-weight="700">チームB</text>
+<line x1="816.2" y1="361.7" x2="713.5" y2="381.6" stroke="#566773" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="721.335575687742" y="497.35254915624216" width="110" height="48" rx="12" fill="#ffffff" stroke="#b95130" stroke-width="2"/>
+<text x="776.335575687742" y="527.3525491562422" fill="#b95130" font-size="17" text-anchor="middle" font-weight="700">チームC</text>
+<line x1="718.7" y1="493.0" x2="694.7" y2="465.2" stroke="#566773" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="368.6644243122581" y="497.35254915624216" width="110" height="48" rx="12" fill="#ffffff" stroke="#b95130" stroke-width="2"/>
+<text x="423.6644243122581" y="527.3525491562422" fill="#b95130" font-size="17" text-anchor="middle" font-weight="700">チームD</text>
+<line x1="481.3" y1="493.0" x2="505.3" y2="465.2" stroke="#566773" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="259.6830451114539" y="329.6474508437579" width="110" height="48" rx="12" fill="#ffffff" stroke="#b95130" stroke-width="2"/>
+<text x="314.6830451114539" y="359.6474508437579" fill="#b95130" font-size="17" text-anchor="middle" font-weight="700">チームE</text>
+<line x1="383.8" y1="361.7" x2="486.5" y2="381.6" stroke="#566773" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="540" y="280" fill="#566773" font-size="15" text-anchor="middle" font-weight="400">利用する</text>
+<rect x="70" y="600" width="230" height="70" rx="12" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="185" y="628" fill="#087f83" font-size="16" text-anchor="middle" font-weight="700">維持の負担を分ける</text>
+<text x="185" y="652" fill="#566773" font-size="14" text-anchor="middle" font-weight="400">保守時間・枠の割当</text>
+<rect x="330" y="600" width="230" height="70" rx="12" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="445" y="628" fill="#087f83" font-size="16" text-anchor="middle" font-weight="700">利用を監視する</text>
+<text x="445" y="652" fill="#566773" font-size="14" text-anchor="middle" font-weight="400">利用者自身が確かめる</text>
+<rect x="640" y="600" width="230" height="70" rx="12" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="755" y="628" fill="#087f83" font-size="16" text-anchor="middle" font-weight="700">紛争を解決する</text>
+<text x="755" y="652" fill="#566773" font-size="14" text-anchor="middle" font-weight="400">低い費用で、その場で</text>
+<rect x="900" y="600" width="230" height="70" rx="12" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="1015" y="628" fill="#087f83" font-size="16" text-anchor="middle" font-weight="700">ルールを改訂する</text>
+<text x="1015" y="652" fill="#566773" font-size="14" text-anchor="middle" font-weight="400">利用者が決定に参加</text>
+<text x="600" y="586" fill="#182e3a" font-size="15" text-anchor="middle" font-weight="400">中央管理でも放任でもない、複数の意思決定の拠点</text>
+<text x="50" y="692" fill="#566773" font-size="19" text-anchor="start" font-weight="400">概念図。オストロムの設計原理の一部を、共通基盤に当てはめた本連載の類比。</text>
+</g>
+</svg>

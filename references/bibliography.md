@@ -362,3 +362,67 @@ Ecosystems, 4, 390–405。適応サイクルと、速度の異なる階層が�
 Island Press。適応サイクルの四相と、階層間の「反乱」「記憶」の接続。
 
 **今回の確認範囲：** 書誌と紹介のみ確認。原文は今回未取得。
+
+
+
+## march
+
+**James G. March / 1991**
+
+[Exploration and Exploitation in Organizational Learning](https://ideas.repec.org/a/inm/ororsc/v2y1991i1p71-87.html)
+
+Organization Science, 2(1), 71–87。探索と活用の区別と、適応過程が活用を探索より速く洗練させる結果、短期には有効で長期には自壊的になり得るという議論。
+
+**今回の確認範囲：** 書誌と要旨を確認。原文は今回未取得。相互学習モデルの構造は二次資料で照合した。
+
+
+
+
+## ostrom
+
+**Elinor Ostrom / 2010**
+
+[Beyond Markets and States: Polycentric Governance of Complex Economic Systems](https://www.aeaweb.org/articles?id=10.1257/aer.100.3.641)
+
+American Economic Review, 100(3), 641–672。ノーベル賞記念講演。市場か国家かの二分法を超えた多中心型の統治と、持続する自治制度の設計原理。
+
+**今回の確認範囲：** 書誌と要旨を確認。原文は今回未取得。設計原理の内容は二次資料で照合した。
+
+
+
+
+## maynardsmith
+
+**John Maynard Smith, Eörs Szathmáry / 1995**
+
+[The Major Transitions in Evolution](https://global.oup.com/academic/product/the-major-transitions-in-evolution-9780198502944)
+
+Oxford University Press。転換の前は独立に複製できた単位が、転換の後は全体の一部としてしか複製できなくなること、情報の保存と伝達の仕方の変化、分業。
+
+**今回の確認範囲：** 書誌のみ確認。原文は今回未取得。要点は二次資料と szathmary2015 の要旨で照合した。
+
+
+
+
+## szathmary2015
+
+**Eörs Szathmáry / 2015**
+
+[Toward major evolutionary transitions theory 2.0](https://pmc.ncbi.nlm.nih.gov/articles/PMC4547294/)
+
+PNAS, 112(33), 10104–10111。情報システムの進化と個体性の転換という二つの軸で理論を再構成する。
+
+**今回の確認範囲：** PMC の公開本文の要旨を確認。
+
+
+
+
+## west2015
+
+**Stuart A. West, Roberta M. Fisher, Andy Gardner, E. Toby Kiers / 2015**
+
+[Major evolutionary transitions in individuality](https://doi.org/10.1073/pnas.1421402112)
+
+PNAS, 112(33), 10112–10119。協力と分業と群内対立の小ささが転換に要ること、競争を積極的に抑える機構の役割は多くの転換で小さかったとする再検討。
+
+**今回の確認範囲：** 要旨のみ確認（二次資料経由）。原文は今回未取得。

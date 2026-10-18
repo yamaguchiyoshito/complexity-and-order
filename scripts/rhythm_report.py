@@ -10,7 +10,7 @@ import subprocess
 import sys
 
 ROOT=Path(__file__).resolve().parents[1]
-CONNECTIVES=('しかし','ただし','では','ところが','それでも','だから','つまり','そこで','ここで','もちろん','さらに','また','むしろ','一方','たとえば','例えば','なお','そして','これは','それは','だが','逆に','反対に','同じく','同様に','やがて','最初は','最後に','言い換えれば','ところで','もちろん','それとも','こうして','たとえば')
+CONNECTIVES=('しかし','ただし','では','ところが','それでも','だから','つまり','そこで','ここで','もちろん','さらに','また','むしろ','一方','たとえば','例えば','なお','そして','これは','それは','だが','逆に','反対に','同じく','同様に','やがて','最初は','最後に','言い換えれば','ところで','もちろん','それとも','こうして','たとえば','すなわち')
 HEDGES={'ではない':r'ではない','とは限らない':r'とは限らない','てはいけない':r'てはいけない','区別':r'区別','違う':r'違う','本連載/本稿':r'本連載|本稿|この連載','説明用/公式ではない':r'説明用|の公式ではない|法則ではない','必要がある/べき':r'必要がある|べきである|なければならない','太字文':r'\*\*[^*]+\*\*','次回は':r'次回は'}
 
 
@@ -36,7 +36,7 @@ def prose_paragraphs(text:str)->list[str]:
             if s.startswith('<!-- /NAV'):in_nav=False
             continue
         if s.startswith('## 参考文献'):break
-        if not s or s.startswith(('#','![','[^','*図')) or s=='---':continue
+        if not s or s.startswith(('#','![','[^','*図','- ','* ')) or re.match(r'^\d+\. ',s) or s=='---':continue
         if after_math:MATH_ADJACENT.add(len(out));after_math=False
         out.append(s)
     return out
@@ -63,7 +63,8 @@ def ending(s:str)->str:
 def subject_start(s:str)->bool:
     """「〜は／〜が」で始まる文。接続語、時・条件句（「〜とき、」「〜れば、」「〜では、」）で始まる文は除く。"""
     if s.startswith(CONNECTIVES) or re.match(r'^.{1,14}?(とき|れば|たら|ても|ると|では|なら)[、,]',s) or re.match(r'^.{1,6}?(から|まで|では|には|でも)',s):return False
-    return re.match(r'^.{1,14}?(は|が)[、,]?',s) is not None
+    m=re.match(r'^.{1,14}?(は|が)[、,]?',s)
+    return m is not None and '、' not in m.group(0)[:-1]
 
 
 def is_question(s:str)->bool:return '？' in s or s.endswith(('か。','だろう。','だろうか。'))

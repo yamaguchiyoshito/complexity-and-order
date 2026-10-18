@@ -432,7 +432,76 @@ def figure_20(name):
     f.save(name)
 
 
-CHAPTER_FIGURES={13:lambda name:figure_conversation(name,final=False),14:figure_14,15:figure_15,16:figure_16,17:figure_17,18:figure_18,19:figure_19,20:figure_20}
+def figure_21(name):
+    """図21: 現在の山を高く登る経路と、別の山を探す経路に、同じ資源を配分する図。"""
+    f=Figure(21,'今の山を登る資源と、別の山を探す資源','既知の方法を磨く活用と、新しい可能性を探す探索に、同じ資源を配分する',640)
+    import math as _m
+    X=lambda x:120+x*980
+    Y=lambda v:540-v*280
+    known=lambda x:0.62*_m.exp(-((x-0.28)/0.16)**2)
+    other=lambda x:0.95*_m.exp(-((x-0.78)/0.12)**2)
+    xs=[i/200 for i in range(201)]
+    f.line(100,540,1120,540,color=INK,width=1.5,arrow=True);f.text(1120,566,'方法の空間',17,MUTED,anchor='end')
+    f.line(120,540,120,230,color=INK,width=1.5,arrow=True);f.text(108,236,'成果',17,MUTED,anchor='end')
+    f.path(polyline([(X(x),Y(known(x))) for x in xs]),color=TEAL,width=3)
+    f.path(polyline([(X(x),Y(other(x))) for x in xs]),color=ORANGE,width=3,dash=True)
+    f.circ(X(0.22),Y(known(0.22)),9,TEAL)
+    for a,b in [(0.22,0.245),(0.245,0.265),(0.265,0.28)]:f.line(X(a),Y(known(a)),X(b),Y(known(b)),color=TEAL,width=2.5,arrow=True)
+    f.text(X(0.28),Y(known(0.28))-18,'活用：今の山を少しずつ高く登る',17,TEAL,anchor='middle',weight=700)
+    f.path(f'M{X(0.24):.0f},{Y(known(0.22))-30:.0f} Q{X(0.5):.0f},{Y(0.15):.0f} {X(0.70):.0f},{Y(other(0.70))+40:.0f}',color=ORANGE,width=2.5,dash=True,arrow=True)
+    f.text(X(0.5),Y(0.08)-6,'探索：成果が出るか分からない別の山へ',17,ORANGE,anchor='middle',weight=700)
+    f.text(X(0.78),Y(other(0.78))-16,'見つかれば高いが、見つかるとは限らない',15,MUTED,anchor='middle')
+    rect(f,160,232,420,70,MUTED);f.text(370,260,'同じ資源 R を、活用 (1−ε) と探索 ε に分ける',16,INK,anchor='middle');f.text(370,286,'短期の指標はほぼ活用の成果だけを映す',15,MUTED,anchor='middle')
+    f.footer('概念図。マーチの相互学習モデルの結果ではなく、配分のトレードオフを示す構図。')
+    f.save(name)
+
+
+def figure_22(name):
+    """図22: 共有資源を囲む複数の利用主体と、利用・維持負担・監視・ルール改訂の経路。"""
+    f=Figure(22,'共有のものは、自由だけでは保たれない','共有資源を囲む複数の利用主体と、利用・維持負担・監視・ルール改訂の経路',720)
+    import math as _m
+    cx,cy=600,400
+    f.parts.append(f'<circle cx="{cx}" cy="{cy}" r="95" fill="#ffffff" stroke="#087f83" stroke-width="3"/>')
+    f.text(cx,cy-6,'共通基盤',22,TEAL,anchor='middle',weight=700);f.text(cx,cy+20,'コード・保守者の時間・CI枠・問い合わせの余力',13,MUTED,anchor='middle')
+    teams=[(cx+300*_m.cos(a),cy+150*_m.sin(a)) for a in [-_m.pi/2,-_m.pi/2+2*_m.pi/5,-_m.pi/2+4*_m.pi/5,-_m.pi/2+6*_m.pi/5,-_m.pi/2+8*_m.pi/5]]
+    for i,(x,y) in enumerate(teams):
+        rect(f,x-55,y-24,110,48,ORANGE);f.text(x,y+6,f'チーム{"ABCDE"[i]}',17,ORANGE,anchor='middle',weight=700)
+        ang=_m.atan2(cy-y,cx-x);ex,ey=x+70*_m.cos(ang),y+50*_m.sin(ang);tx,ty=cx-115*_m.cos(ang),cy-115*_m.sin(ang)
+        f.line(ex,ey,tx,ty,color=MUTED,width=1.5,arrow=True)
+    f.text(cx-60,cy-120,'利用する',15,MUTED,anchor='middle')
+    rect(f,70,600,230,70,TEAL);f.text(185,628,'維持の負担を分ける',16,TEAL,anchor='middle',weight=700);f.text(185,652,'保守時間・枠の割当',14,MUTED,anchor='middle')
+    rect(f,330,600,230,70,TEAL);f.text(445,628,'利用を監視する',16,TEAL,anchor='middle',weight=700);f.text(445,652,'利用者自身が確かめる',14,MUTED,anchor='middle')
+    rect(f,640,600,230,70,TEAL);f.text(755,628,'紛争を解決する',16,TEAL,anchor='middle',weight=700);f.text(755,652,'低い費用で、その場で',14,MUTED,anchor='middle')
+    rect(f,900,600,230,70,TEAL);f.text(1015,628,'ルールを改訂する',16,TEAL,anchor='middle',weight=700);f.text(1015,652,'利用者が決定に参加',14,MUTED,anchor='middle')
+    f.text(600,586,'中央管理でも放任でもない、複数の意思決定の拠点',15,INK,anchor='middle')
+    f.footer('概念図。オストロムの設計原理の一部を、共通基盤に当てはめた本連載の類比。')
+    f.save(name)
+
+
+def figure_23(name):
+    """図23: 独立した要素の協働から、全体として特徴を継承する単位への変化。"""
+    f=Figure(23,'一緒に動くことと、一つとして続くことは違う','独立に複製する要素の協働から、全体として再生産され特徴を次へ伝える単位へ',640)
+    f.panel(70,200,480,350);f.text(90,232,'集まる：各要素が独立に複製する',20,INK,weight=700)
+    f.panel(650,200,480,350);f.text(670,232,'一つになる：全体として複製し、特徴を引き継ぐ',20,INK,weight=700)
+    pts=[(170,320),(260,300),(350,330),(220,400),(320,410)]
+    for a,b in [(0,1),(1,2),(0,3),(1,3),(2,4),(3,4),(1,4)]:f.line(*pts[a],*pts[b],color='#aec1c4',width=1.5)
+    for x,y in pts:f.circ(x,y,11,TEAL)
+    for x,y in pts:
+        f.line(x,y+16,x,y+44,color=MUTED,width=1.2,arrow=True);ring(f,x,y+58,7,TEAL)
+    f.text(310,500,'次の世代：各要素がばらばらに',15,MUTED,anchor='middle')
+    rect(f,700,280,180,120,ORANGE)
+    for x,y in [(740,320),(800,310),(840,350),(760,370)]:f.circ(x,y,9,ORANGE)
+    f.line(790,410,790,450,color=ORANGE,width=2.5,arrow=True);f.text(812,436,'全体として複製',15,ORANGE)
+    rect(f,700,460,180,70,ORANGE,dash=True)
+    for x,y in [(740,490),(800,482),(840,510),(760,520)]:ring(f,x,y,8,ORANGE)
+    rect(f,920,280,190,120,MUTED);f.text(1015,318,'情報の保存と伝達',15,INK,anchor='middle',weight=700);f.text(1015,344,'全体の特徴が次へ渡る',13,MUTED,anchor='middle');f.text(1015,366,'内部の対立が抑えられる',13,MUTED,anchor='middle')
+    f.line(880,340,920,340,color=MUTED,width=1.5,arrow=True)
+    f.text(890,538,'結合だけでなく、全体を維持し引き継ぐ仕組みが関わる',14,MUTED,anchor='middle')
+    f.footer('概念図。生物の進化の大転換を図式化したもので、組織やAgentの増設と同一視しない。')
+    f.save(name)
+
+
+CHAPTER_FIGURES={13:lambda name:figure_conversation(name,final=False),14:figure_14,15:figure_15,16:figure_16,17:figure_17,18:figure_18,19:figure_19,20:figure_20,21:figure_21,22:figure_22,23:figure_23}
 COVERS={2:figure_cover_2}
 EXTRA_FIGURES={'3-2':figure_3_2,'6-2':figure_6_2,'4-2':figure_4_2,'2-2':figure_2_2,'1-2':figure_1_2,'12-2':figure_12_2}
 

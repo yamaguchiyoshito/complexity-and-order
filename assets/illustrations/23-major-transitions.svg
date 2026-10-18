@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+<title id="title">一緒に動くことと、一つとして続くことは違う</title>
+<desc id="desc">独立に複製する要素の協働から、全体として再生産され特徴を次へ伝える単位へ</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#566773" stroke-width="1.4"/></marker></defs>
+<rect width="1200" height="640" rx="20" fill="#f8f7f2"/>
+<g font-family="system-ui, Noto Sans CJK JP, Hiragino Kaku Gothic ProN, Meiryo, sans-serif">
+<text x="50" y="52" fill="#087f83" font-size="18" text-anchor="start" font-weight="700">COMPLEXITY / ORDER     23</text>
+<text x="50" y="103" fill="#182e3a" font-size="34" text-anchor="start" font-weight="700">一緒に動くことと、一つとして続くことは違う</text>
+<text x="50" y="141" fill="#566773" font-size="21" text-anchor="start" font-weight="400">独立に複製する要素の協働から、全体として再生産され特徴を次へ伝える単位へ</text>
+<line x1="50.0" y1="166.0" x2="1150.0" y2="166.0" stroke="#d5dedc" stroke-width="1"/>
+<rect x="70" y="200" width="480" height="350" rx="16" fill="none" stroke="#cad5d3" stroke-width="2" stroke-dasharray="7 7"/>
+<text x="90" y="232" fill="#182e3a" font-size="20" text-anchor="start" font-weight="700">集まる：各要素が独立に複製する</text>
+<rect x="650" y="200" width="480" height="350" rx="16" fill="none" stroke="#cad5d3" stroke-width="2" stroke-dasharray="7 7"/>
+<text x="670" y="232" fill="#182e3a" font-size="20" text-anchor="start" font-weight="700">一つになる：全体として複製し、特徴を引き継ぐ</text>
+<line x1="170.0" y1="320.0" x2="260.0" y2="300.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="260.0" y1="300.0" x2="350.0" y2="330.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="170.0" y1="320.0" x2="220.0" y2="400.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="260.0" y1="300.0" x2="220.0" y2="400.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="350.0" y1="330.0" x2="320.0" y2="410.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="220.0" y1="400.0" x2="320.0" y2="410.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="260.0" y1="300.0" x2="320.0" y2="410.0" stroke="#aec1c4" stroke-width="1.5"/>
+<circle cx="170.0" cy="320.0" r="11" fill="#087f83"/>
+<circle cx="260.0" cy="300.0" r="11" fill="#087f83"/>
+<circle cx="350.0" cy="330.0" r="11" fill="#087f83"/>
+<circle cx="220.0" cy="400.0" r="11" fill="#087f83"/>
+<circle cx="320.0" cy="410.0" r="11" fill="#087f83"/>
+<line x1="170.0" y1="336.0" x2="170.0" y2="364.0" stroke="#566773" stroke-width="1.2" marker-end="url(#arrow)"/>
+<circle cx="170.0" cy="378.0" r="7" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<line x1="260.0" y1="316.0" x2="260.0" y2="344.0" stroke="#566773" stroke-width="1.2" marker-end="url(#arrow)"/>
+<circle cx="260.0" cy="358.0" r="7" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<line x1="350.0" y1="346.0" x2="350.0" y2="374.0" stroke="#566773" stroke-width="1.2" marker-end="url(#arrow)"/>
+<circle cx="350.0" cy="388.0" r="7" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<line x1="220.0" y1="416.0" x2="220.0" y2="444.0" stroke="#566773" stroke-width="1.2" marker-end="url(#arrow)"/>
+<circle cx="220.0" cy="458.0" r="7" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<line x1="320.0" y1="426.0" x2="320.0" y2="454.0" stroke="#566773" stroke-width="1.2" marker-end="url(#arrow)"/>
+<circle cx="320.0" cy="468.0" r="7" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="310" y="500" fill="#566773" font-size="15" text-anchor="middle" font-weight="400">次の世代：各要素がばらばらに</text>
+<rect x="700" y="280" width="180" height="120" rx="12" fill="#ffffff" stroke="#b95130" stroke-width="2"/>
+<circle cx="740.0" cy="320.0" r="9" fill="#b95130"/>
+<circle cx="800.0" cy="310.0" r="9" fill="#b95130"/>
+<circle cx="840.0" cy="350.0" r="9" fill="#b95130"/>
+<circle cx="760.0" cy="370.0" r="9" fill="#b95130"/>
+<line x1="790.0" y1="410.0" x2="790.0" y2="450.0" stroke="#b95130" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="812" y="436" fill="#b95130" font-size="15" text-anchor="start" font-weight="400">全体として複製</text>
+<rect x="700" y="460" width="180" height="70" rx="12" fill="#ffffff" stroke="#b95130" stroke-width="2" stroke-dasharray="7 6"/>
+<circle cx="740.0" cy="490.0" r="8" fill="#ffffff" stroke="#b95130" stroke-width="2"/>
+<circle cx="800.0" cy="482.0" r="8" fill="#ffffff" stroke="#b95130" stroke-width="2"/>
+<circle cx="840.0" cy="510.0" r="8" fill="#ffffff" stroke="#b95130" stroke-width="2"/>
+<circle cx="760.0" cy="520.0" r="8" fill="#ffffff" stroke="#b95130" stroke-width="2"/>
+<rect x="920" y="280" width="190" height="120" rx="12" fill="#ffffff" stroke="#566773" stroke-width="2"/>
+<text x="1015" y="318" fill="#182e3a" font-size="15" text-anchor="middle" font-weight="700">情報の保存と伝達</text>
+<text x="1015" y="344" fill="#566773" font-size="13" text-anchor="middle" font-weight="400">全体の特徴が次へ渡る</text>
+<text x="1015" y="366" fill="#566773" font-size="13" text-anchor="middle" font-weight="400">内部の対立が抑えられる</text>
+<line x1="880.0" y1="340.0" x2="920.0" y2="340.0" stroke="#566773" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="890" y="538" fill="#566773" font-size="14" text-anchor="middle" font-weight="400">結合だけでなく、全体を維持し引き継ぐ仕組みが関わる</text>
+<text x="50" y="612" fill="#566773" font-size="19" text-anchor="start" font-weight="400">概念図。生物の進化の大転換を図式化したもので、組織やAgentの増設と同一視しない。</text>
+</g>
+</svg>
