@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
+<title id="title">五つの機能であって、五段階の役職ではない</title>
+<desc id="desc">局所の自律性を、調整・統合・将来適応・方針で支える</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#566773" stroke-width="1.4"/></marker></defs>
+<rect width="1200" height="780" rx="20" fill="#f8f7f2"/>
+<g font-family="system-ui, Noto Sans CJK JP, Hiragino Kaku Gothic ProN, Meiryo, sans-serif">
+<text x="50" y="52" fill="#087f83" font-size="18" text-anchor="start" font-weight="700">COMPLEXITY / ORDER     10</text>
+<text x="50" y="103" fill="#182e3a" font-size="34" text-anchor="start" font-weight="700">五つの機能であって、五段階の役職ではない</text>
+<text x="50" y="141" fill="#566773" font-size="21" text-anchor="start" font-weight="400">局所の自律性を、調整・統合・将来適応・方針で支える</text>
+<line x1="50.0" y1="166.0" x2="1150.0" y2="166.0" stroke="#d5dedc" stroke-width="1"/>
+<rect x="440" y="205" width="365" height="75" rx="14" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="622.5" y="250.5" fill="#087f83" font-size="25" text-anchor="middle" font-weight="700">S5  同一性・方針</text>
+<rect x="200" y="336" width="365" height="85" rx="14" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="382.5" y="386.5" fill="#087f83" font-size="25" text-anchor="middle" font-weight="700">S3  現在の内部統合</text>
+<rect x="680" y="336" width="365" height="85" rx="14" fill="#ffffff" stroke="#b95130" stroke-width="2"/>
+<text x="862.5" y="386.5" fill="#b95130" font-size="25" text-anchor="middle" font-weight="700">S4  外部・将来への適応</text>
+<line x1="510.0" y1="280.0" x2="430.0" y2="332.0" stroke="#566773" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="730.0" y1="280.0" x2="817.0" y2="332.0" stroke="#566773" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="570.0" y1="378.0" x2="675.0" y2="378.0" stroke="#566773" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="445" y="469" width="360" height="73" rx="14" fill="#ffffff" stroke="#3c60a4" stroke-width="2"/>
+<text x="625.0" y="513.5" fill="#3c60a4" font-size="25" text-anchor="middle" font-weight="700">S2  運用間の調整</text>
+<rect x="80" y="610" width="300" height="83" rx="14" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="230.0" y="647.5" fill="#087f83" font-size="25" text-anchor="middle" font-weight="700">S1  価値提供 A</text>
+<text x="230.0" y="681.5" fill="#566773" font-size="20" text-anchor="middle" font-weight="400">内部にも制御機能</text>
+<rect x="455" y="610" width="300" height="83" rx="14" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="605.0" y="647.5" fill="#087f83" font-size="25" text-anchor="middle" font-weight="700">S1  価値提供 B</text>
+<text x="605.0" y="681.5" fill="#566773" font-size="20" text-anchor="middle" font-weight="400">固有の環境と自律性</text>
+<rect x="875" y="475" width="270" height="70" rx="14" fill="#ffffff" stroke="#b95130" stroke-width="2"/>
+<text x="1010.0" y="518.0" fill="#b95130" font-size="25" text-anchor="middle" font-weight="700">S3*  直接監査</text>
+<line x1="382.0" y1="421.0" x2="382.0" y2="589.0" stroke="#566773" stroke-width="2"/>
+<line x1="382.0" y1="589.0" x2="230.0" y2="606.0" stroke="#566773" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="382.0" y1="589.0" x2="605.0" y2="606.0" stroke="#566773" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="530.0" y1="542.0" x2="250.0" y2="606.0" stroke="#566773" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="8 7"/>
+<line x1="625.0" y1="542.0" x2="625.0" y2="606.0" stroke="#566773" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="8 7"/>
+<path d="M 1010 545 L 1010 652 L 760 652" fill="none" stroke="#b95130" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="8 7"/>
+<path d="M 1010 475 L 1010 447 L 500 447 L 500 421" fill="none" stroke="#b95130" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="8 7"/>
+<text x="50" y="752" fill="#566773" font-size="19" text-anchor="start" font-weight="400">通信経路を省略した概念図。S1は単なる分業工程ではなく、価値提供と自律性で境界を考える。</text>
+</g>
+</svg>

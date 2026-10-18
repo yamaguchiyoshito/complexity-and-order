@@ -1,0 +1,8 @@
+_site/
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+Thumbs.db
+*.zip
+verification-artifacts/

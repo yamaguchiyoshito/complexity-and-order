@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<title id="title">規則に従う活動が、規則自身を対象にする</title>
+<desc id="desc">構成・実行・記述の関係を区別した、自己改訂の工学的な模型</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#566773" stroke-width="1.4"/></marker></defs>
+<rect width="1200" height="680" rx="20" fill="#f8f7f2"/>
+<g font-family="system-ui, Noto Sans CJK JP, Hiragino Kaku Gothic ProN, Meiryo, sans-serif">
+<text x="50" y="52" fill="#087f83" font-size="18" text-anchor="start" font-weight="700">COMPLEXITY / ORDER     07</text>
+<text x="50" y="103" fill="#182e3a" font-size="34" text-anchor="start" font-weight="700">規則に従う活動が、規則自身を対象にする</text>
+<text x="50" y="141" fill="#566773" font-size="21" text-anchor="start" font-weight="400">構成・実行・記述の関係を区別した、自己改訂の工学的な模型</text>
+<line x1="50.0" y1="166.0" x2="1150.0" y2="166.0" stroke="#d5dedc" stroke-width="1"/>
+<rect x="330" y="218" width="540" height="90" rx="14" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="600.0" y="259.0" fill="#087f83" font-size="25" text-anchor="middle" font-weight="700">規則・Skill θ</text>
+<text x="600.0" y="293.0" fill="#566773" font-size="20" text-anchor="middle" font-weight="400">何に従って実行するか</text>
+<rect x="95" y="432" width="390" height="90" rx="14" fill="#ffffff" stroke="#3c60a4" stroke-width="2"/>
+<text x="290.0" y="473.0" fill="#3c60a4" font-size="25" text-anchor="middle" font-weight="700">実行と成果物</text>
+<text x="290.0" y="507.0" fill="#566773" font-size="20" text-anchor="middle" font-weight="400">規則に従う活動</text>
+<rect x="715" y="432" width="390" height="90" rx="14" fill="#ffffff" stroke="#b95130" stroke-width="2"/>
+<text x="910.0" y="473.0" fill="#b95130" font-size="25" text-anchor="middle" font-weight="700">規則についての記述</text>
+<text x="910.0" y="507.0" fill="#566773" font-size="20" text-anchor="middle" font-weight="400">評価・改訂案</text>
+<line x1="435.0" y1="308.0" x2="313.0" y2="427.0" stroke="#566773" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="280" y="360" fill="#182e3a" font-size="22" text-anchor="end" font-weight="400">実行を規定</text>
+<line x1="490.0" y1="477.0" x2="710.0" y2="477.0" stroke="#566773" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="600" y="463" fill="#182e3a" font-size="22" text-anchor="middle" font-weight="400">対象化</text>
+<line x1="910.0" y1="432.0" x2="790.0" y2="309.0" stroke="#566773" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="952" y="367" fill="#182e3a" font-size="22" text-anchor="middle" font-weight="400">改訂提案</text>
+<text x="600" y="588" fill="#182e3a" font-size="24" text-anchor="middle" font-weight="700">評価基準と権限の変更は、別の承認境界で扱う。</text>
+<text x="50" y="652" fill="#566773" font-size="19" text-anchor="start" font-weight="400">単なる循環や自己修正だけで、ストレンジループ・意識の成立を意味するわけではない。</text>
+</g>
+</svg>

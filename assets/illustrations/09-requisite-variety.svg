@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<title id="title">速さと、選び分ける能力は違う</title>
+<desc id="desc">固定した対応ごとに結果が重複しない制御表を仮定する</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#566773" stroke-width="1.4"/></marker></defs>
+<rect width="1200" height="680" rx="20" fill="#f8f7f2"/>
+<g font-family="system-ui, Noto Sans CJK JP, Hiragino Kaku Gothic ProN, Meiryo, sans-serif">
+<text x="50" y="52" fill="#087f83" font-size="18" text-anchor="start" font-weight="700">COMPLEXITY / ORDER     09</text>
+<text x="50" y="103" fill="#182e3a" font-size="34" text-anchor="start" font-weight="700">速さと、選び分ける能力は違う</text>
+<text x="50" y="141" fill="#566773" font-size="21" text-anchor="start" font-weight="400">固定した対応ごとに結果が重複しない制御表を仮定する</text>
+<line x1="50.0" y1="166.0" x2="1150.0" y2="166.0" stroke="#d5dedc" stroke-width="1"/>
+<circle cx="80.0" cy="245.0" r="7" fill="#3c60a4"/>
+<circle cx="106.0" cy="245.0" r="7" fill="#3c60a4"/>
+<circle cx="132.0" cy="245.0" r="7" fill="#3c60a4"/>
+<circle cx="158.0" cy="245.0" r="7" fill="#3c60a4"/>
+<circle cx="184.0" cy="245.0" r="7" fill="#3c60a4"/>
+<circle cx="210.0" cy="245.0" r="7" fill="#3c60a4"/>
+<circle cx="236.0" cy="245.0" r="7" fill="#3c60a4"/>
+<circle cx="262.0" cy="245.0" r="7" fill="#3c60a4"/>
+<circle cx="80.0" cy="271.0" r="7" fill="#3c60a4"/>
+<circle cx="106.0" cy="271.0" r="7" fill="#3c60a4"/>
+<circle cx="132.0" cy="271.0" r="7" fill="#3c60a4"/>
+<circle cx="158.0" cy="271.0" r="7" fill="#3c60a4"/>
+<circle cx="184.0" cy="271.0" r="7" fill="#3c60a4"/>
+<circle cx="210.0" cy="271.0" r="7" fill="#3c60a4"/>
+<circle cx="236.0" cy="271.0" r="7" fill="#3c60a4"/>
+<circle cx="262.0" cy="271.0" r="7" fill="#3c60a4"/>
+<circle cx="80.0" cy="297.0" r="7" fill="#3c60a4"/>
+<circle cx="106.0" cy="297.0" r="7" fill="#3c60a4"/>
+<circle cx="132.0" cy="297.0" r="7" fill="#3c60a4"/>
+<circle cx="158.0" cy="297.0" r="7" fill="#3c60a4"/>
+<circle cx="184.0" cy="297.0" r="7" fill="#3c60a4"/>
+<circle cx="210.0" cy="297.0" r="7" fill="#3c60a4"/>
+<circle cx="236.0" cy="297.0" r="7" fill="#3c60a4"/>
+<circle cx="262.0" cy="297.0" r="7" fill="#3c60a4"/>
+<circle cx="80.0" cy="323.0" r="7" fill="#3c60a4"/>
+<circle cx="106.0" cy="323.0" r="7" fill="#3c60a4"/>
+<circle cx="132.0" cy="323.0" r="7" fill="#3c60a4"/>
+<circle cx="158.0" cy="323.0" r="7" fill="#3c60a4"/>
+<circle cx="184.0" cy="323.0" r="7" fill="#3c60a4"/>
+<circle cx="210.0" cy="323.0" r="7" fill="#3c60a4"/>
+<circle cx="236.0" cy="323.0" r="7" fill="#3c60a4"/>
+<circle cx="262.0" cy="323.0" r="7" fill="#3c60a4"/>
+<circle cx="80.0" cy="349.0" r="7" fill="#3c60a4"/>
+<circle cx="106.0" cy="349.0" r="7" fill="#3c60a4"/>
+<circle cx="132.0" cy="349.0" r="7" fill="#3c60a4"/>
+<circle cx="158.0" cy="349.0" r="7" fill="#3c60a4"/>
+<circle cx="184.0" cy="349.0" r="7" fill="#3c60a4"/>
+<circle cx="210.0" cy="349.0" r="7" fill="#3c60a4"/>
+<circle cx="236.0" cy="349.0" r="7" fill="#3c60a4"/>
+<circle cx="262.0" cy="349.0" r="7" fill="#3c60a4"/>
+<circle cx="80.0" cy="375.0" r="7" fill="#3c60a4"/>
+<circle cx="106.0" cy="375.0" r="7" fill="#3c60a4"/>
+<circle cx="132.0" cy="375.0" r="7" fill="#3c60a4"/>
+<circle cx="158.0" cy="375.0" r="7" fill="#3c60a4"/>
+<circle cx="184.0" cy="375.0" r="7" fill="#3c60a4"/>
+<circle cx="210.0" cy="375.0" r="7" fill="#3c60a4"/>
+<circle cx="236.0" cy="375.0" r="7" fill="#3c60a4"/>
+<circle cx="262.0" cy="375.0" r="7" fill="#3c60a4"/>
+<circle cx="80.0" cy="401.0" r="7" fill="#3c60a4"/>
+<circle cx="106.0" cy="401.0" r="7" fill="#3c60a4"/>
+<circle cx="132.0" cy="401.0" r="7" fill="#3c60a4"/>
+<circle cx="158.0" cy="401.0" r="7" fill="#3c60a4"/>
+<circle cx="184.0" cy="401.0" r="7" fill="#3c60a4"/>
+<circle cx="210.0" cy="401.0" r="7" fill="#3c60a4"/>
+<circle cx="236.0" cy="401.0" r="7" fill="#3c60a4"/>
+<circle cx="262.0" cy="401.0" r="7" fill="#3c60a4"/>
+<circle cx="80.0" cy="427.0" r="7" fill="#3c60a4"/>
+<circle cx="106.0" cy="427.0" r="7" fill="#3c60a4"/>
+<circle cx="132.0" cy="427.0" r="7" fill="#3c60a4"/>
+<circle cx="158.0" cy="427.0" r="7" fill="#3c60a4"/>
+<circle cx="184.0" cy="427.0" r="7" fill="#3c60a4"/>
+<circle cx="210.0" cy="427.0" r="7" fill="#3c60a4"/>
+<circle cx="236.0" cy="427.0" r="7" fill="#3c60a4"/>
+<circle cx="262.0" cy="427.0" r="7" fill="#3c60a4"/>
+<circle cx="550.0" cy="290.0" r="10" fill="#087f83"/>
+<circle cx="582.0" cy="290.0" r="10" fill="#087f83"/>
+<circle cx="614.0" cy="290.0" r="10" fill="#087f83"/>
+<circle cx="646.0" cy="290.0" r="10" fill="#087f83"/>
+<circle cx="550.0" cy="322.0" r="10" fill="#087f83"/>
+<circle cx="582.0" cy="322.0" r="10" fill="#087f83"/>
+<circle cx="614.0" cy="322.0" r="10" fill="#087f83"/>
+<circle cx="646.0" cy="322.0" r="10" fill="#087f83"/>
+<circle cx="550.0" cy="354.0" r="10" fill="#087f83"/>
+<circle cx="582.0" cy="354.0" r="10" fill="#087f83"/>
+<circle cx="614.0" cy="354.0" r="10" fill="#087f83"/>
+<circle cx="646.0" cy="354.0" r="10" fill="#087f83"/>
+<circle cx="550.0" cy="386.0" r="10" fill="#087f83"/>
+<circle cx="582.0" cy="386.0" r="10" fill="#087f83"/>
+<circle cx="614.0" cy="386.0" r="10" fill="#087f83"/>
+<circle cx="646.0" cy="386.0" r="10" fill="#087f83"/>
+<circle cx="964.0" cy="304.0" r="18" fill="#b95130"/>
+<circle cx="1034.0" cy="304.0" r="18" fill="#b95130"/>
+<circle cx="964.0" cy="374.0" r="18" fill="#b95130"/>
+<circle cx="1034.0" cy="374.0" r="18" fill="#b95130"/>
+<line x1="326.0" y1="340.0" x2="483.0" y2="340.0" stroke="#566773" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="732.0" y1="340.0" x2="891.0" y2="340.0" stroke="#566773" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="185" y="500" fill="#182e3a" font-size="29" text-anchor="middle" font-weight="700">外乱：64種類</text>
+<text x="600" y="500" fill="#182e3a" font-size="29" text-anchor="middle" font-weight="700">対応：16種類</text>
+<text x="1000" y="500" fill="#182e3a" font-size="27" text-anchor="middle" font-weight="700">結果：4種類以上</text>
+<text x="600" y="582" fill="#182e3a" font-size="27" text-anchor="middle" font-weight="400">結果の種類数 ≥ ⌈ 外乱の種類数 / 対応の種類数 ⌉</text>
+<text x="50" y="652" fill="#566773" font-size="19" text-anchor="start" font-weight="400">モデルの必要条件。対応の有効性、観測可能性、選択精度、応答時間は別に確かめる。</text>
+</g>
+</svg>

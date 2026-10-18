@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">複雑さを減らすことが、次の複雑さを可能にする</title>
+<desc id="desc">連載全体を結ぶ設計上の解釈。各接続には条件がある。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#566773" stroke-width="1.4"/></marker></defs>
+<rect width="1200" height="760" rx="20" fill="#f8f7f2"/>
+<g font-family="system-ui, Noto Sans CJK JP, Hiragino Kaku Gothic ProN, Meiryo, sans-serif">
+<text x="50" y="52" fill="#087f83" font-size="18" text-anchor="start" font-weight="700">COMPLEXITY / ORDER     12</text>
+<text x="50" y="103" fill="#182e3a" font-size="34" text-anchor="start" font-weight="700">複雑さを減らすことが、次の複雑さを可能にする</text>
+<text x="50" y="141" fill="#566773" font-size="21" text-anchor="start" font-weight="400">連載全体を結ぶ設計上の解釈。各接続には条件がある。</text>
+<line x1="50.0" y1="166.0" x2="1150.0" y2="166.0" stroke="#d5dedc" stroke-width="1"/>
+<rect x="95" y="235" width="350" height="90" rx="14" fill="#ffffff" stroke="#3c60a4" stroke-width="2"/>
+<text x="270.0" y="276.0" fill="#3c60a4" font-size="25" text-anchor="middle" font-weight="700">複雑な相互作用</text>
+<text x="270.0" y="310.0" fill="#566773" font-size="20" text-anchor="middle" font-weight="400">要素と関係が増える</text>
+<rect x="750" y="235" width="350" height="90" rx="14" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="925.0" y="276.0" fill="#087f83" font-size="25" text-anchor="middle" font-weight="700">局所的な秩序</text>
+<text x="925.0" y="310.0" fill="#566773" font-size="20" text-anchor="middle" font-weight="400">安定したまとまりが生じる</text>
+<rect x="750" y="485" width="350" height="90" rx="14" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="925.0" y="526.0" fill="#087f83" font-size="25" text-anchor="middle" font-weight="700">階層・自律性</text>
+<text x="925.0" y="560.0" fill="#566773" font-size="20" text-anchor="middle" font-weight="400">内部で扱い、境界でつなぐ</text>
+<rect x="95" y="485" width="350" height="90" rx="14" fill="#ffffff" stroke="#b95130" stroke-width="2"/>
+<text x="270.0" y="526.0" fill="#b95130" font-size="25" text-anchor="middle" font-weight="700">高次の複雑さ</text>
+<text x="270.0" y="560.0" fill="#566773" font-size="20" text-anchor="middle" font-weight="400">新しい活動が可能になる</text>
+<line x1="450.0" y1="280.0" x2="745.0" y2="280.0" stroke="#566773" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="600" y="263" fill="#182e3a" font-size="21" text-anchor="middle" font-weight="400">条件付きの形成</text>
+<line x1="925.0" y1="330.0" x2="925.0" y2="480.0" stroke="#566773" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="950" y="410" fill="#182e3a" font-size="21" text-anchor="start" font-weight="400">局所化・統合</text>
+<line x1="745.0" y1="530.0" x2="450.0" y2="530.0" stroke="#566773" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="600" y="512" fill="#182e3a" font-size="21" text-anchor="middle" font-weight="400">対応能力の拡大</text>
+<line x1="270.0" y1="480.0" x2="270.0" y2="330.0" stroke="#566773" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="245" y="410" fill="#182e3a" font-size="21" text-anchor="end" font-weight="400">新しい相互作用</text>
+<rect x="430" y="357" width="345" height="80" rx="14" fill="#ffffff" stroke="#b95130" stroke-width="2"/>
+<text x="602.5" y="405.0" fill="#b95130" font-size="25" text-anchor="middle" font-weight="700">観測・検証・再設計</text>
+<text x="600" y="664" fill="#182e3a" font-size="30" text-anchor="middle" font-weight="700">どれほどの複雑さを、私たちは成立させられるのか。</text>
+<text x="50" y="732" fill="#566773" font-size="19" text-anchor="start" font-weight="400">自然科学の単一の法則でも、すべての系がたどる発達順序でもない。</text>
+</g>
+</svg>

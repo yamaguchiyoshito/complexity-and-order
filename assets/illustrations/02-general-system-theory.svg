@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<title id="title">境界は、交換を止めるためだけにない</title>
+<desc id="desc">開放系を、要素・関係・境界・環境として捉える</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#566773" stroke-width="1.4"/></marker></defs>
+<rect width="1200" height="680" rx="20" fill="#f8f7f2"/>
+<g font-family="system-ui, Noto Sans CJK JP, Hiragino Kaku Gothic ProN, Meiryo, sans-serif">
+<text x="50" y="52" fill="#087f83" font-size="18" text-anchor="start" font-weight="700">COMPLEXITY / ORDER     02</text>
+<text x="50" y="103" fill="#182e3a" font-size="34" text-anchor="start" font-weight="700">境界は、交換を止めるためだけにない</text>
+<text x="50" y="141" fill="#566773" font-size="21" text-anchor="start" font-weight="400">開放系を、要素・関係・境界・環境として捉える</text>
+<line x1="50.0" y1="166.0" x2="1150.0" y2="166.0" stroke="#d5dedc" stroke-width="1"/>
+<rect x="340" y="205" width="520" height="350" rx="16" fill="none" stroke="#cad5d3" stroke-width="2" stroke-dasharray="7 7"/>
+<text x="600" y="245" fill="#182e3a" font-size="24" text-anchor="middle" font-weight="700">システムの境界</text>
+<rect x="399" y="291" width="152" height="68" rx="14" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="475.0" y="333.0" fill="#087f83" font-size="25" text-anchor="middle" font-weight="700">要素 A</text>
+<rect x="649" y="291" width="152" height="68" rx="14" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="725.0" y="333.0" fill="#087f83" font-size="25" text-anchor="middle" font-weight="700">要素 B</text>
+<rect x="524" y="431" width="152" height="68" rx="14" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="600.0" y="473.0" fill="#087f83" font-size="25" text-anchor="middle" font-weight="700">要素 C</text>
+<line x1="551.0" y1="325.0" x2="649.0" y2="325.0" stroke="#566773" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="702.0" y1="360.0" x2="640.0" y2="427.0" stroke="#566773" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="560.0" y1="427.0" x2="494.0" y2="360.0" stroke="#566773" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="600" y="397" fill="#182e3a" font-size="22" text-anchor="middle" font-weight="400">相互作用</text>
+<text x="172" y="325" fill="#182e3a" font-size="23" text-anchor="middle" font-weight="400">環境からの供給</text>
+<line x1="80.0" y1="380.0" x2="340.0" y2="380.0" stroke="#b95130" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="1022" y="325" fill="#182e3a" font-size="23" text-anchor="middle" font-weight="400">環境への流出</text>
+<line x1="860.0" y1="380.0" x2="1120.0" y2="380.0" stroke="#b95130" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="600" y="606" fill="#182e3a" font-size="25" text-anchor="middle" font-weight="400">同じ部品でも、関係と境界が変われば全体の働きが変わる。</text>
+<text x="50" y="652" fill="#566773" font-size="19" text-anchor="start" font-weight="400">交換・相互作用の概念図。すべての開放系が階層や自己生産を持つわけではない。</text>
+</g>
+</svg>

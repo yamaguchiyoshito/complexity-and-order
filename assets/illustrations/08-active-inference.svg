@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<title id="title">直すために動く。知るためにも動く。</title>
+<desc id="desc">原因仮説の更新と、情報獲得を含む行動選択</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#566773" stroke-width="1.4"/></marker></defs>
+<rect width="1200" height="680" rx="20" fill="#f8f7f2"/>
+<g font-family="system-ui, Noto Sans CJK JP, Hiragino Kaku Gothic ProN, Meiryo, sans-serif">
+<text x="50" y="52" fill="#087f83" font-size="18" text-anchor="start" font-weight="700">COMPLEXITY / ORDER     08</text>
+<text x="50" y="103" fill="#182e3a" font-size="34" text-anchor="start" font-weight="700">直すために動く。知るためにも動く。</text>
+<text x="50" y="141" fill="#566773" font-size="21" text-anchor="start" font-weight="400">原因仮説の更新と、情報獲得を含む行動選択</text>
+<line x1="50.0" y1="166.0" x2="1150.0" y2="166.0" stroke="#d5dedc" stroke-width="1"/>
+<rect x="60" y="232" width="380" height="95" rx="14" fill="#ffffff" stroke="#3c60a4" stroke-width="2"/>
+<text x="250.0" y="275.5" fill="#3c60a4" font-size="25" text-anchor="middle" font-weight="700">観測・ログ</text>
+<text x="250.0" y="309.5" fill="#566773" font-size="20" text-anchor="middle" font-weight="400">何が実際に起きたか</text>
+<rect x="760" y="232" width="380" height="95" rx="14" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="950.0" y="275.5" fill="#087f83" font-size="25" text-anchor="middle" font-weight="700">仮説・信念 q(s)</text>
+<text x="950.0" y="309.5" fill="#566773" font-size="20" text-anchor="middle" font-weight="400">何が原因だと考えるか</text>
+<rect x="760" y="450" width="380" height="95" rx="14" fill="#ffffff" stroke="#b95130" stroke-width="2"/>
+<text x="950.0" y="493.5" fill="#b95130" font-size="25" text-anchor="middle" font-weight="700">行動選択</text>
+<text x="950.0" y="527.5" fill="#566773" font-size="20" text-anchor="middle" font-weight="400">修正する／追加調査する</text>
+<rect x="60" y="450" width="380" height="95" rx="14" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="250.0" y="493.5" fill="#087f83" font-size="25" text-anchor="middle" font-weight="700">環境・実行結果</text>
+<text x="250.0" y="527.5" fill="#566773" font-size="20" text-anchor="middle" font-weight="400">次の観測を生む</text>
+<line x1="445.0" y1="280.0" x2="755.0" y2="280.0" stroke="#566773" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="600" y="263" fill="#182e3a" font-size="22" text-anchor="middle" font-weight="400">観測から更新</text>
+<line x1="950.0" y1="331.0" x2="950.0" y2="444.0" stroke="#566773" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="928" y="389" fill="#182e3a" font-size="22" text-anchor="end" font-weight="400">価値と情報利得</text>
+<line x1="755.0" y1="497.0" x2="445.0" y2="497.0" stroke="#566773" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="600" y="480" fill="#182e3a" font-size="22" text-anchor="middle" font-weight="400">働きかける</text>
+<line x1="250.0" y1="445.0" x2="250.0" y2="332.0" stroke="#566773" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="50" y="652" fill="#566773" font-size="19" text-anchor="start" font-weight="400">確率モデル上の判断と、現実の正しさは別。適用は仮説であり、独立した検証を要する。</text>
+</g>
+</svg>

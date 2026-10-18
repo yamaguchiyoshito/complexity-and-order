@@ -1,0 +1,170 @@
+{
+  "title": "複雑さと秩序",
+  "subtitle": "階層・自己組織化・自律性をめぐる全12回",
+  "language": "ja",
+  "version": "1.0.0",
+  "chapters": [
+    {
+      "number": 1,
+      "slug": "complexity-hierarchy",
+      "title": "複雑さを減らすと、何が増えるのか",
+      "subtitle": "複雑度のオーダーとサイモンの階層論",
+      "summary": "要素数、関係数、状態数を区別し、階層化が効く条件を考える。",
+      "path": "chapters/01-complexity-hierarchy.md",
+      "figure": "assets/illustrations/01-complexity-hierarchy.svg",
+      "sources": [
+        "simon"
+      ]
+    },
+    {
+      "number": 2,
+      "slug": "general-system-theory",
+      "title": "部品を並べても、全体にはならない",
+      "subtitle": "ベルタランフィの一般システム理論",
+      "summary": "関係、境界、環境との交換から、全体が成立する条件を読む。",
+      "path": "chapters/02-general-system-theory.md",
+      "figure": "assets/illustrations/02-general-system-theory.svg",
+      "sources": [
+        "bertalanffy"
+      ]
+    },
+    {
+      "number": 3,
+      "slug": "dissipative-structures",
+      "title": "流れているから、かたちが保たれる",
+      "subtitle": "プリゴジンの散逸構造論",
+      "summary": "非平衡での秩序形成と、カオス・階層形成との違いを考える。",
+      "path": "chapters/03-dissipative-structures.md",
+      "figure": "assets/illustrations/03-dissipative-structures.svg",
+      "sources": [
+        "prigogine"
+      ]
+    },
+    {
+      "number": 4,
+      "slug": "synergetics",
+      "title": "一万の動きを、一つの動きとして読む",
+      "subtitle": "ハーケンのシナジェティクスと隷属原理",
+      "summary": "関係を分ける縮約と、動的な自由度を減らす縮約を区別する。",
+      "path": "chapters/04-synergetics.md",
+      "figure": "assets/illustrations/04-synergetics.svg",
+      "sources": [
+        "haken"
+      ]
+    },
+    {
+      "number": 5,
+      "slug": "autopoiesis",
+      "title": "壊れないのではなく、つくり直している",
+      "subtitle": "オートポイエーシスと自己生産",
+      "summary": "パターンの持続、自動化、自己生産を混同せず、自律性を捉え直す。",
+      "path": "chapters/05-autopoiesis.md",
+      "figure": "assets/illustrations/05-autopoiesis.svg",
+      "sources": [
+        "autopoiesis"
+      ]
+    },
+    {
+      "number": 6,
+      "slug": "kauffman",
+      "title": "つながるほど生まれやすく、変わりにくくなる",
+      "subtitle": "自己触媒集合とNKモデル",
+      "summary": "自己維持を助ける関係と、探索を難しくする相互依存の二面性を読む。",
+      "path": "chapters/06-kauffman.md",
+      "figure": "assets/illustrations/06-kauffman.svg",
+      "sources": [
+        "kauffman",
+        "raf",
+        "nk"
+      ]
+    },
+    {
+      "number": 7,
+      "slug": "strange-loops",
+      "title": "規則に従うものが、規則を書く",
+      "subtitle": "ホフスタッターのストレンジループ",
+      "summary": "反復、フィードバック、自己参照、階層横断を分けて考える。",
+      "path": "chapters/07-strange-loops.md",
+      "figure": "assets/illustrations/07-strange-loops.svg",
+      "sources": [
+        "hofstadter"
+      ]
+    },
+    {
+      "number": 8,
+      "slug": "active-inference",
+      "title": "直す前に、何を知るべきか",
+      "subtitle": "自由エネルギー原理と能動的推論",
+      "summary": "行動を成果達成だけでなく、情報獲得としても評価する。",
+      "path": "chapters/08-active-inference.md",
+      "figure": "assets/illustrations/08-active-inference.svg",
+      "sources": [
+        "friston",
+        "active"
+      ]
+    },
+    {
+      "number": 9,
+      "slug": "requisite-variety",
+      "title": "速くするだけでは、制御できない",
+      "subtitle": "アシュビーの必要多様性の法則",
+      "summary": "処理容量と対応の多様性を分け、局所化が制御を支える条件を考える。",
+      "path": "chapters/09-requisite-variety.md",
+      "figure": "assets/illustrations/09-requisite-variety.svg",
+      "sources": [
+        "ashby"
+      ]
+    },
+    {
+      "number": 10,
+      "slug": "viable-system-model",
+      "title": "中央がすべてを知らなくても、全体は動く",
+      "subtitle": "ビーアの生存可能システムモデル",
+      "summary": "実行・調整・統合・適応・方針を、役職ではなく再帰的な機能として配置する。",
+      "path": "chapters/10-viable-system-model.md",
+      "figure": "assets/illustrations/10-viable-system-model.svg",
+      "sources": [
+        "beer",
+        "ashby"
+      ]
+    },
+    {
+      "number": 11,
+      "slug": "second-order-cybernetics",
+      "title": "測る側も、測られている系の中にいる",
+      "subtitle": "フォン・フェルスターの第二次サイバネティクス",
+      "summary": "評価者のモデルと介入も対象へ含め、観測と統制の責任を考える。",
+      "path": "chapters/11-second-order-cybernetics.md",
+      "figure": "assets/illustrations/11-second-order-cybernetics.svg",
+      "sources": [
+        "foerster",
+        "beer"
+      ]
+    },
+    {
+      "number": 12,
+      "slug": "complexity-and-order",
+      "title": "複雑さは、なぜ秩序を生むのか",
+      "subtitle": "階層、自己組織化、そして自律するシステム",
+      "summary": "十一の視点を結び、複雑さをなくす問いから、複雑さを成立させる問いへ戻る。",
+      "path": "chapters/12-complexity-and-order.md",
+      "figure": "assets/illustrations/12-complexity-and-order.svg",
+      "sources": [
+        "simon",
+        "bertalanffy",
+        "prigogine",
+        "haken",
+        "autopoiesis",
+        "kauffman",
+        "raf",
+        "nk",
+        "hofstadter",
+        "friston",
+        "active",
+        "ashby",
+        "beer",
+        "foerster"
+      ]
+    }
+  ]
+}

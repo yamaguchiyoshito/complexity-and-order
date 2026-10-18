@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<title id="title">数が同じでも、関係の増え方は違う</title>
+<desc id="desc">12要素を、全結合と局所接続で比較する</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#566773" stroke-width="1.4"/></marker></defs>
+<rect width="1200" height="680" rx="20" fill="#f8f7f2"/>
+<g font-family="system-ui, Noto Sans CJK JP, Hiragino Kaku Gothic ProN, Meiryo, sans-serif">
+<text x="50" y="52" fill="#087f83" font-size="18" text-anchor="start" font-weight="700">COMPLEXITY / ORDER     01</text>
+<text x="50" y="103" fill="#182e3a" font-size="34" text-anchor="start" font-weight="700">数が同じでも、関係の増え方は違う</text>
+<text x="50" y="141" fill="#566773" font-size="21" text-anchor="start" font-weight="400">12要素を、全結合と局所接続で比較する</text>
+<line x1="50.0" y1="166.0" x2="1150.0" y2="166.0" stroke="#d5dedc" stroke-width="1"/>
+<line x1="290.0" y1="215.0" x2="362.5" y2="234.4" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="290.0" y1="215.0" x2="415.6" y2="287.5" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="290.0" y1="215.0" x2="435.0" y2="360.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="290.0" y1="215.0" x2="415.6" y2="432.5" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="290.0" y1="215.0" x2="362.5" y2="485.6" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="290.0" y1="215.0" x2="290.0" y2="505.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="290.0" y1="215.0" x2="217.5" y2="485.6" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="290.0" y1="215.0" x2="164.4" y2="432.5" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="290.0" y1="215.0" x2="145.0" y2="360.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="290.0" y1="215.0" x2="164.4" y2="287.5" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="290.0" y1="215.0" x2="217.5" y2="234.4" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="362.5" y1="234.4" x2="415.6" y2="287.5" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="362.5" y1="234.4" x2="435.0" y2="360.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="362.5" y1="234.4" x2="415.6" y2="432.5" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="362.5" y1="234.4" x2="362.5" y2="485.6" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="362.5" y1="234.4" x2="290.0" y2="505.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="362.5" y1="234.4" x2="217.5" y2="485.6" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="362.5" y1="234.4" x2="164.4" y2="432.5" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="362.5" y1="234.4" x2="145.0" y2="360.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="362.5" y1="234.4" x2="164.4" y2="287.5" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="362.5" y1="234.4" x2="217.5" y2="234.4" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="415.6" y1="287.5" x2="435.0" y2="360.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="415.6" y1="287.5" x2="415.6" y2="432.5" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="415.6" y1="287.5" x2="362.5" y2="485.6" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="415.6" y1="287.5" x2="290.0" y2="505.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="415.6" y1="287.5" x2="217.5" y2="485.6" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="415.6" y1="287.5" x2="164.4" y2="432.5" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="415.6" y1="287.5" x2="145.0" y2="360.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="415.6" y1="287.5" x2="164.4" y2="287.5" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="415.6" y1="287.5" x2="217.5" y2="234.4" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="435.0" y1="360.0" x2="415.6" y2="432.5" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="435.0" y1="360.0" x2="362.5" y2="485.6" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="435.0" y1="360.0" x2="290.0" y2="505.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="435.0" y1="360.0" x2="217.5" y2="485.6" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="435.0" y1="360.0" x2="164.4" y2="432.5" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="435.0" y1="360.0" x2="145.0" y2="360.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="435.0" y1="360.0" x2="164.4" y2="287.5" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="435.0" y1="360.0" x2="217.5" y2="234.4" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="415.6" y1="432.5" x2="362.5" y2="485.6" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="415.6" y1="432.5" x2="290.0" y2="505.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="415.6" y1="432.5" x2="217.5" y2="485.6" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="415.6" y1="432.5" x2="164.4" y2="432.5" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="415.6" y1="432.5" x2="145.0" y2="360.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="415.6" y1="432.5" x2="164.4" y2="287.5" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="415.6" y1="432.5" x2="217.5" y2="234.4" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="362.5" y1="485.6" x2="290.0" y2="505.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="362.5" y1="485.6" x2="217.5" y2="485.6" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="362.5" y1="485.6" x2="164.4" y2="432.5" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="362.5" y1="485.6" x2="145.0" y2="360.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="362.5" y1="485.6" x2="164.4" y2="287.5" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="362.5" y1="485.6" x2="217.5" y2="234.4" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="290.0" y1="505.0" x2="217.5" y2="485.6" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="290.0" y1="505.0" x2="164.4" y2="432.5" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="290.0" y1="505.0" x2="145.0" y2="360.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="290.0" y1="505.0" x2="164.4" y2="287.5" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="290.0" y1="505.0" x2="217.5" y2="234.4" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="217.5" y1="485.6" x2="164.4" y2="432.5" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="217.5" y1="485.6" x2="145.0" y2="360.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="217.5" y1="485.6" x2="164.4" y2="287.5" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="217.5" y1="485.6" x2="217.5" y2="234.4" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="164.4" y1="432.5" x2="145.0" y2="360.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="164.4" y1="432.5" x2="164.4" y2="287.5" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="164.4" y1="432.5" x2="217.5" y2="234.4" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="145.0" y1="360.0" x2="164.4" y2="287.5" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="145.0" y1="360.0" x2="217.5" y2="234.4" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="164.4" y1="287.5" x2="217.5" y2="234.4" stroke="#aec1c4" stroke-width="1.5"/>
+<circle cx="290.0" cy="215.0" r="10" fill="#087f83"/>
+<circle cx="362.5" cy="234.4" r="10" fill="#087f83"/>
+<circle cx="415.6" cy="287.5" r="10" fill="#087f83"/>
+<circle cx="435.0" cy="360.0" r="10" fill="#087f83"/>
+<circle cx="415.6" cy="432.5" r="10" fill="#087f83"/>
+<circle cx="362.5" cy="485.6" r="10" fill="#087f83"/>
+<circle cx="290.0" cy="505.0" r="10" fill="#087f83"/>
+<circle cx="217.5" cy="485.6" r="10" fill="#087f83"/>
+<circle cx="164.4" cy="432.5" r="10" fill="#087f83"/>
+<circle cx="145.0" cy="360.0" r="10" fill="#087f83"/>
+<circle cx="164.4" cy="287.5" r="10" fill="#087f83"/>
+<circle cx="217.5" cy="234.4" r="10" fill="#087f83"/>
+<text x="290" y="570" fill="#182e3a" font-size="30" text-anchor="middle" font-weight="700">全結合：66関係</text>
+<rect x="798" y="203" width="134" height="134" rx="16" fill="none" stroke="#cad5d3" stroke-width="2" stroke-dasharray="7 7"/>
+<line x1="865.0" y1="227.0" x2="908.0" y2="270.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="865.0" y1="227.0" x2="865.0" y2="313.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="865.0" y1="227.0" x2="822.0" y2="270.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="908.0" y1="270.0" x2="865.0" y2="313.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="908.0" y1="270.0" x2="822.0" y2="270.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="865.0" y1="313.0" x2="822.0" y2="270.0" stroke="#aec1c4" stroke-width="1.5"/>
+<circle cx="865.0" cy="227.0" r="10" fill="#087f83"/>
+<circle cx="908.0" cy="270.0" r="10" fill="#087f83"/>
+<circle cx="865.0" cy="313.0" r="10" fill="#087f83"/>
+<circle cx="822.0" cy="270.0" r="10" fill="#087f83"/>
+<rect x="658" y="393" width="134" height="134" rx="16" fill="none" stroke="#cad5d3" stroke-width="2" stroke-dasharray="7 7"/>
+<line x1="725.0" y1="417.0" x2="768.0" y2="460.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="725.0" y1="417.0" x2="725.0" y2="503.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="725.0" y1="417.0" x2="682.0" y2="460.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="768.0" y1="460.0" x2="725.0" y2="503.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="768.0" y1="460.0" x2="682.0" y2="460.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="725.0" y1="503.0" x2="682.0" y2="460.0" stroke="#aec1c4" stroke-width="1.5"/>
+<circle cx="725.0" cy="417.0" r="10" fill="#087f83"/>
+<circle cx="768.0" cy="460.0" r="10" fill="#087f83"/>
+<circle cx="725.0" cy="503.0" r="10" fill="#087f83"/>
+<circle cx="682.0" cy="460.0" r="10" fill="#087f83"/>
+<rect x="938" y="393" width="134" height="134" rx="16" fill="none" stroke="#cad5d3" stroke-width="2" stroke-dasharray="7 7"/>
+<line x1="1005.0" y1="417.0" x2="1048.0" y2="460.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="1005.0" y1="417.0" x2="1005.0" y2="503.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="1005.0" y1="417.0" x2="962.0" y2="460.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="1048.0" y1="460.0" x2="1005.0" y2="503.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="1048.0" y1="460.0" x2="962.0" y2="460.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="1005.0" y1="503.0" x2="962.0" y2="460.0" stroke="#aec1c4" stroke-width="1.5"/>
+<circle cx="1005.0" cy="417.0" r="10" fill="#087f83"/>
+<circle cx="1048.0" cy="460.0" r="10" fill="#087f83"/>
+<circle cx="1005.0" cy="503.0" r="10" fill="#087f83"/>
+<circle cx="962.0" cy="460.0" r="10" fill="#087f83"/>
+<line x1="822.0" y1="270.0" x2="725.0" y2="417.0" stroke="#b95130" stroke-width="3"/>
+<line x1="908.0" y1="270.0" x2="1005.0" y2="417.0" stroke="#b95130" stroke-width="3"/>
+<text x="870" y="570" fill="#182e3a" font-size="28" text-anchor="middle" font-weight="700">内部18 ＋ 境界2 ＝ 20関係</text>
+<text x="50" y="652" fill="#566773" font-size="19" text-anchor="start" font-weight="400">右は接続そのものを制限した模型。分類ラベルを付けるだけでは関係は減らない。</text>
+</g>
+</svg>

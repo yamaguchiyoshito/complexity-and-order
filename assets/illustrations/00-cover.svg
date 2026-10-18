@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" role="img" aria-labelledby="title desc">
+<title id="title">複雑さをなくす、から。成立させる、へ。</title>
+<desc id="desc">階層・自己組織化・自律性をめぐる、全12回の連載</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#566773" stroke-width="1.4"/></marker></defs>
+<rect width="1200" height="660" rx="20" fill="#f8f7f2"/>
+<g font-family="system-ui, Noto Sans CJK JP, Hiragino Kaku Gothic ProN, Meiryo, sans-serif">
+<text x="50" y="52" fill="#087f83" font-size="18" text-anchor="start" font-weight="700">COMPLEXITY / ORDER     00</text>
+<text x="50" y="103" fill="#182e3a" font-size="34" text-anchor="start" font-weight="700">複雑さをなくす、から。成立させる、へ。</text>
+<text x="50" y="141" fill="#566773" font-size="21" text-anchor="start" font-weight="400">階層・自己組織化・自律性をめぐる、全12回の連載</text>
+<line x1="50.0" y1="166.0" x2="1150.0" y2="166.0" stroke="#d5dedc" stroke-width="1"/>
+<line x1="225.0" y1="250.0" x2="275.0" y2="263.4" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="225.0" y1="250.0" x2="311.6" y2="300.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="225.0" y1="250.0" x2="325.0" y2="350.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="225.0" y1="250.0" x2="311.6" y2="400.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="225.0" y1="250.0" x2="275.0" y2="436.6" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="225.0" y1="250.0" x2="225.0" y2="450.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="225.0" y1="250.0" x2="175.0" y2="436.6" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="225.0" y1="250.0" x2="138.4" y2="400.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="225.0" y1="250.0" x2="125.0" y2="350.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="225.0" y1="250.0" x2="138.4" y2="300.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="225.0" y1="250.0" x2="175.0" y2="263.4" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="275.0" y1="263.4" x2="311.6" y2="300.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="275.0" y1="263.4" x2="325.0" y2="350.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="275.0" y1="263.4" x2="311.6" y2="400.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="275.0" y1="263.4" x2="275.0" y2="436.6" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="275.0" y1="263.4" x2="225.0" y2="450.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="275.0" y1="263.4" x2="175.0" y2="436.6" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="275.0" y1="263.4" x2="138.4" y2="400.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="275.0" y1="263.4" x2="125.0" y2="350.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="275.0" y1="263.4" x2="138.4" y2="300.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="275.0" y1="263.4" x2="175.0" y2="263.4" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="311.6" y1="300.0" x2="325.0" y2="350.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="311.6" y1="300.0" x2="311.6" y2="400.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="311.6" y1="300.0" x2="275.0" y2="436.6" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="311.6" y1="300.0" x2="225.0" y2="450.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="311.6" y1="300.0" x2="175.0" y2="436.6" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="311.6" y1="300.0" x2="138.4" y2="400.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="311.6" y1="300.0" x2="125.0" y2="350.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="311.6" y1="300.0" x2="138.4" y2="300.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="311.6" y1="300.0" x2="175.0" y2="263.4" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="325.0" y1="350.0" x2="311.6" y2="400.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="325.0" y1="350.0" x2="275.0" y2="436.6" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="325.0" y1="350.0" x2="225.0" y2="450.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="325.0" y1="350.0" x2="175.0" y2="436.6" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="325.0" y1="350.0" x2="138.4" y2="400.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="325.0" y1="350.0" x2="125.0" y2="350.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="325.0" y1="350.0" x2="138.4" y2="300.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="325.0" y1="350.0" x2="175.0" y2="263.4" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="311.6" y1="400.0" x2="275.0" y2="436.6" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="311.6" y1="400.0" x2="225.0" y2="450.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="311.6" y1="400.0" x2="175.0" y2="436.6" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="311.6" y1="400.0" x2="138.4" y2="400.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="311.6" y1="400.0" x2="125.0" y2="350.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="311.6" y1="400.0" x2="138.4" y2="300.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="311.6" y1="400.0" x2="175.0" y2="263.4" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="275.0" y1="436.6" x2="225.0" y2="450.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="275.0" y1="436.6" x2="175.0" y2="436.6" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="275.0" y1="436.6" x2="138.4" y2="400.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="275.0" y1="436.6" x2="125.0" y2="350.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="275.0" y1="436.6" x2="138.4" y2="300.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="275.0" y1="436.6" x2="175.0" y2="263.4" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="225.0" y1="450.0" x2="175.0" y2="436.6" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="225.0" y1="450.0" x2="138.4" y2="400.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="225.0" y1="450.0" x2="125.0" y2="350.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="225.0" y1="450.0" x2="138.4" y2="300.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="225.0" y1="450.0" x2="175.0" y2="263.4" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="175.0" y1="436.6" x2="138.4" y2="400.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="175.0" y1="436.6" x2="125.0" y2="350.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="175.0" y1="436.6" x2="138.4" y2="300.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="175.0" y1="436.6" x2="175.0" y2="263.4" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="138.4" y1="400.0" x2="125.0" y2="350.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="138.4" y1="400.0" x2="138.4" y2="300.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="138.4" y1="400.0" x2="175.0" y2="263.4" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="125.0" y1="350.0" x2="138.4" y2="300.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="125.0" y1="350.0" x2="175.0" y2="263.4" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="138.4" y1="300.0" x2="175.0" y2="263.4" stroke="#aec1c4" stroke-width="1.5"/>
+<circle cx="225.0" cy="250.0" r="10" fill="#087f83"/>
+<circle cx="275.0" cy="263.4" r="10" fill="#087f83"/>
+<circle cx="311.6" cy="300.0" r="10" fill="#087f83"/>
+<circle cx="325.0" cy="350.0" r="10" fill="#087f83"/>
+<circle cx="311.6" cy="400.0" r="10" fill="#087f83"/>
+<circle cx="275.0" cy="436.6" r="10" fill="#087f83"/>
+<circle cx="225.0" cy="450.0" r="10" fill="#087f83"/>
+<circle cx="175.0" cy="436.6" r="10" fill="#087f83"/>
+<circle cx="138.4" cy="400.0" r="10" fill="#087f83"/>
+<circle cx="125.0" cy="350.0" r="10" fill="#087f83"/>
+<circle cx="138.4" cy="300.0" r="10" fill="#087f83"/>
+<circle cx="175.0" cy="263.4" r="10" fill="#087f83"/>
+<text x="225" y="500" fill="#182e3a" font-size="28" text-anchor="middle" font-weight="700">相互作用</text>
+<line x1="360.0" y1="350.0" x2="470.0" y2="350.0" stroke="#566773" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="550.0" y1="230.0" x2="590.0" y2="270.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="550.0" y1="230.0" x2="550.0" y2="310.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="550.0" y1="230.0" x2="510.0" y2="270.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="590.0" y1="270.0" x2="550.0" y2="310.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="590.0" y1="270.0" x2="510.0" y2="270.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="550.0" y1="310.0" x2="510.0" y2="270.0" stroke="#aec1c4" stroke-width="1.5"/>
+<circle cx="550.0" cy="230.0" r="10" fill="#087f83"/>
+<circle cx="590.0" cy="270.0" r="10" fill="#087f83"/>
+<circle cx="550.0" cy="310.0" r="10" fill="#087f83"/>
+<circle cx="510.0" cy="270.0" r="10" fill="#087f83"/>
+<line x1="650.0" y1="345.0" x2="690.0" y2="385.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="650.0" y1="345.0" x2="650.0" y2="425.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="650.0" y1="345.0" x2="610.0" y2="385.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="690.0" y1="385.0" x2="650.0" y2="425.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="690.0" y1="385.0" x2="610.0" y2="385.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="650.0" y1="425.0" x2="610.0" y2="385.0" stroke="#aec1c4" stroke-width="1.5"/>
+<circle cx="650.0" cy="345.0" r="10" fill="#087f83"/>
+<circle cx="690.0" cy="385.0" r="10" fill="#087f83"/>
+<circle cx="650.0" cy="425.0" r="10" fill="#087f83"/>
+<circle cx="610.0" cy="385.0" r="10" fill="#087f83"/>
+<line x1="490.0" y1="370.0" x2="530.0" y2="410.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="490.0" y1="370.0" x2="490.0" y2="450.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="490.0" y1="370.0" x2="450.0" y2="410.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="530.0" y1="410.0" x2="490.0" y2="450.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="530.0" y1="410.0" x2="450.0" y2="410.0" stroke="#aec1c4" stroke-width="1.5"/>
+<line x1="490.0" y1="450.0" x2="450.0" y2="410.0" stroke="#aec1c4" stroke-width="1.5"/>
+<circle cx="490.0" cy="370.0" r="10" fill="#087f83"/>
+<circle cx="530.0" cy="410.0" r="10" fill="#087f83"/>
+<circle cx="490.0" cy="450.0" r="10" fill="#087f83"/>
+<circle cx="450.0" cy="410.0" r="10" fill="#087f83"/>
+<line x1="550.0" y1="310.0" x2="520.0" y2="375.0" stroke="#566773" stroke-width="2"/>
+<line x1="585.0" y1="290.0" x2="635.0" y2="350.0" stroke="#566773" stroke-width="2"/>
+<text x="580" y="500" fill="#182e3a" font-size="28" text-anchor="middle" font-weight="700">局所化と階層</text>
+<line x1="735.0" y1="350.0" x2="835.0" y2="350.0" stroke="#566773" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="880" y="245" width="230" height="75" rx="14" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="995.0" y="290.5" fill="#087f83" font-size="25" text-anchor="middle" font-weight="700">観測・判断</text>
+<rect x="880" y="395" width="230" height="75" rx="14" fill="#ffffff" stroke="#b95130" stroke-width="2"/>
+<text x="995.0" y="440.5" fill="#b95130" font-size="25" text-anchor="middle" font-weight="700">行動・検証</text>
+<path d="M 970 320 L 970 395" fill="none" stroke="#566773" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 1040 395 C 1160 395 1160 280 1110 280" fill="none" stroke="#566773" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="995" y="525" fill="#182e3a" font-size="28" text-anchor="middle" font-weight="700">自律と自己観測</text>
+<text x="50" y="632" fill="#566773" font-size="19" text-anchor="start" font-weight="400">原典の理論・説明用モデル・工学的な応用を区別して読む。</text>
+</g>
+</svg>
