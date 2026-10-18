@@ -10,7 +10,7 @@ import subprocess
 import sys
 
 ROOT=Path(__file__).resolve().parents[1]
-CONNECTIVES=('しかし','ただし','では','ところが','それでも','だから','つまり','そこで','ここで','もちろん','さらに','また','むしろ','一方','たとえば','例えば','なお','そして','これは','それは','だが')
+CONNECTIVES=('しかし','ただし','では','ところが','それでも','だから','つまり','そこで','ここで','もちろん','さらに','また','むしろ','一方','たとえば','例えば','なお','そして','これは','それは','だが','逆に','反対に','同じく','同様に')
 HEDGES={'ではない':r'ではない','とは限らない':r'とは限らない','てはいけない':r'てはいけない','区別':r'区別','違う':r'違う','本連載/本稿':r'本連載|本稿|この連載','説明用/公式ではない':r'説明用|の公式ではない|法則ではない','必要がある/べき':r'必要がある|べきである|なければならない','太字文':r'\*\*[^*]+\*\*','次回は':r'次回は'}
 
 
@@ -62,7 +62,7 @@ def ending(s:str)->str:
 
 def subject_start(s:str)->bool:
     """「〜は／〜が」で始まる文。接続語、時・条件句（「〜とき、」「〜れば、」「〜では、」）で始まる文は除く。"""
-    if s.startswith(CONNECTIVES) or re.match(r'^.{1,14}?(とき|れば|たら|ても|ると|では)[、,]',s) or re.match(r'^.{1,6}?(から|まで|では|には|でも)',s):return False
+    if s.startswith(CONNECTIVES) or re.match(r'^.{1,14}?(とき|れば|たら|ても|ると|では|なら)[、,]',s) or re.match(r'^.{1,6}?(から|まで|では|には|でも)',s):return False
     return re.match(r'^.{1,14}?(は|が)[、,]?',s) is not None
 
 
@@ -81,7 +81,7 @@ def measure(text:str)->dict:
             e=ending(s);endings[e]+=1
             run_end=run_end+1 if e==prev_end else 1;max_end=max(max_end,run_end);prev_end=e
             sub=subject_start(s);run_sub=run_sub+1 if sub and prev_sub else 1;max_sub=max(max_sub,run_sub);prev_sub=sub
-            run_mid=run_mid+1 if 25<=L<=45 else 0;max_mid=max(max_mid,run_mid)
+            run_mid=0 if i in MATH_ADJACENT else (run_mid+1 if 25<=L<=45 else 0);max_mid=max(max_mid,run_mid)
     n=max(len(lengths),1);body=''.join(paras)
     return dict(sentences=len(lengths),mean_length=round(sum(lengths)/n,1),
         short_le15=sum(L<=15 for L in lengths),mid_25_45=sum(25<=L<=45 for L in lengths),long_ge60=sum(L>=60 for L in lengths),
