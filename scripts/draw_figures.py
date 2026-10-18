@@ -501,7 +501,7 @@ def figure_23(name):
     f.save(name)
 
 
-CHAPTER_FIGURES={13:lambda name:figure_conversation(name,final=False),14:figure_14,15:figure_15,16:figure_16,17:figure_17,18:figure_18,19:figure_19,20:figure_20,21:figure_21,22:figure_22,23:figure_23}
+CHAPTER_FIGURES={13:lambda name:figure_conversation(name,final=False),14:figure_14,15:figure_15,16:figure_16,17:figure_17,18:figure_18,19:figure_19,20:figure_20,21:figure_21,22:figure_22,23:figure_23,24:lambda name:figure_conversation(name,final=True)}
 COVERS={2:figure_cover_2}
 EXTRA_FIGURES={'3-2':figure_3_2,'6-2':figure_6_2,'4-2':figure_4_2,'2-2':figure_2_2,'1-2':figure_1_2,'12-2':figure_12_2}
 

@@ -24,7 +24,7 @@
         24
       ],
       "cover": "assets/illustrations/00-cover-2.svg",
-      "status": "planned",
+      "status": "published",
       "parts": [
         {
           "label": "Ⅰ",
@@ -444,6 +444,31 @@
         "maynardsmith",
         "szathmary2015",
         "west2015"
+      ]
+    },
+    {
+      "number": 24,
+      "cour": 2,
+      "part": "Ⅲ",
+      "slug": "maintaining-by-changing",
+      "title": "同じであり続けるために、変わっていく",
+      "subtitle": "秩序の維持から、秩序の更新へ",
+      "summary": "第13〜23回を束ね、形を変えながら必要な機能と関係を引き継ぐことを、存続の条件として読み直す。",
+      "path": "chapters/24-maintaining-by-changing.md",
+      "figure": "assets/illustrations/24-maintaining-by-changing.svg",
+      "figures": [],
+      "sources": [
+        "pask",
+        "bateson",
+        "tishby",
+        "hoel",
+        "arthur",
+        "carlson",
+        "holling1973",
+        "holling2001",
+        "march",
+        "ostrom",
+        "maynardsmith"
       ]
     }
   ]
