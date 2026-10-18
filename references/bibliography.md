@@ -285,3 +285,80 @@ Chandler / University of Chicago Press。所収の "The Logical Categories of Le
 PNAS, 110(49), 19790–19795。有効情報（EI）を介入分布のもとで定義し、巨視的記述が微視的記述を上回る例を示す。
 
 **今回の確認範囲：** PMC の公開本文の要旨と枠組みの記述を確認。例の数値は本文に転記していない。
+
+
+
+## arthur
+
+**W. Brian Arthur / 1989**
+
+[Competing Technologies, Increasing Returns, and Lock-In by Historical Events](https://ideas.repec.org/a/ecj/econjl/v99y1989i394p116-31.html)
+
+The Economic Journal, 99(394), 116–131。採用に伴う収穫逓増のもとで、初期の偶然がどちらかの技術への固定を生むことを示す。
+
+**今回の確認範囲：** 書誌と要旨を確認。原文（JSTOR）は今回未取得。モデルの構造は二次資料の要約で照合し、本文の数値例は本連載の説明用である。
+
+
+
+
+## carlson
+
+**J. M. Carlson, John Doyle / 2002**
+
+[Complexity and robustness](https://pmc.ncbi.nlm.nih.gov/articles/PMC128573/)
+
+PNAS, 99(suppl 1), 2538–2545。高度最適化耐性（HOT）。設計された系の内部構造と「頑健だが脆い」外部挙動。
+
+**今回の確認範囲：** PMC の公開本文の要旨と概念の記述を確認。1999年の原モデル（Phys. Rev. E）は未取得。
+
+
+
+
+## holling1973
+
+**C. S. Holling / 1973**
+
+[Resilience and Stability of Ecological Systems](https://pure.iiasa.ac.at/id/eprint/26/7/RP-73-003.pdf)
+
+Annual Review of Ecology and Systematics, 4, 1–23。平衡へ戻る安定性と、変化を吸収して関係を保つレジリエンスを区別する。
+
+**今回の確認範囲：** IIASA の公開版で要旨と定義の箇所を確認。
+
+
+
+
+## holling1996
+
+**C. S. Holling / 1996**
+
+[Engineering Resilience versus Ecological Resilience](https://nap.nationalacademies.org/read/4919/chapter/4)
+
+In P. C. Schulze (ed.), Engineering Within Ecological Constraints, National Academies Press。平衡への戻りの速さを測る工学的レジリエンスと、別の領域へ移る前に吸収できる外乱の大きさを測る生態学的レジリエンス。
+
+**今回の確認範囲：** 全米アカデミーズの公開章で定義の箇所を確認。
+
+
+
+
+## holling2001
+
+**C. S. Holling / 2001**
+
+[Understanding the Complexity of Economic, Ecological, and Social Systems](https://link.springer.com/article/10.1007/s10021-001-0101-5)
+
+Ecosystems, 4, 390–405。適応サイクルと、速度の異なる階層が結びついたパナーキー。
+
+**今回の確認範囲：** 出版社ページの要旨を確認。本文全文は未取得。
+
+
+
+
+## panarchy
+
+**Lance H. Gunderson, C. S. Holling (eds.) / 2002**
+
+[Panarchy: Understanding Transformations in Human and Natural Systems](https://press.princeton.edu/isbn/9781597269391)
+
+Island Press。適応サイクルの四相と、階層間の「反乱」「記憶」の接続。
+
+**今回の確認範囲：** 書誌と紹介のみ確認。原文は今回未取得。

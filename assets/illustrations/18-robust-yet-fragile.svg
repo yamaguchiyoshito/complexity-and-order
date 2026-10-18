@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="690" viewBox="0 0 1200 690" role="img" aria-labelledby="title desc">
+<title id="title">何に対して強いのかを、必ず問う</title>
+<desc id="desc">頻出する外乱には厚い防御、想定していない方向には薄い防御</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#566773" stroke-width="1.4"/></marker></defs>
+<rect width="1200" height="690" rx="20" fill="#f8f7f2"/>
+<g font-family="system-ui, Noto Sans CJK JP, Hiragino Kaku Gothic ProN, Meiryo, sans-serif">
+<text x="50" y="52" fill="#087f83" font-size="18" text-anchor="start" font-weight="700">COMPLEXITY / ORDER     18</text>
+<text x="50" y="103" fill="#182e3a" font-size="34" text-anchor="start" font-weight="700">何に対して強いのかを、必ず問う</text>
+<text x="50" y="141" fill="#566773" font-size="21" text-anchor="start" font-weight="400">頻出する外乱には厚い防御、想定していない方向には薄い防御</text>
+<line x1="50.0" y1="166.0" x2="1150.0" y2="166.0" stroke="#d5dedc" stroke-width="1"/>
+<rect x="470" y="330" width="260" height="140" rx="12" fill="#ffffff" stroke="#087f83" stroke-width="2"/>
+<text x="600" y="390" fill="#087f83" font-size="24" text-anchor="middle" font-weight="700">系</text>
+<text x="600" y="422" fill="#566773" font-size="16" text-anchor="middle" font-weight="400">共通の前提に依存</text>
+<rect x="440" y="310" width="22" height="180" rx="6" fill="#087f83"/>
+<rect x="738" y="310" width="22" height="180" rx="6" fill="#087f83"/>
+<rect x="440" y="500" width="320" height="22" rx="6" fill="#087f83"/>
+<rect x="440" y="272" width="320" height="5" rx="2" fill="#b95130"/>
+<line x1="330.0" y1="400.0" x2="420.0" y2="400.0" stroke="#182e3a" stroke-width="5" marker-end="url(#arrow)"/>
+<text x="270" y="382" fill="#182e3a" font-size="16" text-anchor="middle" font-weight="400">頻出の障害</text>
+<line x1="870.0" y1="400.0" x2="780.0" y2="400.0" stroke="#182e3a" stroke-width="5" marker-end="url(#arrow)"/>
+<text x="930" y="382" fill="#182e3a" font-size="16" text-anchor="middle" font-weight="400">頻出の障害</text>
+<line x1="600.0" y1="605.0" x2="600.0" y2="535.0" stroke="#182e3a" stroke-width="5" marker-end="url(#arrow)"/>
+<text x="600" y="628" fill="#182e3a" font-size="16" text-anchor="middle" font-weight="400">頻出の障害</text>
+<line x1="600.0" y1="195.0" x2="600.0" y2="260.0" stroke="#b95130" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="600" y="186" fill="#b95130" font-size="16" text-anchor="middle" font-weight="700">想定外の外乱（稀だが共通の前提を崩す）</text>
+<text x="270" y="600" fill="#087f83" font-size="15" text-anchor="start" font-weight="400">厚い防御：自動復旧・冗長化・再試行</text>
+<text x="270" y="622" fill="#b95130" font-size="15" text-anchor="start" font-weight="400">薄い防御：前提そのものを疑う手段</text>
+<text x="50" y="662" fill="#566773" font-size="19" text-anchor="start" font-weight="400">概念図。HOT の確率モデルの計算ではなく、資源を配分した結果として生じる「頑健だが脆い」構図。</text>
+</g>
+</svg>

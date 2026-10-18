@@ -336,6 +336,68 @@
       "sources": [
         "hoel"
       ]
+    },
+    {
+      "number": 17,
+      "cour": 2,
+      "part": "Ⅱ",
+      "slug": "lock-in",
+      "title": "選ばれたから、選ばれ続ける",
+      "subtitle": "ブライアン・アーサーの経路依存性とロックイン",
+      "summary": "採用の蓄積が次の採用を有利にし、初期の偶然が長期の選択を固定する過程を扱う。",
+      "path": "chapters/17-lock-in.md",
+      "figure": "assets/illustrations/17-lock-in.svg",
+      "figures": [],
+      "sources": [
+        "arthur"
+      ]
+    },
+    {
+      "number": 18,
+      "cour": 2,
+      "part": "Ⅱ",
+      "slug": "robust-yet-fragile",
+      "title": "強くしたところが、弱さになる",
+      "subtitle": "高度に最適化された頑健性と、想定外への脆さ",
+      "summary": "想定した外乱への頑健性と、想定外の外乱への脆弱性が同じ設計から生まれる構造を扱う。",
+      "path": "chapters/18-robust-yet-fragile.md",
+      "figure": "assets/illustrations/18-robust-yet-fragile.svg",
+      "figures": [],
+      "sources": [
+        "carlson"
+      ]
+    },
+    {
+      "number": 19,
+      "cour": 2,
+      "part": "Ⅱ",
+      "slug": "resilience",
+      "title": "元に戻ることと、生き残ることは違う",
+      "subtitle": "ホリングのレジリエンスと安定性",
+      "summary": "平衡へ素早く戻る安定性と、変化を吸収して関係を保つレジリエンスを分ける。",
+      "path": "chapters/19-resilience.md",
+      "figure": "assets/illustrations/19-resilience.svg",
+      "figures": [],
+      "sources": [
+        "holling1973",
+        "holling1996"
+      ]
+    },
+    {
+      "number": 20,
+      "cour": 2,
+      "part": "Ⅱ",
+      "slug": "panarchy",
+      "title": "崩れるときにも、残っているものがある",
+      "subtitle": "パナーキーと、異なる時間スケールの相互作用",
+      "summary": "速い局所の変化と遅い大域の構造の結びつきから、崩壊と再編成の違いを読む。",
+      "path": "chapters/20-panarchy.md",
+      "figure": "assets/illustrations/20-panarchy.svg",
+      "figures": [],
+      "sources": [
+        "holling2001",
+        "panarchy"
+      ]
     }
   ]
 }

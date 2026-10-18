@@ -354,7 +354,85 @@ def figure_16(name):
     f.save(name)
 
 
-CHAPTER_FIGURES={13:lambda name:figure_conversation(name,final=False),14:figure_14,15:figure_15,16:figure_16}
+def figure_17(name):
+    """図17: 最初は対等だった二つの道が、利用者・知識・接続先の蓄積によって非対称になる図。"""
+    f=Figure(17,'先に選ばれた方が、次も選ばれやすくなる','対等だった二つの道が、利用者と教材と接続先の蓄積で非対称になる',640)
+    f.line(120,560,1100,560,color=INK,width=1.5,arrow=True);f.text(1100,586,'時間（採用者の到着）',17,MUTED,anchor='end')
+    f.line(120,560,120,230,color=INK,width=1.5,arrow=True);f.text(132,236,'累積の採用と周辺の蓄積',17,MUTED)
+    import math as _m
+    ax=[(120+i*19.6,560-(0.5*i+0.11*i*i)) for i in range(51)]
+    bx=[(120+i*19.6,560-(0.5*i+ (0 if i<12 else 0.02*(i-12)**2*0.5))) for i in range(51)]
+    f.path(polyline([(x,max(y,235)) for x,y in ax]),color=TEAL,width=5)
+    f.path(polyline(bx),color=ORANGE,width=5)
+    f.text(600,300,'A：採用者・教材・接続先が積み上がる',18,TEAL,weight=700)
+    f.text(480,522,'B：利用が増えず、周辺が育たない',18,ORANGE,weight=700)
+    f.line(355,560,355,250,color=MUTED,width=1.5,dash=True);f.text(355,586,'初期の偶然（到着順）',16,MUTED,anchor='middle')
+    f.line(640,560,640,250,color=MUTED,width=1.5,dash=True);f.text(640,586,'固定：Bを好む人もAを選ぶ',16,MUTED,anchor='middle')
+    for i,(lab,y) in enumerate([('利用者',300),('教材・知識',330),('周辺システム',360)]):
+        rect(f,950,y-12,150,24,TEAL);f.text(1025,y+6,lab,14,TEAL,anchor='middle')
+    f.text(1025,280,'Aに積み上がるもの',15,MUTED,anchor='middle')
+    f.footer('概念図。アーサーの収穫逓増モデルの数値結果ではなく、採用の蓄積が次の採用を有利にする構図。')
+    f.save(name)
+
+
+def figure_18(name):
+    """図18: 頻出する外乱には厚い防御がある一方、想定外の方向には防御が薄い構造。"""
+    f=Figure(18,'何に対して強いのかを、必ず問う','頻出する外乱には厚い防御、想定していない方向には薄い防御',690)
+    cx,cy=600,400
+    rect(f,cx-130,cy-70,260,140,TEAL);f.text(cx,cy-10,'系',24,TEAL,anchor='middle',weight=700);f.text(cx,cy+22,'共通の前提に依存',16,MUTED,anchor='middle')
+    # thick shields on left, right, bottom (frequent perturbations)
+    f.parts.append(f'<rect x="{cx-160}" y="{cy-90}" width="22" height="180" rx="6" fill="#087f83"/>')
+    f.parts.append(f'<rect x="{cx+138}" y="{cy-90}" width="22" height="180" rx="6" fill="#087f83"/>')
+    f.parts.append(f'<rect x="{cx-160}" y="{cy+100}" width="320" height="22" rx="6" fill="#087f83"/>')
+    # thin shield on top (unanticipated)
+    f.parts.append(f'<rect x="{cx-160}" y="{cy-128}" width="320" height="5" rx="2" fill="#b95130"/>')
+    for x,lab in [(cx-330,'頻出の障害'),(cx+330,'頻出の障害')]:
+        f.line(x+(60 if x<cx else -60),cy,x+(150 if x<cx else -150),cy,color=INK,width=5,arrow=True);f.text(x,cy-18,lab,16,INK,anchor='middle')
+    f.line(cx,cy+205,cx,cy+135,color=INK,width=5,arrow=True);f.text(cx,cy+228,'頻出の障害',16,INK,anchor='middle')
+    f.line(cx,cy-205,cx,cy-140,color=ORANGE,width=2,arrow=True);f.text(cx,cy-214,'想定外の外乱（稀だが共通の前提を崩す）',16,ORANGE,anchor='middle',weight=700)
+    f.text(cx-330,cy+200,'厚い防御：自動復旧・冗長化・再試行',15,TEAL);f.text(cx-330,cy+222,'薄い防御：前提そのものを疑う手段',15,ORANGE)
+    f.footer('概念図。HOT の確率モデルの計算ではなく、資源を配分した結果として生じる「頑健だが脆い」構図。')
+    f.save(name)
+
+
+def figure_19(name):
+    """図19: 平衡点への戻りやすさ（器の深さ）と、別の状態領域へ移りにくさ（器の広さ）を分けて示す概念図。"""
+    f=Figure(19,'戻りやすさと、移りにくさは別の量である','平衡へ戻る速さ（安定性）と、別の領域へ移る前に吸収できる外乱の大きさ（レジリエンス）',640)
+    import math as _m
+    def basin(px,width,depth):
+        pts=[(px+x,280+depth*_m.exp(-((x-width/2)/(width*0.3))**2)) for x in range(0,width+1,4)]
+        f.path(polyline(pts),color=INK,width=3)
+        return px+width/2,280+depth
+    lx,ly=basin(90,300,200);f.circ(lx,ly-12,12,TEAL)
+    rx,ry=basin(560,540,110);f.circ(rx,ry-12,12,ORANGE)
+    f.line(lx-90,ly-12,lx-26,ly-12,color=MUTED,width=2,arrow=True);f.text(lx-58,ly-26,'外乱',14,MUTED,anchor='middle')
+    f.line(rx-190,ry-12,rx-26,ry-12,color=MUTED,width=2,arrow=True);f.text(rx-108,ry-26,'外乱',14,MUTED,anchor='middle')
+    f.path(f'M{lx+12},{ly-20} Q{lx+150},{ly-60} {lx+180},{262}',color=ORANGE,width=2,dash=True,arrow=True)
+    f.text(lx+190,252,'小さな外乱でも別の領域へ出る',15,ORANGE)
+    f.text(lx,560,'戻りが速いが、器は狭い',19,TEAL,anchor='middle',weight=700);f.text(lx,586,'安定性は高く、レジリエンスは低い',15,MUTED,anchor='middle')
+    f.text(rx,560,'戻りは遅いが、器は広い',19,ORANGE,anchor='middle',weight=700);f.text(rx,586,'安定性は低く、レジリエンスは高い',15,MUTED,anchor='middle')
+    f.footer('概念図。ホリングの定義の説明であり、特定の系の測定ではない。器の形は系ごとに違う。')
+    f.save(name)
+
+
+def figure_20(name):
+    """図20: 速い・中間・遅い三つの周期と、階層間を結ぶ変化・継承の経路。"""
+    f=Figure(20,'速い変化と遅い構造は、互いに支え合う','速い・中間・遅い三つの周期と、下からの反乱と上からの記憶という階層間の経路',700)
+    import math as _m
+    levels=[(600,300,70,'速い・小さい','チームの運営'),(600,420,110,'中間','組織の制度'),(600,560,150,'遅い・大きい','技術・信頼・記録の蓄積')]
+    for cx,cy,r,lab,sub in levels:
+        pts=[(cx+r*_m.cos(a)*1.6,cy+r*0.42*_m.sin(a)) for a in [i*2*_m.pi/60 for i in range(61)]]
+        f.path(polyline(pts),color=TEAL if r<150 else ORANGE,width=3)
+        f.text(cx+r*1.6+16,cy+6,f'{lab}：{sub}',16,INK)
+    for (x,y,txt) in [(600,300,'成長'),(600+70*1.6,300,'保全'),(600,300+70*0.42,'解放'),(600-70*1.6,300,'再編成')]:pass
+    f.text(600,246,'各周期は、成長 → 保全 → 解放 → 再編成をたどる',15,MUTED,anchor='middle')
+    f.line(430,330,430,395,color=ORANGE,width=2.5,arrow=True);f.text(418,370,'反乱：速い層の崩壊が遅い層へ波及',15,ORANGE,anchor='end')
+    f.line(770,520,770,455,color=TEAL,width=2.5,arrow=True);f.text(782,490,'記憶：遅い層の蓄積が速い層の再編成を支える',15,TEAL)
+    f.footer('概念図。適応サイクルは分析の枠組みであり、すべての系が同じ順序で回る法則ではない。')
+    f.save(name)
+
+
+CHAPTER_FIGURES={13:lambda name:figure_conversation(name,final=False),14:figure_14,15:figure_15,16:figure_16,17:figure_17,18:figure_18,19:figure_19,20:figure_20}
 COVERS={2:figure_cover_2}
 EXTRA_FIGURES={'3-2':figure_3_2,'6-2':figure_6_2,'4-2':figure_4_2,'2-2':figure_2_2,'1-2':figure_1_2,'12-2':figure_12_2}
 
