@@ -57,6 +57,12 @@ def svg_errors(path: Path) -> list[str]:
     return errors
 
 
+def figure_in_section(text:str,section:str,filename:str)->bool:
+    """True if the figure file is referenced inside the given ### section of a chapter."""
+    m=re.search(r'^### '+re.escape(section)+r'\n(.*?)(?=^#{2,3} |\Z)',text,re.M|re.S)
+    return bool(m) and filename in m.group(1)
+
+
 def validate(root: Path=ROOT) -> tuple[Result,list[str]]:
     root=root.resolve();result=Result();errors=[]
     try:
@@ -98,6 +104,12 @@ def validate(root: Path=ROOT) -> tuple[Result,list[str]]:
         if len(re.sub(r'\s','',text.split('## 参考文献・注記')[0]))<1500:errors.append(f'{c["path"]}: article is too short for a complete essay')
         if text.count('<!-- NAV:')!=2:errors.append(f'{c["path"]}: top/bottom navigation missing')
         if c['figure'].split('/')[-1] not in text:errors.append(f'{c["path"]}: assigned figure is not referenced')
+        for fig in c.get('figures',[]):
+            name=fig['path'].split('/')[-1]
+            if not (root/fig['path']).exists():errors.append(f'missing figure: {fig["path"]}')
+            if fig.get('section'):
+                if not figure_in_section(text,fig['section'],name):errors.append(f'{c["path"]}: figure {name} is not referenced in section 「{fig["section"]}」')
+            elif name not in text:errors.append(f'{c["path"]}: figure {name} is not referenced')
         references=set(re.findall(r'^\[\^([^\]]+)\]:',text,re.M))
         uses=set(re.findall(r'\[\^([^\]]+)\](?!:)',text))
         if references!=set(c['sources']):errors.append(f'{c["path"]}: source list mismatch')
@@ -120,7 +132,8 @@ def validate(root: Path=ROOT) -> tuple[Result,list[str]]:
             if parsed.fragment and target.suffix=='.md' and unquote(parsed.fragment) not in anchors.get(target,set()):errors.append(f'{path.name}: unknown anchor: {url}')
     for svg in sorted((root/'assets').rglob('*.svg')):
         result.svg_files+=1;errors+=svg_errors(svg)
-    if result.svg_files!=13:errors.append('expected exactly 13 SVG illustrations (cover + 12 chapters)')
+    expected_svgs=1+len(chapters)+sum(len(c.get('figures',[])) for c in chapters)
+    if result.svg_files!=expected_svgs:errors.append(f'expected exactly {expected_svgs} SVG illustrations (cover + 12 chapters + additional figures in series.json)')
     for c in chapters:
         if not (root/c['figure']).exists():errors.append(f'missing figure: {c["figure"]}')
     for p in root.rglob('*'):

@@ -12,6 +12,7 @@
       "summary": "要素数、関係数、状態数を区別し、階層化が効く条件を考える。",
       "path": "chapters/01-complexity-hierarchy.md",
       "figure": "assets/illustrations/01-complexity-hierarchy.svg",
+      "figures": [],
       "sources": [
         "simon"
       ]
@@ -24,6 +25,7 @@
       "summary": "関係、境界、環境との交換から、全体が成立する条件を読む。",
       "path": "chapters/02-general-system-theory.md",
       "figure": "assets/illustrations/02-general-system-theory.svg",
+      "figures": [],
       "sources": [
         "bertalanffy"
       ]
@@ -36,6 +38,13 @@
       "summary": "非平衡での秩序形成と、カオス・階層形成との違いを考える。",
       "path": "chapters/03-dissipative-structures.md",
       "figure": "assets/illustrations/03-dissipative-structures.svg",
+      "figures": [
+        {
+          "path": "assets/illustrations/03-2-pitchfork.svg",
+          "label": "3-2",
+          "section": "揺らぎが残る条件"
+        }
+      ],
       "sources": [
         "prigogine"
       ]
@@ -48,6 +57,7 @@
       "summary": "関係を分ける縮約と、動的な自由度を減らす縮約を区別する。",
       "path": "chapters/04-synergetics.md",
       "figure": "assets/illustrations/04-synergetics.svg",
+      "figures": [],
       "sources": [
         "haken"
       ]
@@ -60,6 +70,7 @@
       "summary": "パターンの持続、自動化、自己生産を混同せず、自律性を捉え直す。",
       "path": "chapters/05-autopoiesis.md",
       "figure": "assets/illustrations/05-autopoiesis.svg",
+      "figures": [],
       "sources": [
         "autopoiesis"
       ]
@@ -72,6 +83,7 @@
       "summary": "自己維持を助ける関係と、探索を難しくする相互依存の二面性を読む。",
       "path": "chapters/06-kauffman.md",
       "figure": "assets/illustrations/06-kauffman.svg",
+      "figures": [],
       "sources": [
         "kauffman",
         "raf",
@@ -86,6 +98,7 @@
       "summary": "反復、フィードバック、自己参照、階層横断を分けて考える。",
       "path": "chapters/07-strange-loops.md",
       "figure": "assets/illustrations/07-strange-loops.svg",
+      "figures": [],
       "sources": [
         "hofstadter"
       ]
@@ -98,6 +111,7 @@
       "summary": "行動を成果達成だけでなく、情報獲得としても評価する。",
       "path": "chapters/08-active-inference.md",
       "figure": "assets/illustrations/08-active-inference.svg",
+      "figures": [],
       "sources": [
         "friston",
         "active"
@@ -111,6 +125,7 @@
       "summary": "処理容量と対応の多様性を分け、局所化が制御を支える条件を考える。",
       "path": "chapters/09-requisite-variety.md",
       "figure": "assets/illustrations/09-requisite-variety.svg",
+      "figures": [],
       "sources": [
         "ashby"
       ]
@@ -123,6 +138,7 @@
       "summary": "実行・調整・統合・適応・方針を、役職ではなく再帰的な機能として配置する。",
       "path": "chapters/10-viable-system-model.md",
       "figure": "assets/illustrations/10-viable-system-model.svg",
+      "figures": [],
       "sources": [
         "beer",
         "ashby"
@@ -136,6 +152,7 @@
       "summary": "評価者のモデルと介入も対象へ含め、観測と統制の責任を考える。",
       "path": "chapters/11-second-order-cybernetics.md",
       "figure": "assets/illustrations/11-second-order-cybernetics.svg",
+      "figures": [],
       "sources": [
         "foerster",
         "beer"
@@ -149,6 +166,7 @@
       "summary": "十一の視点を結び、複雑さをなくす問いから、複雑さを成立させる問いへ戻る。",
       "path": "chapters/12-complexity-and-order.md",
       "figure": "assets/illustrations/12-complexity-and-order.svg",
+      "figures": [],
       "sources": [
         "simon",
         "bertalanffy",

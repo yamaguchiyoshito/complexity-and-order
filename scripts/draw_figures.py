@@ -12,7 +12,8 @@ class Figure:
     def __init__(self, number, title, subtitle, height=680):
         self.h = height
         self.parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="{height}" viewBox="0 0 1200 {height}" role="img" aria-labelledby="title desc">', f'<title id="title">{escape(title)}</title>',f'<desc id="desc">{escape(subtitle)}</desc>', '<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#566773" stroke-width="1.4"/></marker></defs>', f'<rect width="1200" height="{height}" rx="20" fill="{BG}"/>', '<g font-family="system-ui, Noto Sans CJK JP, Hiragino Kaku Gothic ProN, Meiryo, sans-serif">']
-        self.text(50,52,f'COMPLEXITY / ORDER     {number:02d}',18,TEAL,weight=700)
+        label=f'{number:02d}' if isinstance(number,int) else str(number)
+        self.text(50,52,f'COMPLEXITY / ORDER     {label}',18,TEAL,weight=700)
         self.text(50,103,title,34,weight=700)
         self.text(50,141,subtitle,21,MUTED)
         self.line(50,166,1150,166,color='#d5dedc',width=1)
@@ -44,6 +45,42 @@ def network(f,cx,cy,n,r,all_edges=True,color=TEAL):
             for q in pts[i+1:]:f.line(*p,*q,color='#aec1c4',width=1.5)
     for p in pts:f.circ(*p,10,color)
     return pts
+
+def polyline(pts):
+    return 'M'+' L'.join(f'{x:.1f},{y:.1f}' for x,y in pts)
+
+
+def figure_3_2(name):
+    """図3-2: 超臨界ピッチフォーク分岐の正規形 u' = μu − u³ の定常解と安定性。"""
+    f=Figure('03-2','同じ揺らぎでも、戻されるか増幅されるかが変わる','超臨界ピッチフォーク分岐の正規形 u̇ = μu − u³ の定常解と安定性',640)
+    X=lambda mu:600+400*mu
+    Y=lambda u:395-137.5*u
+    f.line(180,395,1020,395,color=INK,width=1.5,arrow=True)
+    f.line(600,575,600,220,color=INK,width=1.5,arrow=True)
+    f.text(1150,388,'μ（駆動の強さ）',20,MUTED,anchor='end')
+    f.text(614,214,'u（パターンの振幅）',20,MUTED)
+    f.text(592,422,'μ = 0（分岐点）',18,MUTED,anchor='end')
+    f.line(X(-1),Y(0),X(0),Y(0),color=TEAL,width=4)
+    f.line(X(0),Y(0),X(1),Y(0),color=ORANGE,width=3,dash=True)
+    mus=[i/40 for i in range(41)]
+    f.path(polyline([(X(m),Y(math.sqrt(m))) for m in mus]),color=TEAL,width=4)
+    f.path(polyline([(X(m),Y(-math.sqrt(m))) for m in mus]),color=TEAL,width=4)
+    f.text(X(-0.9),Y(0)+30,'u = 0（安定）',19,TEAL,anchor='middle')
+    f.text(X(0.3),Y(0)+30,'u = 0（不安定）',19,ORANGE,anchor='middle')
+    f.text(X(1)+10,Y(1)+7,'u = +√μ',19,TEAL)
+    f.text(X(1)+10,Y(-1)+7,'u = −√μ',19,TEAL)
+    for u0,u1 in [(0.55,0.08),(-0.55,-0.08)]:f.line(X(-0.6),Y(u0),X(-0.6),Y(u1),color=BLUE,width=2.5,arrow=True)
+    f.text(X(-0.6),Y(0.8)-6,'ずれは戻される',20,BLUE,anchor='middle',weight=700)
+    for u0,u1 in [(0.12,0.68),(-0.12,-0.68),(1.15,0.86),(-1.15,-0.86)]:f.line(X(0.6),Y(u0),X(0.6),Y(u1),color=BLUE,width=2.5,arrow=True)
+    f.text(X(0.6),Y(-1.2)+28,'u = 0 からのずれは増幅され、±√μ で止まる',20,BLUE,anchor='middle',weight=700)
+    f.line(190,206,250,206,color=TEAL,width=4);f.text(262,212,'実線 = 安定な定常解',19,MUTED)
+    f.line(190,234,250,234,color=ORANGE,width=3,dash=True);f.text(262,240,'破線 = 不安定な定常解',19,MUTED)
+    f.footer('正規形の説明図。対流の実験データではない。μ は駆動の強さを表す一般的な記号。')
+    f.save(name)
+
+
+EXTRA_FIGURES={'3-2':figure_3_2}
+
 
 def main():
     chapters=json.loads((ROOT/'series.json').read_text())['chapters']
@@ -219,6 +256,10 @@ def main():
     f.text(600,664,'どれほどの複雑さを、私たちは成立させられるのか。',30,anchor='middle',weight=700)
     f.footer('自然科学の単一の法則でも、すべての系がたどる発達順序でもない。')
     f.save(filenames[12])
-    print(f'Generated {len(chapters)+1} SVG files in {OUT}')
+    extra=0
+    for c in chapters:
+        for fig in c.get('figures',[]):
+            EXTRA_FIGURES[fig['label']](Path(fig['path']).name);extra+=1
+    print(f'Generated {len(chapters)+1+extra} SVG files in {OUT}')
 
 if __name__=='__main__':main()

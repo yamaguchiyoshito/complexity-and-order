@@ -8,7 +8,7 @@ import unittest
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
 from build import parse_markdown,render,map_url,build,site_index_text
-from validate import validate,svg_errors,walk
+from validate import validate,svg_errors,walk,figure_in_section
 from check_html import check,Document
 
 
@@ -17,7 +17,8 @@ class RepositoryTests(unittest.TestCase):
         result,errors=validate()
         self.assertEqual(errors,[])
         self.assertEqual(result.chapters,12)
-        self.assertEqual(result.svg_files,13)
+        series=json.loads((ROOT/'series.json').read_text(encoding='utf-8'))
+        self.assertEqual(result.svg_files,1+12+sum(len(c.get('figures',[])) for c in series['chapters']))
         self.assertGreater(result.display_math,15)
 
     def test_math_becomes_native_mathml(self):
@@ -38,6 +39,12 @@ class RepositoryTests(unittest.TestCase):
         readme=(ROOT/'README.md').read_text(encoding='utf-8')
         self.assertIn('## 全12回の目次',site_index_text(readme))
         self.assertNotIn('## GitHubで読む',site_index_text(readme))
+
+    def test_figure_section_check(self):
+        text='### 一\n\n本文\n\n![a](../assets/illustrations/x-2-a.svg)\n\n### 二\n\n本文\n\n## 参考文献・注記\n'
+        self.assertTrue(figure_in_section(text,'一','x-2-a.svg'))
+        self.assertFalse(figure_in_section(text,'二','x-2-a.svg'))
+        self.assertFalse(figure_in_section(text,'三','x-2-a.svg'))
 
     def test_relative_links(self):
         self.assertEqual(map_url('../README.md'),'../index.html')
