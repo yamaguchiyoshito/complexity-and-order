@@ -7,7 +7,7 @@ import unittest
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
-from build import parse_markdown,render,map_url,build
+from build import parse_markdown,render,map_url,build,site_index_text
 from validate import validate,svg_errors,walk
 from check_html import check,Document
 
@@ -30,6 +30,14 @@ class RepositoryTests(unittest.TestCase):
     def test_code_fence_is_not_equation(self):
         ast=parse_markdown('```text\n$x$\n```\n')
         self.assertFalse(any(n.get('t')=='Math' for n in walk(ast)))
+
+    def test_site_index_stops_at_marker(self):
+        text='# T\n\n本文\n\n<!-- SITE-INDEX-END -->\n\n## GitHubで読む\n\n運用\n'
+        self.assertEqual(site_index_text(text),'# T\n\n本文\n')
+        self.assertEqual(site_index_text('# T\n\n本文\n'),'# T\n\n本文\n')
+        readme=(ROOT/'README.md').read_text(encoding='utf-8')
+        self.assertIn('## 全12回の目次',site_index_text(readme))
+        self.assertNotIn('## GitHubで読む',site_index_text(readme))
 
     def test_relative_links(self):
         self.assertEqual(map_url('../README.md'),'../index.html')

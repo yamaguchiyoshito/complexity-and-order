@@ -14,6 +14,13 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 READER = 'markdown+tex_math_dollars+footnotes+pipe_tables'
+SITE_INDEX_END = '<!-- SITE-INDEX-END'
+
+
+def site_index_text(text: str) -> str:
+    """README本文のうち、HTML閲覧版のトップページへ載せる範囲(マーカーより前)を返す。"""
+    head, marker, _ = text.partition(SITE_INDEX_END)
+    return head.rstrip() + '\n' if marker else text
 
 
 def run_pandoc(text: str, args: list[str]) -> str:
@@ -120,6 +127,7 @@ def build(output: Path) -> dict:
         target = output/map_url(source.as_posix())
         target.parent.mkdir(parents=True, exist_ok=True)
         text=p.read_text(encoding='utf-8')
+        if p.name == 'README.md': text = site_index_text(text)
         title = re.search(r'^# (.+)', text, re.M).group(1)
         content=render(text)
         count += content.count('<math ')

@@ -29,6 +29,8 @@
 
 第1回で複雑度とサイモンの階層論を扱う。以降は一回につき一つの主題を中心に接続し、最後に十一の理論的視点を総括する。理論の数を、そのまま科学上の発達段階とみなす構成ではない。
 
+<!-- SITE-INDEX-END: 以下はリポジトリ利用者向け。HTML閲覧版のトップページには含めない。 -->
+
 ## GitHubで読む
 
 このREADMEと各回の `.md` をGitHubの **Preview** で開く。本文中の図は相対リンク先のSVG、数式は `$...$` と `$$...$$` の数式として表示する。[GitHub公式の数式仕様](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)を用いるため、Markdown閲覧のためにPagesや専用アプリを起動する必要はない。
