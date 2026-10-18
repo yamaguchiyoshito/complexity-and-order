@@ -117,6 +117,7 @@ def make_book(series: dict, css: str, dest: Path, cour: dict) -> None:
                 if raw.endswith('index.html'): return 'href="#book-contents"'
                 md = (source.parent / (raw[:-5]+'.md' if raw.endswith('.html') else raw)).resolve()
                 if str(md) in paths:return f'href="{paths[str(md)]}"'
+                if md.parent == ROOT/'chapters' and md.suffix == '.md':return f'href="chapters/{md.stem}.html"'
             return match.group(0)
         body = re.sub(r'(href|src)="([^"]*)"', rewrite, body)
         pieces.append(f'<section class="book-chapter" id="chapter-{c["number"]:02d}">{body}</section>')

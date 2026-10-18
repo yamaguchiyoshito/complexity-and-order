@@ -3,7 +3,7 @@
 ## 階層、自己組織化、そして自律するシステム
 
 <!-- NAV:TOP -->
-[← 第11回](11-second-order-cybernetics.md) | [連載目次](../README.md) | 第1クール最終回
+[← 第11回](11-second-order-cybernetics.md) | [連載目次](../README.md) | 第1クール最終回 | [第13回 →](13-conversation-theory.md)
 <!-- /NAV -->
 
 ### 複雑なものを、単純にする
@@ -205,5 +205,5 @@ $$
 <!-- NAV:BOTTOM -->
 ---
 
-[← 第11回](11-second-order-cybernetics.md) | [連載目次](../README.md) | 第1クール最終回
+[← 第11回](11-second-order-cybernetics.md) | [連載目次](../README.md) | 第1クール最終回 | [第13回 →](13-conversation-theory.md)
 <!-- /NAV -->

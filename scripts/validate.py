@@ -77,7 +77,8 @@ def validate(root: Path=ROOT) -> tuple[Result,list[str]]:
     for k in cours:
         lo,hi=k['chapters'];present=[c for c in chapters if lo<=c['number']<=hi]
         if hi-lo+1!=12:errors.append(f'series.json: cour {k["number"]} must span exactly 12 chapters')
-        if present and len(present)!=12:errors.append(f'series.json: cour {k["number"]} has {len(present)} of 12 chapters')
+        if k.get('status')=='published' and len(present)!=12:errors.append(f'series.json: cour {k["number"]} has {len(present)} of 12 chapters')
+        if [c['number'] for c in present]!=list(range(lo,lo+len(present))):errors.append(f'series.json: cour {k["number"]} chapters must be contiguous from {lo}')
         if not present and k.get('status')!='planned':errors.append(f'series.json: cour {k["number"]} has no chapters and is not marked planned')
         for c in present:
             if c.get('cour')!=k['number']:errors.append(f'{c["path"]}: cour field does not match series.json cours')

@@ -253,6 +253,37 @@ def figure_cover_2(name):
     f.save(name)
 
 
+def figure_conversation(name,final=False):
+    """図13（final=False）／図24（final=True）: 同じ文書から別の概念図ができ、説明と再構成の往復で違いが見つかる。"""
+    if not final:
+        f=Figure(13,'届いたことと、分かったことは違う','同じ文書から別の概念図ができ、説明と再構成の往復で違いが見つかる',640)
+    else:
+        f=Figure(24,'同じにはならない。それでも更新し合える。','第13回と同じ二者。概念図は一致しないまま、確かめ合う往復が続く',640)
+    rect(f,540,212,120,66,MUTED);f.text(600,252,'仕様書',22,MUTED,anchor='middle',weight=700)
+    f.line(540,245,410,300,color=MUTED,width=1.5,arrow=True);f.line(660,245,790,300,color=MUTED,width=1.5,arrow=True)
+    f.text(470,262,'読む',16,MUTED,anchor='middle');f.text(730,262,'読む',16,MUTED,anchor='middle')
+    rect(f,110,300,300,230,TEAL);f.text(260,332,'Aの概念図',20,TEAL,anchor='middle',weight=700)
+    rect(f,790,300,300,230,ORANGE);f.text(940,332,'Bの概念図',20,ORANGE,anchor='middle',weight=700)
+    a=[(200,400),(320,400),(260,490)]
+    for i in range(3):
+        for j in range(i+1,3):f.line(*a[i],*a[j],color=TEAL,width=2)
+    for x,y in a:f.circ(x,y,11,TEAL)
+    b=[(840,400),(905,400),(970,400),(1035,400),(940,490)]
+    for i in range(3):f.line(*b[i],*b[i+1],color=ORANGE,width=2)
+    f.line(*b[1],*b[4],color=ORANGE,width=2)
+    for x,y in b:f.circ(x,y,11,ORANGE)
+    f.line(420,385,780,385,color=INK,width=2,arrow=True);f.text(600,374,'説明する（どうやるか／なぜそうなるか）',18,INK,anchor='middle',weight=700)
+    f.line(780,455,420,455,color=INK,width=2,arrow=True);f.text(600,478,'別の条件で再構成してみせる',18,INK,anchor='middle',weight=700)
+    if not final:
+        f.text(600,560,'同じ語の下に、別の構造があったことが見つかる',20,ORANGE,anchor='middle',weight=700)
+        f.footer('概念図。パスクの会話の形式化を再現したものではない。復唱は語の到達を、再構成は理解を確かめる。')
+    else:
+        f.text(600,560,'二つの図は一致しない。違いを確かめ、修正し、共同で動く往復が続く',20,ORANGE,anchor='middle',weight=700)
+        f.footer('第13回の図と同じ構図。到達点は一致ではなく、更新し合える関係である。')
+    f.save(name)
+
+
+CHAPTER_FIGURES={13:lambda name:figure_conversation(name,final=False)}
 COVERS={2:figure_cover_2}
 EXTRA_FIGURES={'3-2':figure_3_2,'6-2':figure_6_2,'4-2':figure_4_2,'2-2':figure_2_2,'1-2':figure_1_2,'12-2':figure_12_2}
 
@@ -433,6 +464,8 @@ def main():
     f.text(600,664,'どれほどの複雑さを、私たちは成立させられるのか。',30,anchor='middle',weight=700)
     f.footer('自然科学の単一の法則でも、すべての系がたどる発達順序でもない。')
     f.save(filenames[12])
+    for c in chapters:
+        if c['number'] in CHAPTER_FIGURES:CHAPTER_FIGURES[c['number']](Path(c['figure']).name)
     extra=0
     for c in chapters:
         for fig in c.get('figures',[]):

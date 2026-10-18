@@ -275,6 +275,22 @@
         "beer",
         "foerster"
       ]
+    },
+    {
+      "number": 13,
+      "cour": 2,
+      "part": "Ⅰ",
+      "slug": "conversation-theory",
+      "title": "同じ言葉を使っていても、同じことを考えてはいない",
+      "subtitle": "パスクの会話理論と、理解を確かめる循環",
+      "summary": "情報が届くことと理解が成立することの違いを、再構成の実演として確かめる。",
+      "path": "chapters/13-conversation-theory.md",
+      "figure": "assets/illustrations/13-conversation-theory.svg",
+      "figures": [],
+      "sources": [
+        "pask",
+        "manning"
+      ]
     }
   ]
 }

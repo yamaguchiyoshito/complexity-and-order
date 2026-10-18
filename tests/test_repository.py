@@ -104,7 +104,7 @@ class RepositoryTests(unittest.TestCase):
             report=check(output)
             self.assertEqual(report['errors'],[])
             self.assertEqual(report['chapter_math'],report['standalone_math'])
-            self.assertEqual(report['chapter_pages'],12)
+            self.assertEqual(report['chapter_pages'],len(json.loads((ROOT/'series.json').read_text(encoding='utf-8'))['chapters']))
 
     def test_combined_footnote_ids_are_namespaced(self):
         text='A[^a].\n\n[^a]: A source.\n'

@@ -223,3 +223,27 @@ In K. Krippendorff (ed.), Communication and Control in Society, pp. 5–8。
 任意のHTML出力をPagesへ配置するワークフロー。
 
 **今回の確認範囲：** 公式ドキュメントを確認。
+
+
+
+## pask
+
+**Gordon Pask / 1976**
+
+[Conversation Theory: Applications in Education and Epistemology](https://monoskop.org/log/?p=2376)
+
+Elsevier。リンク先は書誌と紹介。理解を再構成の実演として確かめる「教え返し」と、二つの水準の会話。
+
+**今回の確認範囲：** 書誌と紹介ページのみ確認。原文は今回の取得環境では読めていない。本文の記述は二次資料（manning ほか）の要約と照合した範囲に留めた。
+
+
+
+## manning
+
+**Paul Manning / 2023**
+
+[What is conversation theory?](https://discovery.ucl.ac.uk/id/eprint/10181184)
+
+Cybernetics & Human Knowing。UCL Discovery の記録。会話理論を概念の形成と共有の過程として導入する論文。
+
+**今回の確認範囲：** UCL Discovery の書誌と要旨を確認。本文全文は未取得。

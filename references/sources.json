@@ -142,5 +142,21 @@
     "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages",
     "note": "任意のHTML出力をPagesへ配置するワークフロー。",
     "checked": "公式ドキュメントを確認。"
+  },
+  "pask": {
+    "author": "Gordon Pask",
+    "year": 1976,
+    "title": "Conversation Theory: Applications in Education and Epistemology",
+    "url": "https://monoskop.org/log/?p=2376",
+    "note": "Elsevier。リンク先は書誌と紹介。理解を再構成の実演として確かめる「教え返し」と、二つの水準の会話。",
+    "checked": "書誌と紹介ページのみ確認。原文は今回の取得環境では読めていない。本文の記述は二次資料（manning ほか）の要約と照合した範囲に留めた。"
+  },
+  "manning": {
+    "author": "Paul Manning",
+    "year": 2023,
+    "title": "What is conversation theory?",
+    "url": "https://discovery.ucl.ac.uk/id/eprint/10181184",
+    "note": "Cybernetics & Human Knowing。UCL Discovery の記録。会話理論を概念の形成と共有の過程として導入する論文。",
+    "checked": "UCL Discovery の書誌と要旨を確認。本文全文は未取得。"
   }
 }
