@@ -286,7 +286,13 @@
       "summary": "情報が届くことと理解が成立することの違いを、再構成の実演として確かめる。",
       "path": "chapters/13-conversation-theory.md",
       "figure": "assets/illustrations/13-conversation-theory.svg",
-      "figures": [],
+      "figures": [
+        {
+          "path": "assets/animations/13-conversation-theory.gif",
+          "label": "13-動",
+          "section": "会話は、二つの水準で進む"
+        }
+      ],
       "sources": [
         "pask",
         "manning"
@@ -317,7 +323,13 @@
       "summary": "入力の情報量を抑えながら目的に必要な区別を残す圧縮として、要約を設計する。",
       "path": "chapters/15-information-bottleneck.md",
       "figure": "assets/illustrations/15-information-bottleneck.svg",
-      "figures": [],
+      "figures": [
+        {
+          "path": "assets/animations/15-information-bottleneck.gif",
+          "label": "15-動",
+          "section": "目的が変われば、残すものも変わる"
+        }
+      ],
       "sources": [
         "tishby"
       ]
@@ -362,7 +374,13 @@
       "summary": "想定した外乱への頑健性と、想定外の外乱への脆弱性が同じ設計から生まれる構造を扱う。",
       "path": "chapters/18-robust-yet-fragile.md",
       "figure": "assets/illustrations/18-robust-yet-fragile.svg",
-      "figures": [],
+      "figures": [
+        {
+          "path": "assets/animations/18-robust-yet-fragile.gif",
+          "label": "18-動",
+          "section": "資源を配分すれば、薄い場所ができる"
+        }
+      ],
       "sources": [
         "carlson"
       ]
@@ -424,7 +442,13 @@
       "summary": "複数の自律した主体が共有資源の利用と維持を両立させる制度を、中央管理か放任かの二択を超えて考える。",
       "path": "chapters/22-commons.md",
       "figure": "assets/illustrations/22-commons.svg",
-      "figures": [],
+      "figures": [
+        {
+          "path": "assets/animations/22-commons.gif",
+          "label": "22-動",
+          "section": "持続する制度に、共通するもの"
+        }
+      ],
       "sources": [
         "ostrom"
       ]
@@ -456,7 +480,13 @@
       "summary": "第13〜23回を束ね、形を変えながら必要な機能と関係を引き継ぐことを、存続の条件として読み直す。",
       "path": "chapters/24-maintaining-by-changing.md",
       "figure": "assets/illustrations/24-maintaining-by-changing.svg",
-      "figures": [],
+      "figures": [
+        {
+          "path": "assets/animations/24-maintaining-by-changing.gif",
+          "label": "24-動",
+          "section": "同じであり続けるために、変わっていく"
+        }
+      ],
       "sources": [
         "pask",
         "bateson",

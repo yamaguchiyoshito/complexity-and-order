@@ -18,7 +18,7 @@ class RepositoryTests(unittest.TestCase):
         self.assertEqual(errors,[])
         series=json.loads((ROOT/'series.json').read_text(encoding='utf-8'))
         self.assertEqual(result.chapters,len(series['chapters']))
-        self.assertEqual(result.svg_files,len(series['cours'])+len(series['chapters'])+sum(len(c.get('figures',[])) for c in series['chapters']))
+        self.assertEqual(result.svg_files,len(series['cours'])+len(series['chapters'])+sum(1 for c in series['chapters'] for fig in c.get('figures',[]) if fig['path'].endswith('.svg')))
         self.assertGreater(result.display_math,15)
 
     def test_math_becomes_native_mathml(self):

@@ -20,6 +20,8 @@
 | `scripts/publish.py` | 新規GitHubリポジトリ作成の補助 | 既存リポジトリには使わない |
 | `scripts/rhythm_report.py` | 文のリズムの計測（[文体の規則](STYLE.md)） | 合否判定には使わない |
 | `scripts/manuscript_invariants.py` | 改稿前後で数式・数値・脚注・図が不変かの検査 | 文体改稿のたびに実行する |
+| `scripts/animate_figures.py` | 選んだ図の動く版（GIF）を生成 | `assets/animations/` を直接編集せず再生成する |
+| `assets/animations/*.gif` | 本文から参照する動く図 | `animate_figures.py` で再生成する |
 | `_site/` | ブラウザ用生成物 | 直接編集せず再生成する |
 
 ## 変更の最小手順
@@ -34,6 +36,10 @@ python scripts/check_html.py
 ```
 
 SVGを直接修正すると次の図再生成で上書きされる。長期保守する変更は `draw_figures.py` に反映する。1クール12回の枠組みを固定し、クールの追加は `series.json` の `cours` に登録する。各回は通し番号で、`cour` にクール番号を持つ。クールごとに `complete.html`（第1クール）、`complete-2.html` のような単一ファイル版を生成する。
+
+## 動く図
+
+`python scripts/animate_figures.py --figure 22` のように回番号を指定して生成する。各フレームは静止図と同じ道具で描いた静止 SVG で、SMIL とスクリプトは使わない。周期は6秒、10 fps の60枚で、1枚目と周期末のフレームが同一であること、文字要素が全フレームで同一であることをスクリプトが検査する。ラスタ化は `rsvg-convert`、減色は `ffmpeg`、GIF の書き出しはスクリプト内の差分符号化で行う。動く版は静止図の直後に「図N-動」として置き、`series.json` の `figures` に登録する。
 
 ## 数式の記法
 

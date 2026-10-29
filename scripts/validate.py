@@ -146,7 +146,7 @@ def validate(root: Path=ROOT) -> tuple[Result,list[str]]:
             if parsed.fragment and target.suffix=='.md' and unquote(parsed.fragment) not in anchors.get(target,set()):errors.append(f'{path.name}: unknown anchor: {url}')
     for svg in sorted((root/'assets').rglob('*.svg')):
         result.svg_files+=1;errors+=svg_errors(svg)
-    expected_svgs=len(series.get('cours',[]))+len(chapters)+sum(len(c.get('figures',[])) for c in chapters)
+    expected_svgs=len(series.get('cours',[]))+len(chapters)+sum(1 for c in chapters for fig in c.get('figures',[]) if fig['path'].endswith('.svg'))
     if result.svg_files!=expected_svgs:errors.append(f'expected exactly {expected_svgs} SVG illustrations (one cover per cour + one per chapter + additional figures in series.json)')
     for c in chapters:
         if not (root/c['figure']).exists():errors.append(f'missing figure: {c["figure"]}')

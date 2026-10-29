@@ -107,11 +107,12 @@ def make_book(series: dict, css: str, dest: Path, cour: dict) -> None:
         body = render(source.read_text(encoding='utf-8'), prefix=f'c{c["number"]:02d}-')
         def rewrite(match: re.Match) -> str:
             attr, url = match.group(1), html.unescape(match.group(2))
-            if attr == 'src' and url.endswith('.svg'):
+            if attr == 'src' and url.endswith(('.svg', '.gif')):
                 path = (source.parent/url).resolve()
                 path.relative_to(ROOT)
                 encoded = base64.b64encode(path.read_bytes()).decode('ascii')
-                return f'src="data:image/svg+xml;base64,{encoded}"'
+                mime = 'image/svg+xml' if url.endswith('.svg') else 'image/gif'
+                return f'src="data:{mime};base64,{encoded}"'
             if attr == 'href' and not urlsplit(url).scheme and not url.startswith('#'):
                 raw = urlsplit(url).path
                 if raw.endswith('index.html'): return 'href="#book-contents"'

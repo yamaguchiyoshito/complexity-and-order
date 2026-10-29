@@ -78,8 +78,119 @@ def draw_22(f: Figure, t: float) -> None:
     f.footer('動く版。オストロムの設計原理の一部を、共通基盤に当てはめた本連載の類比。')
 
 
+def glow_rect(f: Figure, x: float, y: float, w: float, h: float, color: str, opacity: float, rx: int = 12) -> None:
+    if opacity > 0.005:
+        f.parts.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{rx}" fill="{color}" fill-opacity="{opacity:.3f}"/>')
+
+
+def pulse_every(t: float, start: float, width: float, every: float) -> float:
+    """pulse() repeated with period `every` inside the 6-second loop (every must divide PERIOD)."""
+    return max(pulse(t, start + k * every, width) for k in range(int(round(PERIOD / every))))
+
+
+def draw_18(f: Figure, t: float) -> None:
+    """図18（頑健だが脆い）。頻出の障害は2秒周期で厚い防御に当たって光り、想定外は6秒に一度だけ薄い線を抜けて系を暗転させる。"""
+    cx, cy = 600, 400
+    rect(f, cx - 130, cy - 70, 260, 140, TEAL)
+    # the rare perturbation reaches the box at t=4.0 and dims it for 0.6 s
+    glow_rect(f, cx - 130, cy - 70, 260, 140, INK, 0.25 * pulse(t, 4.0, 0.6), rx=14)
+    f.text(cx, cy - 10, '系', 24, TEAL, anchor='middle', weight=700); f.text(cx, cy + 22, '共通の前提に依存', 16, MUTED, anchor='middle')
+    shields = {'left': (cx - 160, cy - 90, 22, 180), 'right': (cx + 138, cy - 90, 22, 180), 'bottom': (cx - 160, cy + 100, 320, 22)}
+    for sx, sy, sw, sh in shields.values():
+        f.parts.append(f'<rect x="{sx}" y="{sy}" width="{sw}" height="{sh}" rx="6" fill="#087f83"/>')
+    f.parts.append(f'<rect x="{cx-160}" y="{cy-128}" width="320" height="5" rx="2" fill="#b95130"/>')
+    for x, lab in [(cx - 330, '頻出の障害'), (cx + 330, '頻出の障害')]:
+        f.line(x + (60 if x < cx else -60), cy, x + (150 if x < cx else -150), cy, color=INK, width=5, arrow=True); f.text(x, cy - 18, lab, 16, INK, anchor='middle')
+    f.line(cx, cy + 205, cx, cy + 135, color=INK, width=5, arrow=True); f.text(cx, cy + 228, '頻出の障害', 16, INK, anchor='middle')
+    f.line(cx, cy - 205, cx, cy - 140, color=ORANGE, width=2, arrow=True); f.text(cx, cy - 214, '想定外の外乱（稀だが共通の前提を崩す）', 16, ORANGE, anchor='middle', weight=700)
+    f.text(cx - 330, cy + 200, '厚い防御：自動復旧・冗長化・再試行', 15, TEAL); f.text(cx - 330, cy + 222, '薄い防御：前提そのものを疑う手段', 15, ORANGE)
+    # frequent perturbations: every 2 s, phases 0, 2/3, 4/3; travel 1.2 s; the shield brightens on impact
+    travel = 1.2
+    routes = [('left', (cx - 270, cy), (cx - 164, cy), 0.0), ('right', (cx + 270, cy), (cx + 164, cy), 2 / 3), ('bottom', (cx, cy + 205), (cx, cy + 126), 4 / 3)]
+    for key, (x0, y0), (x1, y1), phase in routes:
+        sx, sy, sw, sh = shields[key]
+        glow_rect(f, sx, sy, sw, sh, '#ffffff', 0.6 * pulse_every(t, phase + travel, 0.4, 2.0), rx=6)
+        u = ((t - phase) % 2.0) / travel
+        if u < 1: dot(f, x0 + (x1 - x0) * u, y0 + (y1 - y0) * u, INK)
+    # the rare one: departs at 3.0, passes the thin line and reaches the box at 4.0
+    u = ((t - 3.0) % PERIOD) / 1.0
+    if u < 1: dot(f, cx, (cy - 205) + ((cy - 70) - (cy - 205)) * u, ORANGE)
+    f.footer('動く版。頻出の障害は厚い防御で吸収され、想定外の外乱だけが薄い防御を抜ける。HOT の確率モデルの計算ではない。')
+
+
+def draw_15(f: Figure, t: float) -> None:
+    """図15（情報ボトルネック）。項目が順に T へ流れ、残る項目だけが右の箱へ届いて箱が光り、他は T の手前で消える。"""
+    items = ['発生時刻', '直前の変更', '失敗した呼び出し', '利用者の数', '時間帯', '機能の名前', '端末の種類', '再試行の回数']
+    rect(f, 80, 215, 220, 370, MUTED); f.text(190, 245, '入力 X（ログ）', 20, MUTED, anchor='middle', weight=700)
+    ys = [275 + i * 38 for i in range(8)]
+    for y, it in zip(ys, items): f.text(190, y + 6, it, 17, INK, anchor='middle')
+    travel, step, hop = 1.2, 0.3, 0.4
+    dots = []
+    for cy, target, keep, color, offset in [(300, '目的 Y₁：原因の特定', [0, 1, 2], TEAL, 0.0), (500, '目的 Y₂：影響の見積り', [3, 4, 5], ORANGE, 3.0)]:
+        f.parts.append(f'<path d="M520,{cy-70} L560,{cy-18} L560,{cy+18} L520,{cy+70} Z" fill="#ffffff" stroke="{color}" stroke-width="2.5"/>')
+        f.text(540, cy + 6, 'T', 22, color, anchor='middle', weight=700)
+        for i in keep: f.line(300, ys[i], 520, cy - 40 + 40 * keep.index(i), color=color, width=2)
+        rect(f, 640, cy - 60, 230, 120, color)
+        arrivals = [offset + step * i + travel + hop for i in keep]
+        glow_rect(f, 640, cy - 60, 230, 120, color, 0.3 * max(pulse(t, a, 0.4) for a in arrivals))
+        f.text(755, cy - 28, '残る区別', 18, color, anchor='middle', weight=700)
+        for n, i in enumerate(keep): f.text(755, cy + n * 24, items[i], 16, INK, anchor='middle')
+        f.line(870, cy, 950, cy, color=color, width=2, arrow=True); f.text(960, cy + 6, target, 18, color, weight=700)
+        for i in range(8):
+            s = (t - offset - step * i) % PERIOD
+            if i in keep:
+                end = (520, cy - 40 + 40 * keep.index(i))
+                if s < travel:
+                    u = s / travel; dots.append((300 + (end[0] - 300) * u, ys[i] + (end[1] - ys[i]) * u, color))
+                elif s < travel + hop:
+                    u = (s - travel) / hop; dots.append((560 + (640 - 560) * u, cy, color))
+            else:
+                if s < travel:
+                    u = s / travel; x = 300 + (505 - 300) * u; y = ys[i] + (cy - ys[i]) * u
+                    dots.append((x, y, MUTED))  # fades at the mouth of the bottleneck
+    f.text(540, 405, 'ボトルネック T', 17, MUTED, anchor='middle')
+    for x, y, color in dots: dot(f, x, y, color)
+    f.footer('動く版。残る項目だけが T を通って右へ届く。項目は説明用の例で、何が残るかは p(x, y) と β によって決まる。')
+
+
+def draw_conversation(f: Figure, t: float, final: bool) -> None:
+    """図13／図24（会話）。説明が A→B、再構成が B→A と往復し、到着した側の概念図が跳ね、最後に両方の枠が光る。"""
+    rect(f, 540, 212, 120, 66, MUTED); f.text(600, 252, '仕様書', 22, MUTED, anchor='middle', weight=700)
+    f.line(540, 245, 410, 300, color=MUTED, width=1.5, arrow=True); f.line(660, 245, 790, 300, color=MUTED, width=1.5, arrow=True)
+    f.text(470, 262, '読む', 16, MUTED, anchor='middle'); f.text(730, 262, '読む', 16, MUTED, anchor='middle')
+    both = 0.2 * pulse(t, 5.4, 0.6)
+    rect(f, 110, 300, 300, 230, TEAL); glow_rect(f, 110, 300, 300, 230, TEAL, 0.3 * pulse(t, 5.4, 0.4) + both)
+    rect(f, 790, 300, 300, 230, ORANGE); glow_rect(f, 790, 300, 300, 230, ORANGE, 0.3 * pulse(t, 2.4, 0.4) + both)
+    f.text(260, 332, 'Aの概念図', 20, TEAL, anchor='middle', weight=700); f.text(940, 332, 'Bの概念図', 20, ORANGE, anchor='middle', weight=700)
+    da = -3 * pulse(t, 5.4, 0.3); db = -3 * pulse(t, 2.4, 0.3)
+    a = [(200, 400 + da), (320, 400 + da), (260, 490 + da)]
+    for i in range(3):
+        for j in range(i + 1, 3): f.line(*a[i], *a[j], color=TEAL, width=2)
+    for x, y in a: f.circ(x, y, 11, TEAL)
+    b = [(840, 400 + db), (905, 400 + db), (970, 400 + db), (1035, 400 + db), (940, 490 + db)]
+    for i in range(3): f.line(*b[i], *b[i + 1], color=ORANGE, width=2)
+    f.line(*b[1], *b[4], color=ORANGE, width=2)
+    for x, y in b: f.circ(x, y, 11, ORANGE)
+    f.line(420, 385, 780, 385, color=INK, width=2, arrow=True); f.text(600, 374, '説明する（どうやるか／なぜそうなるか）', 18, INK, anchor='middle', weight=700)
+    f.line(780, 455, 420, 455, color=INK, width=2, arrow=True); f.text(600, 478, '別の条件で再構成してみせる', 18, INK, anchor='middle', weight=700)
+    if not final:
+        f.text(600, 560, '同じ語の下に、別の構造があったことが見つかる', 20, ORANGE, anchor='middle', weight=700)
+        f.footer('動く版。説明が A から B へ渡り、再構成が B から A へ戻る。パスクの会話の形式化を再現したものではない。')
+    else:
+        f.text(600, 560, '二つの図は一致しない。違いを確かめ、修正し、共同で動く往復が続く', 20, ORANGE, anchor='middle', weight=700)
+        f.footer('動く版。第13回と同じ往復。到達点は一致ではなく、更新し合える関係である。')
+    u = (t % PERIOD) / 2.4
+    if u < 1: dot(f, 420 + 360 * u, 385, TEAL)
+    u = ((t - 3.0) % PERIOD) / 2.4
+    if u < 1: dot(f, 780 - 360 * u, 455, ORANGE)
+
+
 ANIMATIONS = {
     22: dict(draw=draw_22, title='共有のものは、自由だけでは保たれない', subtitle='五つのチームからのリクエストと、利用・維持負担・監視・ルール改訂の経路', height=720, slug='22-commons'),
+    18: dict(draw=draw_18, title='何に対して強いのかを、必ず問う', subtitle='頻出する外乱には厚い防御、想定していない方向には薄い防御', height=690, slug='18-robust-yet-fragile'),
+    15: dict(draw=draw_15, title='何を残すかは、何を判断したいかで決まる', subtitle='同じ入力から、目的に応じて別々の特徴が残される二つの情報ボトルネック', height=640, slug='15-information-bottleneck'),
+    13: dict(draw=lambda f, t: draw_conversation(f, t, False), title='届いたことと、分かったことは違う', subtitle='同じ文書から別の概念図ができ、説明と再構成の往復で違いが見つかる', height=640, slug='13-conversation-theory'),
+    24: dict(draw=lambda f, t: draw_conversation(f, t, True), title='同じにはならない。それでも更新し合える。', subtitle='第13回と同じ二者。概念図は一致しないまま、確かめ合う往復が続く', height=640, slug='24-maintaining-by-changing'),
 }
 
 
