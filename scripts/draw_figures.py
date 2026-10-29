@@ -687,6 +687,7 @@ def main():
     extra=0
     for c in chapters:
         for fig in c.get('figures',[]):
+            if not fig['path'].endswith('.svg'):continue  # 動く版（GIF）は animate_figures.py が生成する
             EXTRA_FIGURES[fig['label']](Path(fig['path']).name);extra+=1
     covers=len(json.loads((ROOT/'series.json').read_text())['cours'])
     print(f'Generated {len(chapters)+covers+extra} SVG files in {OUT}')
